@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/*.container {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    margin-top: 400px;
+}
+
+.loader {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+}
+
+.loader div {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform: translate(80px, 80px) scale(1);
+    background: #5be1d1;
+    box-sizing: content-box;
+    animation: loading 1s infinite cubic-bezier(0, 0.5, 0.5, 1);
+}
+
+.loader div:nth-child(1) {
+    background: #a260f4;
+    transform: translate(148px, 80px) scale(1);
+    animation: loading-r 0.25s infinite cubic-bezier(0, 0.5, 0.5, 1), loading-c 1s infinite step-start;
+}
+
+.loader div:nth-child(2) {
+    animation-delay: -0.25s;
+    background: #5be1d1;
+}
+
+.loader div:nth-child(3) {
+    animation-delay: -0.5s;
+    background: #a260f4;
+}
+
+.loader div:nth-child(4) {
+    animation-delay: -0.75s;
+    background: #f8b26a;
+}
+
+.loader div:nth-child(5) {
+    animation-delay: -1s;
+    background: #ed296d;
+}
+
+@keyframes loading {
+    0% {
+        transform: translate(12px, 88px) scale(0);
+    }
+
+    25% {
+        transform: translate(12px, 88px) scale(0);
+    }
+
+    50% {
+        transform: translate(12px, 88px) scale(1);
+    }
+
+    75% {
+        transform: translate(80px, 88px) scale(1);
+    }
+
+    100% {
+        transform: translate(148px, 88px) scale(1);
+    }
+}
+
+@keyframes loading-r {
+    0% {
+        transform: translate(148px, 88px) scale(1);
+    }
+
+    100% {
+        transform: translate(148px, 88px) scale(0);
+    }
+}
+
+@keyframes loading-c {
+    0% {
+        background: #5be1d1;
+    }
+
+    25% {
+        background: #ed296d;
+    }
+
+    50% {
+        background: #f8b26a;
+    }
+
+    75% {
+        background: #a260f4;
+    }
+
+    100% {
+        background: #5be1d1;
+    }
+}*/
+
+*{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: 'Poppins', sans-serif;
+}
+body {
+       background-color: #4C96D7;
+       text-align: center;
+   }
+
+   h1{
+       margin-left: 20px;
+   }
+
+   .header{
+       min-height: 100vh;
+       width: 100%;
+       background-image: linear-gradient(#517e86c4, #949fdf1a), url(images/dealership1.png);
+       background-position: center;
+       background-size: cover;
+       position: relative;
+   }
+   nav{
+        display: flex;
+        padding: 2% 6%;
+        align-items: center;
+        justify-content: space-between;
+   }
+
+   nav .logo{
+        text-decoration: none;
+        font-size: 24px;
+        color: #fff3f3;
+        font-weight: bold;
+   }
+
+   nav .fa-solid{
+        font-size: 40px;
+        color: #58A3DB;
+   }
+   
+   .nav-links{
+        flex: 1;
+        text-align: right;
+   }
+
+   .nav-links ul li{
+        display: inline-block;
+        list-style: none;
+        padding: 8px 12px;
+        position: relative;
+        text-transform: uppercase;
+   }
+
+   .nav-links ul li a{
+        text-decoration: none;
+        color: #ffff;
+        font-size: 18px;
+   }
+
+   .nav-links ul li::after{
+        content: '';
+        width: 0%;
+        height: 2px;
+        background: #4C96D7;
+        display: block;
+        margin: auto;
+        transition: 0.25s;
+       }
+
+       .nav-links ul li:hover::after{
+            width: 100%;
+       }
+
+       .text_box{
+            width: 90%;
+            color: #ffff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .text_box h2{
+            font-size: 90px;
+            font-weight: 900;
+            color: #5be1d1;
+        }
+        
+        .text_box #headtext{
+            font-size: 42px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-top: -1%;
+            margin-bottom: 1%;
+            color: #c8fff2;
+        }
+
+        .text_box p{
+            margin: 10px 0 40px;
+            font-size: 18px;
+            color: #ffff;
+        }
+
+        .text_box .text{
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .hero_btn {
+            position: relative;
+            display: inline-block;
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            padding: 12px 34px;
+            font-size: 18px;
+            background: transparent;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .hero_btn:hover {
+            border: 1px solid #24f8c7;
+            background: #24f8c7;
+            transition: 1s;
+        }
+
+        
+        /*#myVideo {
+            position: fixed;
+            right: -1;
+            bottom: -1;
+            width: 2000px;
+            height: 950px;
+        }
+        */
+        
+        .content {
+            position: fixed;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+        }
+
+        nav .fa {
+            display: none;
+        }
+        
+        /* Responsive Navbar Section Start */
+        
+        @media(max-width: 700px) {
+            .text_box h2 {
+                font-size: 50px;
+            }
+            .text_box #headtext {
+                font-size: 23px;
+            }
+            .text_box p {
+                margin: 10px 40px;
+                font-size: 20px;
+            }
+            .nav-links ul li {
+                display: block;
+            }
+            .nav-links {
+                position: fixed;
+                background: #47b19efa;
+                height: 100vh;
+                width: 200px;
+                top: 0;
+                right: -200px;
+                text-align: left;
+                z-index: 2;
+                transition: 1.2s;
+            }
+            nav .fa {
+                display: block;
+                color: #ffff;
+                margin: 10px;
+                font-size: 22px;
+                cursor: pointer;
+            }
+            .nav-links ul {
+                padding: 30px;
+            }
+        }
+        /* Responsive Navbar End */
+
+        /* Course Section Start*/
+        .course {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+        
+        .PageBlock {
+            position: relative;
+            margin: 0px !important;
+            padding: 0px;
+        }
+        
+        .verticalLine {
+            widtH: 5px;
+            height: 100px;
+            background: #24f8c7;
+            margin: 0 auto 40px;
+        }
+        
+        .Clear {
+            clear: both;
+        }
+        
+        p {
+            color: #777;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+
+        .row {
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .course-col {
+            flex-basis: 31%;
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            transition: 0.2s;
+        }
+        
+        .course-col h3 {
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0;
+            line-height: 1.1;
+        }
+        
+        .course-col:hover {
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        @media(max-width: 700px){
+            .verticalLine{
+                width: 1px;
+            }
+            h1{
+                font-size: 24px;
+                line-height: unset;
+            }
+            .row{
+                flex-direction: column;
+            }
+        }
+
+        div .icon-1{
+            margin-top: 40px;
+            width: 110px;
+            height: 115px;
+            margin-bottom: 15px;
+        }
+        div .icon-2{
+            width: 120px;
+            height: 125px;
+            margin-bottom: 30px;
+        }
+        div .icon-3{
+            width: 160px;
+            height: 195px;
+            padding-bottom: 10%;
+            margin-bottom: -39px;
+        }
+        div .hero_btn-2{
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+            color: #000;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 12px 34px;
+            font-size: 18px;
+            background: transparent;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        div .hero_btn-2:hover {
+            border: 1px solid #24f8c7;
+            background: #24f8c7;
+            transition: 0.8s;
+        }
+        div .hero_btn-3{
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+            color: #000;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 12px 34px;
+            font-size: 18px;
+            background: transparent;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        div .hero_btn-3:hover {
+            border: 1px solid #58A3DB;
+            background: #58A3DB;
+            transition: 0.8s;
+        }
+        div .hero_btn-4{
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+            color: #000;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 12px 34px;
+            font-size: 18px;
+            background: transparent;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        div .hero_btn-4:hover {
+            border: 1px solid #A11D1F;
+            background: #A11D1F;
+            transition: 0.8s;
+        }
+        /* Course Section End*/
+
+        /* Course Campus Start*/
+
+        .campus {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+        
+        .campus-col {
+            position: relative;
+            flex-basis: 32%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .campus-col img {
+            width: 100%;
+            display: block;
+        }
+        
+        .layer-1 {
+            background: transparent;
+            width: 100%;
+            height: 67%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+        }
+        
+        .layer-1:hover {
+            /* background: rgba(226, 0, 0, 0.7); */
+            background: #24f8c741;
+        }
+        
+        .layer-1 h3 {
+            position: absolute;
+            width: 100%;
+            font-weight: 500;
+            color: #fff;
+            font-size: 26px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: 0.5s;
+        }
+        
+        .layer-1:hover h3 {
+            bottom: 49%;
+            opacity: 1;
+        }
+
+        .layer-2 {
+            background: transparent;
+            width: 100%;
+            height: 67%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+        }
+        
+        .layer-2:hover {
+            /* background: rgba(226, 0, 0, 0.7); */
+            background: #24f8c741;
+        }
+        
+        .layer-2 h3 {
+            position: absolute;
+            width: 100%;
+            font-weight: 500;
+            color: #fff;
+            font-size: 26px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: 0.5s;
+        }
+        
+        .layer-2:hover h3 {
+            bottom: 45%;
+            opacity: 1;
+        }
+
+        .layer-3 {
+            background: transparent;
+            width: 100%;
+            height: 68%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+        }
+        
+        .layer-3:hover {
+            /* background: rgba(226, 0, 0, 0.7); */
+            background: #24f8c741;
+        }
+        
+        .layer-3 h3 {
+            position: absolute;
+            width: 100%;
+            font-weight: 500;
+            color: #fff;
+            font-size: 26px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: 0.5s;
+        }
+        
+        .layer-3:hover h3 {
+            bottom: 49%;
+            opacity: 1;
+        }
+
+        div .hero_btn-5{
+            margin: 30px;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+            color: #000;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 12px 34px;
+            font-size: 18px;
+            background: transparent;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        div .hero_btn-5:hover {
+            border: 1px solid #24f8c7;
+            background: #24f8c7;
+            transition: 0.8s;
+        }
+
+        div .hero_btn-6{
+            margin: 30px;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+            color: #000;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 12px 34px;
+            font-size: 18px;
+            background: transparent;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        div .hero_btn-6:hover {
+            border: 1px solid #58A3DB;
+            background: #58A3DB;
+            transition: 0.8s;
+        }
+
+        div .hero_btn-7{
+            margin: 25px;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+            color: #000;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 12px 34px;
+            font-size: 18px;
+            background: transparent;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        div .hero_btn-7:hover {
+            border: 1px solid #A11D1F;
+            background: #A11D1F;
+            transition: 0.8s;
+        }
+        p{
+            font-size: 18px;
+        }
+
+        div .i-2{
+            margin-top: -108px;
+        }
+        div .i-3{
+            margin-top: -20px;
+        }
+        
+        @media(max-width: 700px){
+            .verticalLine{
+                width: 5px;
+            }
+            h1{
+                font-size: 24px;
+                line-height: unset;
+            }
+            .row{
+                flex-direction: column;
+            }
+        }
+
+        /* Course Campus End*/
+        
+        /*Reviews Section Start*/
+
+        .reviews{
+            width: 80%;
+            margin: auto;
+            padding-top: 100px;
+            text-align: center;
+        }
+
+        /*Reviews Section End*/

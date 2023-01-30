@@ -665,5 +665,19 @@ body {
             padding-top: 100px;
             text-align: center;
         }
+        .reviews-col{
+            flex-basis: 44%;
+            border-radius: 10px;
+            text-align: left;
+            margin-bottom: 5%;
+            background: #fff3f3;
+            padding: 25px;
+            cursor: pointer;
+            display: flex;
+        }
+        .reviews-col img{
+            height: 60px;
+            width: 60px;
+        }
 
         /*Reviews Section End*/

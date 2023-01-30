@@ -679,10 +679,10 @@ body {
             height: 60px;
             width: 60px;
         }
-        
+        /*Reviews Section End*/
         .footer-clean {
             padding:50px 0;
-            background-color:#58A3D4;
+            background-color:#24f8c7;
             color:#4b4c4d;
           }
           
@@ -729,41 +729,39 @@ body {
           }
           
           .footer-clean .item.social > a {
-            font-size:24px;
-            width:40px;
-            height:40px;
-            line-height:40px;
-            display:inline-block;
-            text-align:center;
-            border-radius:50%;
-            border:1px solid #ccc;
-            margin-left:10px;
-            margin-top:22px;
-            color:inherit;
-            opacity:0.75;
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            margin-left: 10px;
+            margin-top: 22px;
+            color: inherit;
+            opacity: 0.75;
           }
           
           .footer-clean .item.social > a:hover {
-            opacity:0.9;
+            opacity: 0.9;
           }
           
-          @media (max-width:991px) {
+          @media (max-width: 991px) {
             .footer-clean .item.social > a {
-              margin-top:40px;
+              margin-top: 40px;
             }
           }
           
-          @media (max-width:767px) {
+          @media (max-width: 767px) {
             .footer-clean .item.social > a {
-              margin-top:10px;
+              margin-top: 10px;
             }
           }
           
           .footer-clean .copyright {
-            margin-top:14px;
-            margin-bottom:0;
-            font-size:13px;
-            opacity:0.6;
+            margin-top: 12px;
+            margin-bottom: 0;
+            font-size: 13px;
+            opacity: 0.6;
           }
-
-        /*Reviews Section End*/

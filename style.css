@@ -790,7 +790,7 @@ body {
         }
         
         .sub-header h1 {
-            margin-top: 100px;
+            margin-top: 80px;
         }
         
         .about-us {
@@ -846,5 +846,13 @@ body {
             background: #A11D1F;
             transition: 0.8s;
         }
+        div .img-2{
+            width: 500px;
+            height: 300px;
+        }
         
+        div .icon-4{
+            width: 300px;
+            height: 200px;
+        }
           /*About Section End*/

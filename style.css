@@ -775,3 +775,76 @@ body {
             font-size: 13px;
             opacity: 0.6;
           }
+          /*Footer Section End*/
+
+          /*About Section Start*/
+          .sub-header {
+            height: 50vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), 
+            url(images/car-ban.png);
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .sub-header h1 {
+            margin-top: 100px;
+        }
+        
+        .about-us {
+            text-align: center;
+            width: 80%;
+            margin: auto;
+            padding-top: 80px;
+            padding-bottom: 50px;
+        }
+        
+        .about-col {
+            flex-basis: 48%;
+            padding: 30px 2px;
+        }
+        
+        .about-col img {
+            width: 100%;
+        }
+        
+        .about-col h1 {
+            padding-top: 0;
+        }
+
+        .about-col h3{
+            font-size: 46px;
+            font-weight: 800;
+            margin: 15px 0;
+            line-height: 50px;
+            text-transform: uppercase;
+            color: #24f8c7;
+        }
+        
+        .about-col p {
+            padding: 15px 0 25px;
+        }
+        
+        .hero_btn-8{
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+            color: #000;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 12px 34px;
+            font-size: 18px;
+            background: transparent;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        div .hero_btn-8:hover {
+            border: 1px solid #A11D1F;
+            background: #A11D1F;
+            transition: 0.8s;
+        }
+        
+          /*About Section End*/

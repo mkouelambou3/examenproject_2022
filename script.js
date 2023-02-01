@@ -1,3 +1,8 @@
+$(window).on("load",function(){
+    $(".loader-wrapper").fadeOut("slow");
+  });
+
+
 // navbar togglemenu start
 var navLinks = document.getElementById("navLinks");
 

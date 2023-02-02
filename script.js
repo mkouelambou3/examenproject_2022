@@ -9,3 +9,11 @@ function hideMenu() {
     navLinks.style.right = "-200px";
 }
 // navbar togglemenu end
+function doStuff (callback) {
+    // do all app scripts here...
+    callback();
+  }
+  
+  doStuff(function () {
+    document.body.className = 'visible';
+  });

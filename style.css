@@ -576,21 +576,25 @@
             width: 60px;
         }
         /*Reviews Section End*/
+
+        .footer{
+            height: 10px;
+        }
         .footer-clean {
-            height: 10%;
-            padding: 50px 0;
+            height: 1%;
+            padding: 20px 0;
             background-color:#24f8c7;
             color:#4b4c4d;
           }
           .container nav{
-            margin-top: 60px;
+            margin-top: 150px;
             margin-left: -70%;
-            padding: 10px;
+            padding: -10px;
           }
           
           .footer-clean h3 {
             margin-top:0;
-            margin-bottom:12px;
+            margin-bottom:62px;
             font-weight:bold;
             font-size:16px;
           }

@@ -579,22 +579,52 @@
 
         /*Call to Action Start*/
 
-        .cta{
+        .cta {
             margin: 100px auto;
             width: 80%;
-            background-image: linear-gradient(rgba(0, 0, 0,0.5), rgba(0, 0, 0,0.7),url(images/car-back.png));
+            height: 500px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(images/car-back.png);
             background-size: cover;
             background-position: center;
             border-radius: 10px;
             text-align: center;
             padding: 100px 0;
         }
+        
+        .cta h1 {
+            font-size: 58px;
+            font-weight: 800;
+            margin: 80px 0px;
+            line-height: 1.1;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        .cta h4{
+            margin: 80px 0px;
+            color: #fff;
+        }
+        .hero_btn-contact{
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+            color: #fff;
+            border: 1px solid #fff3f3;
+            border-radius: 5px;
+            padding: 12px 34px;
+            font-size: 18px;
+            background: transparent;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .hero_btn-contact:hover{
+            border: 1px solid #24f8c7;
+            background: #24f8c7;
+            transition: 0.8s;
+        }
 
 
 
         /*Call to Action End*/
-
-
 
 
         /*Footer Section Start*/

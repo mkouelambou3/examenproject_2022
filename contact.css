@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+       margin: 0px;
+       padding: 0px;
+       box-sizing: border-box;
+       font-family: 'Montserrat', sans-serif;
+       font-weight: 600;
+       color: #000;
+}
+
+.contact{
+       background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+       url(images/car-background_banner.jpg);
+       background-size: cover;
+       background-position: center;
+       position: absolute;
+       width: 100%;
+       min-height: 100%;
+       padding: 15px;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       align-items: center;
+}
+
+.container-contact{
+       opacity: 0.8;
+       width: 1163px;
+       background: #fff;
+       border-radius: 10px;
+       overflow: hidden;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       align-items: center;
+       padding: 90px 130px 88px 148px;
+}
+
+img{
+      transition: transform  .7s ease-in-out;
+     }
+
+img:hover{
+       transform: rotateX(360deg);
+}
+
+.contact-form-title{
+       margin-bottom: -20px;
+       opacity: 0.4;
+       opacity: 3;
+       display: block;
+       font-weight: 800;
+       font-family: 'Montserrat', sans-serif;
+       font-size: 28px;
+       color: #333;
+       line-height: 1.2;
+       text-align: center;
+       padding-bottom: 44px;
+}
+
+.input{
+       display: block;
+       width: 100%;
+       background: #e6e6e6;
+       font-family: 'Montserrat ExtraBold';
+       font-size: 15px;
+       line-height: 1.5;
+       color: #666;
+       outline: none;
+       border: none;
+}
+
+input.input{
+       z-index: 1;
+       width: 500px;
+       height: 60px;
+       border-radius: 25px;
+       padding: 0 30px;
+       margin-bottom: 20px;
+}
+
+textarea{
+       writing-mode: horizontal-tb !important;
+       text-rendering: auto;
+       letter-spacing: normal;
+       word-spacing: normal;
+       text-transform: none ;
+       text-indent: 0px;
+       appearance: auto;
+       -webkit-rtl-rendering: logical;
+       white-space: pre-wrap;
+       column-count: initial !important;
+       border-color: internal light dark(rgb(118, 118, 188), rgb(133, 133, 133));
+       overflow: auto;
+       resize: vertical;
+       touch-action: manipulation;
+
+}
+
+textarea.input{
+       margin-bottom: 20px;
+       min-height: 150px;
+       border-radius: 25px;
+       padding: 12px 30px;
+}
+
+
+textarea:focus, input:focus {
+       border-color: transparent !important;
+     }
+
+     input::-webkit-input-placeholder { color: #999999; }
+     input:-moz-placeholder { color: #999999; }
+     input::-moz-placeholder { color: #999999; }
+     input:-ms-input-placeholder { color: #999999; }
+     
+     textarea::-webkit-input-placeholder { color: #999999; }
+     textarea:-moz-placeholder { color: #999999; }
+     textarea::-moz-placeholder { color: #999999; }
+     textarea:-ms-input-placeholder { color: #999999; }
+
+.validate-input{
+       position: relative;
+}
+
+.wrap-input{
+       width: 100%;
+       z-index: 1;
+       margin-bottom: 20px;
+}
+@media(max-width: 768px){
+       .contact-form{
+              width: 100%;
+       }
+}
+
+@media(max-width: 1000px){
+       .contact-form{
+              width: 100%;
+       }
+}
+
+@media(max-width: 700px){
+       .contact-form{
+              width: 100%;
+       }
+}
+
+p{
+       margin-top: 30px;
+       font-size: 15px;
+}
+
+ nav{
+       display: flex;
+       padding: 10px 70px;
+       align-items: center;
+       text-align: center;
+       justify-content: space-between;
+}
+
+
+
+   .contact-form-btn {
+       margin-left: 120px;
+       min-width: 193px;
+       height: 50px;
+       border-radius: 25px;
+       background: #57b846;
+       font-family: Montserrat-Bold;
+       font-size: 15px;
+       line-height: 1.5;
+       color: #fff;
+       display: -webkit-box;
+       display: -webkit-flex;
+       display: -moz-box;
+       display: -ms-flexbox;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 0 25px;
+       -webkit-transition: all .4s;
+       -o-transition: all .4s;
+       -moz-transition: all .4s;
+       transition: all .4s;
+   }
+
+   .contact-form-btn:hover {
+       background: #333;
+   }
+
+   button:hover {
+       cursor: pointer;
+   }
+
+   button, input {
+       overflow: visible;
+   }

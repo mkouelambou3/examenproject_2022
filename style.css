@@ -863,4 +863,24 @@
             width: 400px;
             height: 200px;
         }
+
+        div .lease-car{
+            width: 500px;
+        }
+
+        div p.lease-text{
+            text-align: center;
+            font-weight: 600;
+        }
+
+        div p.lease-text-area{
+            text-align: center;
+            font-weight: 600;
+        }
+
+        div .pricing-car{
+            margin: -100px;
+            width: 500px;
+            height: 500px;
+        }
           /*About Section End*/

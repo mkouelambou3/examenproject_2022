@@ -1,0 +1,56 @@
+<html>
+   <head>
+       <title>POC Share Wheels - Contact Login Form</title>
+       <meta charset = "UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="home-icon" type="image/png" href="images/favicon.ico"/>
+   </head>
+   <body>
+              <div class="contact">
+                     <div class="container-contact">
+                            <div class="contact-pic js-tilt" data-tilt>
+                                   <img src="images/img-01.png" alt="IMG">
+                            </div>
+
+                     <form id="contact-form" method="post" action="contact.php" role="form">
+                            <form class="contact-form validate-form">
+                                   <span class="contact-title">
+                                          Get in Touch
+                                   </span>
+
+                            <div class="wrap-input validate-input" data-validate = "Name is required">
+                                   <input class="input" type="text" name="name" placeholder="Name">
+                                   <span class="shadow-input"></span>
+                            </div>
+
+                            <div class="wrap-input validate-input" data-validate = "Valid email is required">
+                                   <input class="input" type="text" name="email" placeholder="Email">
+                                   <span class="shadow-input"></span>
+                            </div>
+
+                            <div class="wrap-input validate-input" data-validate = "Subject is required">
+                                   <input class="input" type="text" name="subject" placeholder="Subject">
+                                   <span class="shadow-input"></span>
+                            </div>
+
+                            <div class="wrap-input validate-input" data-validate = "Message is required">
+					<textarea class="input" name="message" placeholder="Message"></textarea>
+					<span class="shadow-input"></span>
+				</div>
+
+                            <div class="container-contact-form-btn">
+                                   <button class="contact-form-btn">
+                                          <span>
+                                                 Send Message
+                                                 <i class="fa-regular fa-arrow-right" aria-hidden="true"></i>
+                                          </span>
+                                   </button>
+                            </div>
+                            </form>
+                     </form>
+                     </div>
+              </div>
+
+
+   </body>
+</html>

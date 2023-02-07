@@ -34,14 +34,17 @@
    }
 
    nav .logo{
+    
         margin-bottom: 20px;
         text-decoration: none;
-        font-size: 24px;
+        font-size: 20px;
         color: #fff3f3;
         font-weight: bold;
    }
 
    nav .fa-solid{
+         margin-bottom: 15px;
+        padding: 10px;
         font-size: 40px;
         color: #58A3DB;
    }
@@ -883,4 +886,3 @@
             height: 500px;
         }
         /*About Section End*/
-        

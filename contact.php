@@ -7,6 +7,13 @@
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
 
+    $name = "";
+    $email = "";
+    $select = "";
+    $content = "";
+    $message = "";
+
+
   $name = $_POST["user_name"];
   $email = $_POST["user_email"];
   $select = $_POST["select"];

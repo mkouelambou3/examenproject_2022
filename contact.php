@@ -69,4 +69,6 @@
   $stmt->bindParam(":ph_message", $message);
   $stmt->execute();
   $stmt->errorInfo();
+
+  
 ?>

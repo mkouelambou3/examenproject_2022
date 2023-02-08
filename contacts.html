@@ -13,30 +13,30 @@
                      <a href="home.html" class="logo">
                             <i class="fa-solid fa-car-side"></i> POC Share Wheels
                      </a>
+              </nav>
        </section>
        <div class="container">
-              <form action="contacts.php" method="post">
+              <form action="contacts.php" method="POST">
                      <h1>Our Contact Form</h1>
                      <p>Heeft u vragen over ons? Neem gerust contact met ons op.</p>
-                     <label for="fullname"> Naam</label>
-                     <input type="text" id="flname" placeholder="uw naam..." required>
+                     <label for="name"> Naam</label>
+                     <input type="text" name="user_name" id="name" placeholder="uw naam..." value="Mike" required>
                      <label for="email"> Email</label>
-                     <input type="email" id="email" placeholder="uw email..." required>
-                     <label for="subject-selection">Kies uw Onderwerp</label>
-                     <select id="subject-selection" name="sub-selection">
+                     <input type="email" id="email" name="user_email" placeholder="uw email..." value="mkouelambou@gmail.com" required>
+                     <label for="select">Kies uw Onderwerp</label>
+                     <select id="select" name="select">
                             <option value="">Selecteer uw probleem</option>
                             <option value="billing">Problemen met aankoop</option>
                             <option value="tech">Technische problemen</option>
                             <option value="support">Support</option>
                      </select>
-                     <label for="title">Heeft u vragen over ons?</label>
-                     <input type="text" id="title" name="email_title" required
-                     placeholder="Heeft u vragen over ons?" pattern=[A-Za-z0-9\s]{8,60}>
+                     <label for="content">Heeft u vragen over ons?</label>
+                     <input type="text" id="content" name="content" required
+                     placeholder="Heeft u vragen over ons?" value="geen vragen" pattern=[A-Za-z0-9\s]{8,60}>
                      <label for="message">Message</label>
-                     <textarea id="message" rows="4" placeholder="Waar kunnen u mee helpen?"></textarea>
+                     <textarea id="message" name="message" rows="4" placeholder="Waar kunnen u mee helpen?"></textarea>
                      <button type="submit">Send Message</button>
               </form>
        </div>
-      
-                 
+
 </html>

@@ -1,28 +1,14 @@
 <?php
-function strip_crlf($string)
-{
-       return str_replace("\r\n", "", $string);
-}
-if (!empty($_POST["send"])) {
-       $name = $_POST["userName"];
-       $email = $_POST["userEmail"];
-       $subject = $_POST["subject"];
-       $content = $_POST["content"];
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "poc_share_wheels";
 
-       $toEmail = "mkouelambou@gmail.com";
-       $name = strip_crlf($name);
-       $email = strip_crlf($email);
+  $conn = new mysqli($servername,$username,$password,$dbname);
 
-       if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
-              echo "The email address is invalid.";
-          } else {
-              // appending \r\n at the end of mailheaders for end
-              $mailHeaders = "From: " . $name . "<" . $email . ">\r\n";
-              if (mail($toEmail, $subject, $content, $mailHeaders)) {
-                  $message = "Uw contact info is veilig ontvangen..";
-                  $type = "success";
-              }
-          }
-      }
-require_once "contact-view.php";
+  if($conn->connect_error) {
+        die("Connection Failed" .$conn->connect_error);
+  }
+
+  $name = $_POST["user_name"];
 ?>

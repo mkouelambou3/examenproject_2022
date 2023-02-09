@@ -30,6 +30,9 @@
 
 
 <?php
+
+  include "./mail.php";
+
   $servername = "localhost";
   $username = "root";
   $password = "";
@@ -70,5 +73,15 @@
   $stmt->execute();
   $stmt->errorInfo();
 
+   echo sendEmail($email, 'POC Share Wheels Response Contact Form',
+   'Beste Bezoeker,
+   Bedankt u contact heeft opgenomen met POC Share Wheels. Wij zullen zo snel mogelijk 
+   proberen om uw terug te bereiken.
+   Check meer op onze site voor onze contacttijden.');
   
+
+  //TODO: Include mail.php in this file.
+  //TODO: Create functon to send email.
+  //TODO: Call function with email from post data.
+
 ?>

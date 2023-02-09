@@ -533,10 +533,11 @@
         }
         p{
             font-size: 18px;
+            font-weight: 500;
         }
 
         div .i-2{
-            margin-top: -108px;
+            margin-top: -92px;
         }
         div .i-3{
             margin-top: -20px;
@@ -571,13 +572,17 @@
             text-align: left;
             margin-bottom: 5%;
             background: #fff3f3;
-            padding: 25px;
+            padding: 20px;
             cursor: pointer;
             display: flex;
         }
         .reviews-col img{
             height: 60px;
             width: 60px;
+        }
+
+        .reviews-col h3{
+            margin-left: -2px;
         }
         /*Reviews Section End*/
 
@@ -596,15 +601,15 @@
         }
         
         .cta h1 {
-            font-size: 58px;
+            font-size: 50px;
             font-weight: 800;
-            margin: 80px 0px;
+            margin: 30px 0px;
             line-height: 1.1;
             text-transform: uppercase;
             color: #fff;
         }
         .cta h4{
-            margin: 80px 0px;
+            margin: 40px 0px;
             color: #fff;
         }
 
@@ -635,132 +640,6 @@
 
 
         /*Call to Action End*/
-
-
-        /*Footer Section Start*/
-        .footer{
-            height: 10px;
-        }
-        .footer-clean {
-            height: 1%;
-            padding: 20px 0;
-            background-color:#24f8c7;
-            color:#4b4c4d;
-          }
-          .container nav{
-            margin-top: 150px;
-            margin-left: -70%;
-            padding: -10px;
-          }
-          
-          .footer-clean h3 {
-            margin-top:0;
-            margin-bottom:62px;
-            font-weight:bold;
-            font-size:16px;
-          }
-          
-          .footer-clean ul {
-            padding:0;
-            list-style:none;
-            line-height:1.6;
-            font-size:14px;
-            margin-bottom:0;
-          }
-
-          .footer-clean li {
-            padding-top: 30px;
-          }
-          
-          .footer-clean ul a {
-            text-align: center;
-            justify-content: center;
-            color:inherit;
-            text-decoration:none;
-            opacity:0.8;
-          }
-          
-          .footer-clean ul a:hover {
-            opacity:1;
-          }
-          
-          .footer-clean .item.social {
-            text-align:right;
-          }
-          @media(max-width: 700px){
-            .verticalLine{
-                width: 1px;
-            }
-            h1{
-                font-size: 24px;
-                line-height: unset;
-            }
-            .row{
-                flex-direction: column;
-            }
-        }
-          
-          @media (max-width:767px) {
-            .footer-clean .item {
-              padding-bottom:20px;
-            }
-          }
-
-          @media(max-width: 767px) {
-            nav .logo{
-                padding: 5px;
-            }
-          }
-          
-          @media (max-width: 767px) {
-            .footer-clean .item.social {
-              justify-content: center;
-              text-align:center;
-            }
-          }
-          
-          .footer-clean .item.social > a {
-            font-size: 24px;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            display: inline-block;
-            text-align: center;
-            border-radius: 50%;
-            border: 1px solid #ccc;
-            margin-left: 10px;
-            margin-top: 22px;
-            color: inherit;
-            opacity: 0.75;
-          }
-          
-          .footer-clean .item.social > a:hover {
-            opacity: 0.9;
-          }
-          
-          @media (max-width: 991px) {
-            .footer-clean .item.social > a {
-                text-align: center;
-                justify-content: center;
-              margin-top: 40px;
-            }
-          }
-          
-          @media (max-width: 767px) {
-            .footer-clean .item.social > a {
-            text-align: center;
-            justify-content: center;
-              margin-top: 10px;
-            }
-          }
-          
-          .footer-clean .copyright {
-            margin-top: 12px;
-            margin-bottom: 0;
-            font-size: 13px;
-            opacity: 0.6;
-          }
-          /*Footer Section End*/
 
           /*About Section Start*/
           .sub-header {
@@ -857,22 +736,35 @@
         }
 
         div .icon-8{
-            width: 400px;
+            width: 350px;
             height: 200px;
         }
 
         div .icon-9{
-            width: 400px;
+            width: 360px;
+            height: 200px;
+        }
+
+        div .icon-10{
+            width: 200px;
+            height: 200px;
+        }
+        div .icon-11{
+            width: 200px;
+            height: 200px;
+        }
+        div .icon-12{
+            width: 200px;
             height: 200px;
         }
 
         div .lease-car{
-            width: 500px;
+            width: 100px;
         }
 
         div p.lease-text{
             text-align: center;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         div p.lease-text-area{
@@ -881,8 +773,87 @@
         }
 
         div .pricing-car{
-            margin: -100px;
-            width: 500px;
-            height: 500px;
+            padding: 20px;
+            width: 400px;
+            height: 400px;
         }
         /*About Section End*/
+
+        /*Footer Section Start*/
+
+        footer{
+            display: block;
+        }
+
+        .footer-page{
+            padding: 5rem 0;
+            background-color: #000;
+            color: #777;
+        }
+
+        .container{
+        @media (min-width: 768px)
+        {
+        max-width: 720px;
+        }
+        }
+
+        .container{
+            width: 2000px;
+        }
+
+        .mb-6{
+            margin-bottom: 3rem! important;
+        }
+        
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        i.fa-solid{
+            font-size: 26px;
+            margin: 5px;
+            color: #58A3DB;
+        }
+
+        .footer-page .footer-site-logo{
+            margin-left: 5%;
+            text-decoration: none;
+            color: #fff3f3;
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        h5{
+            margin: 10px;
+        }
+        
+        h6{
+            margin: 10px;
+        }
+
+
+        h3{
+            margin-left: 5%;
+        }
+
+        .text-white{
+            padding-top: 10px;
+            align-self: auto;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .d-flex{
+            margin: 10px;
+        }
+
+       
+
+        
+        /*Footer Section End*/

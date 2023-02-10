@@ -1,39 +1,24 @@
-(function($) {
-       "use strict";
-       var input = $('.validate-input .input100');
-       $('.validate-form').on('submit', function() {
-           var check = true;
-           for (var i = 0; i < input.length; i++) {
-               if (validate(input[i]) == false) {
-                   showValidate(input[i]);
-                   check = false;
-               }
-           }
-           return check;
-       });
-       $('.validate-form .input100').each(function() {
-           $(this).focus(function() {
-               hideValidate(this);
-           });
-       });
-       function validate(input) {
-           if ($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
-               if ($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
-                   return false;
-               }
-           } else {
-               if ($(input).val().trim() == '') {
-                   return false;
-               }
-           }
-       }
-       function showValidate(input) {
-           var thisAlert = $(input).parent();
-           $(thisAlert).addClass('alert-validate');
-       }
-       function hideValidate(input) {
-           var thisAlert = $(input).parent();
-           $(thisAlert).removeClass('alert-validate');
-       }
-   }
-   )(jQuery);
+function validate_password() {
+    var pass = document.getElementById('password').value;
+    var confirm_pass = document.getElementById('re-password').value;
+    if (password != re-password) {
+        document.getElementById('wrong_pass_alert').style.color = 'red';
+        document.getElementById('wrong_pass_alert').innerHTML = '☒ Wachtwoorden moeten gelijk zijn.';
+        document.getElementById('submit').disabled = true;
+        document.getElementById('submit').style.opacity = (0.4);
+    } else {
+        document.getElementById('wrong_pass_alert').style.color = 'green';
+        document.getElementById('wrong_pass_alert').innerHTML = '🗹 Wachtwoorden zijn gelijk';
+        document.getElementById('submit').disabled = false;
+        document.getElementById('submit').style.opacity = (1);
+    }
+}
+
+function wrong_pass_alert() {
+    if (document.getElementById('password').value != "" &&
+    document.getElementById('submit').value != "") {
+        alert("Uw gegevens zijn opgeslagen.");
+    } else {
+        alert("Voer alle velden in alstublieft.")
+    }
+}

@@ -16,7 +16,7 @@
               font-family: 'Poppins', sans-serif;
               font-weight: 400;
               line-height: 1.7;
-              color: #666;
+              color: #777;
               margin: 0;
               transition: all .4s;
        }
@@ -56,15 +56,13 @@
              color: #58A3DB;
         }
 
-        
-
-        p{
+        p {
               text-align: center;
-              margin-left: -400px;
+              margin-left: -379px;
               font-size: 13px;
         }
 
-       input {
+        input {
               outline: none;
               border: none;
        }
@@ -89,7 +87,7 @@
        }
 
        .txt1 {
-              margin-left: 50px;
+              margin-left: 95px;
               font-family: 'Poppins', sans-serif;
               font-size: 13px;
               line-height: 1.5;
@@ -102,8 +100,8 @@
 
 
        .txt3 {
-              margin-bottom: 20px;
-              margin-left: 110px;
+              margin-bottom: 30px;
+              margin-left: 60px;
               font-family: 'Poppins', sans-serif;
               line-height: 1.5;
               font-size: 13px;
@@ -125,7 +123,7 @@
               align-items: center;
               padding: 15px;
               background: #9053c7;;
-              background: -webkit-linear-gradient(-135deg,#24f8c7,#4158d0);
+              background: -webkit-linear-gradient(-135deg,#c805c0,#4158d0);
        }
 
        .wrap-signup100 {
@@ -144,7 +142,7 @@
        }
 
        .signup100-pic {
-              padding-top: 70px;
+              padding-top: 10px;
               width: 316px;
        }
 
@@ -174,7 +172,7 @@
               z-index: 1;
               margin-bottom: 10px;
        }
-       
+
        .input100 {
               margin: 15px;
               font-family: 'Poppins', sans-serif;
@@ -204,7 +202,7 @@
 
        .input100:focus+.focus-input100 {
               -webkit-animation: anim-shadow .5s ease-in-out forwards;
-              animation: anim-shadow .5s ease-in-out forwards
+              animation: anim-shadow .5s ease-in-out forwards;
        }
 
        @-webkit-keyframes anim-shadow {
@@ -217,11 +215,11 @@
        @keyframes anim-shadow {
               to {
                   box-shadow: 0 0 70px 25px;
-                  opacity: 0
+                  opacity: 0;
               }
           }
 
-       .symbol-input100 {
+          .symbol-input100 {
               font-size: 15px;
               display: -webkit-box;
               display: -webkit-flex;
@@ -250,6 +248,7 @@
        }
 
        .container-signup100-form-btn {
+              padding: 10px;
               margin-left: 8px;
               width: 100%;
               display: -webkit-box;
@@ -274,7 +273,7 @@
               width: 50%;
               height: 50px;
               border-radius: 25px;
-              background: #57b846;
+              background: #000;
               display: -webkit-box;
               display: -webkit-flex;
               display: -moz-box;
@@ -290,19 +289,19 @@
        }
 
        .signup100-form-btn:hover {
-              background: #333;
+              background: #24bc87;
        }
 
        @media(max-width: 992px) {
-              .wrap-login200 {
+              .wrap-signup100 {
                   padding:177px 90px 33px 85px;
               }
           
-              .signin100-pic {
+              .signup100-pic {
                   width: 35%
               }
           
-              .login100-form {
+              .signup100-form {
                   width: 50%
               }
 
@@ -310,23 +309,24 @@
                      width: 50%;
               }
           }
-          
+
+           
           @media(max-width: 768px) {
-              .wrap-login100 {
+              .wrap-signup100 {
                   padding:100px 80px 33px;
               }
           
-              .login100-pic {
+              .signup100-pic {
                   display: none;
               }
           
-              .login100-form {
+              .signup100-form {
                   width: 100%;
               }
           }
-          
+
           @media(max-width: 576px) {
-              .wrap-login100 {
+              .wrap-signup100 {
                   padding:100px 15px 33px;
               }
           }
@@ -370,7 +370,7 @@
               -moz-transition: opacity .4s;
               transition: opacity .4s
           }
-          
+
           .alert-validate::after {
               visibility: visible;
               content: "\f06a";
@@ -408,3 +408,4 @@
               font-weight: 500;
               color: #ff000f;
           }
+

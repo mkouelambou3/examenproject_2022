@@ -8,35 +8,15 @@
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>POC Share Wheels - Car Rental Website</title>
        <link rel="stylesheet" href="style.css">
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" 
-       integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" 
-       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-              integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-              crossorigin="anonymous"></script>
+       <link rel="stylesheet" 
+       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
+       crossorigin="anonymous"></script>
        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap"
-              rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet">
        <script src="https://kit.fontawesome.com/d6dc7c8001.js" crossorigin="anonymous"></script>
 </head>
-
-<body>
-  <script>
-    document.body.className = 'hidden';
-  </script>
-</style>
 <style>
-       .hidden {
-       opacity: 0;
-       }
-
-       .visible {
-       opacity: 1;
-       transition: 1.5s;
-       transition: opacity 3s ease-out;
-    }
-       
        h1 {
               font-size: 46px;
               font-weight: 800;
@@ -46,36 +26,36 @@
               color: #24f8c7;
        }
 </style>
-              <div class="loader"></div>
-              <section class="header">
-                     <nav>
+<body>
+       <section class="header">
+
+              <nav>             
                      <a href="home.html" class="logo">
-                            <i class="fa-solid fa-car-side"></i>POC Share Wheels
+                     <i class="fa-solid fa-car-side"></i> POC Share Wheels 
                      </a>
-                     
                      <div class="nav-links" id="navLinks">
                             <!-- Reposnive bar open and close -->
                             <i class="fa fa-times" onclick="hideMenu()"></i>
                             <ul>
-                                   <li><a href="#">Home</a></li>
-                                   <li><a href="about.html">Over Ons</a></li>
-                                   <li><a href="#">Producten</a></li>
-                                   <li><a href="#">Reserveren</a></li>
-                                   <li><a href="signup.html">Login</a></li>
-                                   <li><a href="contact.html">Contact</a></li>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Over Ons</a></li>
+                                <li><a href="#">Producten</a></li>
+                                <li><a href="#">Reserveren</a></li>
+                                <li><a href="#">Login</a></li>
+                                <li><a href="#">Contact</a></li>
                             </ul>
-                     </div>
-                     <i class="fa fa-bars" onclick="showMenu()"></i>
-                     <!-- Reposnive bar open and close -->
+                        </div>
+                        <i class="fa fa-bars" onclick="showMenu()"></i>
+                        <!-- Reposnive bar open and close -->
               </nav>
 
 
               <div class="text_box">
                      <h2>GET IN TOUCH</h2>
                      <p id="headtext">DISCOVER OUR CAR RENTALSHIP</p>
-                     <p class="text">POC Share Wheels zijn opgericht als een manier om duurzaam te rijden/huren. <br>
-                            Het is efficent voor toegankelijke reguliere chauffeurs. "Wat mensen nodig <br> hebben,
-                            is regulier vervoer."</p>
+                     <p class="text">POC Share Wheels zijn opgericht als een manier om duurzaam te rijden. <br>
+                     Het is efficent voor toegankelijke  reguliere chauffeurs. "Wat mensen nodig <br> hebben, 
+                     is regulier vervoer."</p>
                      <a href="#" class="hero_btn">Visit Us Today</a>
 
               </div>
@@ -86,23 +66,23 @@
                      <div class="verticalLine"></div>
                      <div class="Clear"></div>
               </div>
-              <h1>CHECK ONZE DIENSTEN <br> & ASSORTIMENT</h1>
-              <p>Ontdek hier onze diensten/assortiment bij POC Share Wheels.</p>
+               <h1>CHECK ONZE DIENSTEN <br> & ASSORTIMENT</h1>
+               <p>Ontdek hier onze diensten/assortiment bij POC Share Wheels.</p>
 
-              <div class="row">
+               <div class="row">
                      <div class="course-col">
                             <img src="images/lease-icon.png" class="icon-1">
                             <h3>Lease</h3>
-                            <p>Lekker gemakkelijk, efficent en snel.
-                                   Bij POC Share Wheels kunt u altijd een lease auto huren
-                                   voor de beste tarief en prijs.</p>
+                            <p>Lekker gemakkelijk, efficent en snel. 
+                             Bij POC Share Wheels kunt u altijd een lease auto huren
+                            voor de beste tarief en prijs.</p>
                             <a href="#" class="hero_btn-2">Lees Meer</a>
                      </div>
                      <div class="course-col">
                             <img src="images/car-service.png" class="icon-2">
                             <h3>Levering en Service</h3>
                             <p>Levering en Service gaat lekker soepel bij POC Share Wheels.
-                                   Wij zorgen voor uitstekende levering en service is zo lekker snel geregeld.
+                             Wij zorgen voor uitstekende levering en service is zo lekker snel geregeld.
                             </p>
                             <a href="#" class="hero_btn-3">Lees Meer</a>
                      </div>
@@ -110,12 +90,12 @@
                             <img src="images/car-price.png" class="icon-3">
                             <h3>Prijzen en Voorwaarden</h3>
                             <p>Lage prijzen, vaste tarieven.
-                                   Bij POC Share Wheels kunt u kiezen uit meerdere verschillende auto's,
-                                   van normale auto's tot aan bestelwagens en eventueel vrachtauto's.
+                             Bij POC Share Wheels kunt u kiezen uit meerdere verschillende auto's,
+                             van normale auto's tot aan bestelwagens en eventueel vrachtauto's.
                             </p>
                             <a href="#" class="hero_btn-4">Lees Meer</a>
                      </div>
-              </div>
+                 </div>
        </section>
        <!-- Course Section End-->
 
@@ -131,27 +111,27 @@
               <div class="row">
                      <div class="campus-col">
                             <img src="images/persons-car.jpg" alt="" class="i-1">
-                            <div class="layer-1">
-                                   <h3>Personenauto's</h3>
-                            </div>
-                            <a href="#" class="hero_btn-5">Check Het Assortiment</a>
+                         <div class="layer-1">
+                             <h3>Personenauto's</h3>
+                         </div>
+                         <a href="#" class="hero_btn-5">Check Het Assortiment</a>
 
                      </div>
                      <div class="campus-col">
                             <img src="images/delivery-cars.jpg" alt="" class="i-2">
-                            <div class="layer-2">
-                                   <h3>Bestelwagens</h3>
-                            </div>
-                            <a href="#" class="hero_btn-6">Check Het Assortiment</a>
+                         <div class="layer-2">
+                             <h3>Bestelwagens</h3>
+                         </div>
+                         <a href="#" class="hero_btn-6">Check Het Assortiment</a>
                      </div>
                      <div class="campus-col">
                             <img src="images/hyper-car.png" alt="" class="i-3">
-                            <div class="layer-3">
-                                   <h3>Sportauto's</h3>
-                            </div>
-                            <a href="#" class="hero_btn-7">Check Het Assortiment</a>
+                         <div class="layer-3">
+                            <h3>Sportauto's</h3> 
+                         </div>
+                         <a href="#" class="hero_btn-7">Check Het Assortiment</a>
                      </div>
-              </div>
+                 </div>
        </section>
        <!-- Campus Section End-->
 
@@ -163,200 +143,15 @@
                      <div class="verticalLine"></div>
                      <div class="Clear"></div>
               </div>
-              <h1>Wat de klanten over ons zeggen</h1>
-              <p>Hier bij POC Share Wheels delen klanten hun ervaringen bij het bezoeken van onze site.</p>
+              <h1>WAT DE KLANTEN ZEGGEN OVER ONS</h1>
+              <p>Hier delen onze klanten reviews over het bedrijf POC Share Wheels zelf. Bekijk wat de klanten over ons zeggen.</p>  
 
               <div class="row">
                      <div class="reviews-col">
-                            <img src="images/user.png" alt="oo..">
-                            <div>
-                                   <p>Mijn vrouw vond het tijd dat ik eens een auto ga huren. Ik zat uren op het
-                                          internet te zitten en kwam deze website genaamd POC Share Wheels. Ik dacht van
-                                          mezelf "Ik
-                                          ga het wel eens proberen." Laatst een personenauto gehuurd en mijn vrouw vond
-                                          het geweldig.
-                                          Ze kwamen voor een voor hele scherpe prijs. Daarnaast erg goede service en
-                                          uitstekende kwaliteit.
-                                          Zeker een aanrader!
-                                   </p>
-                                   <h3>Tim Sanders</h3>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                            </div>
-                     </div>
-                     <div class="reviews-col">
-                            <img src="images/user-2.png" alt="oo..">
-                            <div>
-                                   <p>Ik kwam tegen een hele leuke site tegen genaamd POC Share Wheels. Ik bekekte de
-                                          site en
-                                          het zag er goed uit. Ik besloot om eens een auto te huren. Het kwam voor een
-                                          aantrekkelijke prijs, klein minpuntje
-                                          de service. Het proces heeft iets langer geduurd dan normaal, maar de rest een
-                                          uitstekende website.
-                                   </p>
-                                   <h3>Sandra Van Dijk</h3>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star-half-alt"></i>
-                            </div>
-                     </div>
-                     <div class="reviews-col">
-                            <img src="images/user-3.png" alt="oo..">
-                            <div>
-                                   <p>POC Share Wheels, de toekomst van auto huren! Uitstekende service, uitgebreid
-                                          assortiment.
-                                   </p>
-                                   <h3>Alexander Hoekstra</h3>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                            </div>
-                     </div>
-                     <div class="reviews-col">
-                            <img src="images/user-4.png" alt="oo..">
-                            <div>
-                                   <p>Toen ik deze site bezocht had ik op het eerste oog niet veel verwachtigen.
-                                          Maar toen ik de producten zag, de services die zij bieden had ik hoge
-                                          verwachtigen.
-                                          Verder erg fijn te gebruiken.
-                                   </p>
-                                   <h3>Sara Dekker</h3>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                            </div>
+                        <img src="" alt="">   
                      </div>
               </div>
        </section>
+
        <!-- Reviews Section End -->
-
-       <!-- Call to Action Start -->
-
-       <section class="cta">
-              <h1>GET READY FOR CONTACT</h1>
-              <h4>Heeft u meer vragen over onze producten, prijzen en onze voorwaarden? <br> Neem gerust contact met ons op.</h4>
-              <a href="contact.html" class="hero_btn-contact">CONTACT US</a>
-          </section> 
-       <!-- Call to Action End -->
-
-
-       <!-- Footer Section Start -->
-       <body>
-              <div class="container my-5">
-
-                     <footer
-                     class="text-center text-lg-start text-white" style="background-color: #24b8c7;">
-
-                     <section class="d-flex justify-content-between p-4" 
-                     style="background-color: #58A3DB">
-                     <div class="me-5">
-                            <span>Volg ons op onze sociale media:</span>
-                          </div>
-                          <div>
-                            <a href="https://www.facebook.com/" class="text-white me-4">
-                                 <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.twitter.com/" class="text-white me-4">
-                                   <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://www.instagram.com/" class="text-white me-4">
-                                   <i class="fab fa-instagram"></i>
-                                 </a>
-                            <a href="" class="text-white me-4">
-                                   <i class="fab fa-linkedin"></i>
-                            </a>
-                            </div>
-                     </section>
-
-                     <section class="">
-                            <div class="container text-center text-md-start mt-5">
-                              <!-- Grid row -->
-                              <div class="row mt-3">
-                                <!-- Grid column -->
-                                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                                  <!-- Content -->
-                                  <h6 class="text-uppercase fw-bold">POC Share Wheels</h6>
-                                  <h6>
-                                    Bij POC Share Wheels bieden wij de toekomst van auto's huren.
-                                    Altijd alles tegen een scherpe lage prijs, zeer goede kwaliteit.
-                                    De toekomst van huren. POC Share Wheels.
-                                  </h6>
-                                </div>
-                                <!-- Grid column -->
-                      
-                                <!-- Grid column -->
-                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                                  <!-- Links -->
-                                  <h6 class="text-uppercase fw-bold">Over Ons</h6>
-                                  <p>
-                                    <a href="about.html" class="text-white">Lease</a>
-                                  </p>
-                                  <p>
-                                    <a href="about.html" class="text-white">Levering en Service</a>
-                                  </p>
-                                  <p>
-                                    <a href="about.html" class="text-white">Prijzen en Voorwaarden</a>
-                                  </p>
-                                 
-                                </div>
-                                <!-- Grid column -->
-                      
-                                <!-- Grid column -->
-                                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                                  <!-- Links -->
-                                  <h6 class="text-uppercase fw-bold">Producten</h6>
-                                  <p>
-                                    <a href="about.html" class="text-white">Personenauto's</a>
-                                  </p>
-                                  <p>
-                                    <a href="about.html" class="text-white">Bestelwagens</a>
-                                  </p>
-                                  <p>
-                                    <a href="about.html" class="text-white">Sportauto's</a>
-                                  </p>
-                                </div>
-                                <!-- Grid column -->
-                      
-                                <!-- Grid column -->
-                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                                  <!-- Links -->
-                                  <h6 class="text-uppercase fw-bold">Contact</h6>
-                                  <p><i class="fas fa-home mr-3"></i> Apollolaan 1, 1076 NN, AM</p>
-                                  <p><i class="fas fa-envelope mr-3"></i> mkouelambou@gmail.com</p>
-                                  <p><i class="fas fa-phone mr-3"></i> +31 06 86 10 37 26</p>
-                                </div>
-                                <!-- Grid column -->
-
-                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                                   <!-- Links -->
-                                   <h6 class="text-uppercase fw-bold">Conacttijden</h6>
-                                   <h5>MA : 9:00 - 17:00</h5>
-                                   <h5>DI : 9:00 - 17:00</h5>
-                                   <h5>WO : 9:00 - 17:00</h5>
-                                   <h5>DO : 9:00 - 17:00</h5>
-                                   <h5>VR : 9:00 - 17:00</h5>
-                                   <h5>ZA : 9:00 - 12:00</h5>
-                                   <h5>ZO : 9:00 - 12:00</h5>
-                                 </div>
-                              </div>
-                              <!-- Grid row -->
-                            </div>
-                          </section>
-                        
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-          </body>
-
-       <!-- Footer Section End -->
-
        <script src="script.js"></script>
-</body>
-
-</html>

@@ -50,12 +50,12 @@
      <span class="txt1">
      Forgot
      </span>
-     <a class="txt2" href="#">
+     <a class="txt2" href="forgot-password.php">
      Password?
      </a>
      </div>
     <div class="text-center p-t-136">
-    <a class="txt3" href="signup.html">
+    <a class="txt3" href="register.php">
     Nog geen lid? Registreer nu.
     <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
     </a>

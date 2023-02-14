@@ -1,3 +1,41 @@
+
+
+<?php
+    include 'config.php';
+    $msg = "";
+
+    if (isset($_POST['submit'])) {
+        $naam = mysqli_real_escape_string($conn, $_POST['naam']);
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $password = mysqli_real_escape_string($conn, md5($_POST['password']));
+        $confirm_password = mysqli_real_escape_string($conn, md5($_POST['confirm_password']));
+        $code = mysqli_real_escape_string($conn, md5(rand()));
+
+        
+        if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users WHERE email='{$email}'")) > 0) {
+            $msg = "<div class='alert alert-danger'style='font-weight:bold; color:#58a3db; font-size:11px; margin-left:45px;' ;>{$email} - Email adres bestaat al.</div>";
+        } else {
+            if ($password === $confirm_password) {
+                $sql = "INSERT INTO users (naam, email, password, code) VALUES ('{$naam}', '{$email}', '{$password}', '{$code}')";
+                $result = mysqli_query($conn, $sql);
+
+                if ($result) {
+                    $msg = "<div class='alert alert-info' style='font-weight: bold; color:green; font-size:13px; margin-left:20px; ';> Verificatie link naar uw email gestuurd.</div>";
+                } else {
+                    $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:13px; margin-left:20px; ';> Iets ging fout, probeer het opnieuw.</div>";
+                }
+                
+             } else {
+                $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:40px; ';>Wachtwoord / Herhaal Wachtwoord niet gelijk</div>";
+            }
+        }
+    }
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,21 +47,8 @@
        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" 
        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
        <script src="https://kit.fontawesome.com/d6dc7c8001.js" crossorigin="anonymous"></script>
-      <script>
-        function checkPassword(form) {
-            password = form.password.value;
-            confirm_password = form.confirm_password.value;
-
-
-            if (password == "" || confirm_password == ""){
-                alert("Voer uw wachtwoord in.");
-            }   
-            else if (password != confirm_password) {
-                    alert ("\nWachtwoorden zijn niet gelijk: Voer het opnieuw in...")
-                    return false;
-                }
-        }
-      </script>
+       <link rel="stylesheet" href="signup.css">
+     
        
        
 
@@ -37,7 +62,8 @@
        <div class="signup100-pic js-tilt" data-tilt="">
        <img src="images/signup-image.png" alt="IMG">
        </div>
-       <form class="signup100-form validate-form" action="signup.php" onsubmit="return checkPassword(this)">
+       
+       <form class="signup100-form validate-form" action="" method="post">
         <nav>
             <a href="home.html" class="logo">
                    <i class="fa-solid fa-car-side"></i>POC Share Wheels
@@ -47,7 +73,7 @@
               <span class="signup100-form-title">Member Sign Up</span>
               <span class="signup100-form-error"> * Verplichte velden</span>
        <div class="wrap-input100 validate-input alert-validate" data-validate="Naam is verplicht.">
-       <input class="input100" type="text" name="naam" placeholder="Naam" pattern="[A-Za-z]{0-9}">
+       <input class="input100" type="text" id="naam" name="naam" placeholder="Naam" pattern="[A-Za-z]{0-9}">
        <span class="focus-input100"></span>
        <span class="symbol-input100">
               <i class="fa fa-user" aria-hidden="true"></i>
@@ -68,12 +94,14 @@
        </span>
        </div>
        <div class="wrap-input100 validate-input alert-validate" data-validate="Herhalen wachtwoord is verplicht.">
-              <input class="input100" type="password" id="confirm_password" name="rep-password" placeholder="Herhaal Wachtwoord" minlength="6" oninput="check(this)">
+              <input class="input100" type="password" id="confirm_password" name="confirm_password" placeholder="Herhaal Wachtwoord" minlength="6" oninput="check(this)">
               <span class="focus-input100"></span>
               <span class="symbol-input100">
                      <i class="fa fa-unlock" aria-hidden="true"></i>
+                     
        </span>
        </div>
+       <?php echo $msg; ?>
        <div class="container-signup100-form-btn">
        <button class="signup100-form-btn" id="submit" name="submit">Sign Up</button>
        </div>
@@ -81,12 +109,12 @@
 <span class="txt1">
 Forgot
 </span>
-<a class="txt2" href="#">
+<a class="txt2" href="forgot-password.php">
 Username / Password?
 </a>
 </div>
        <div class="text-center p-t-136">
-       <a class="txt3" href="login.html">
+       <a class="txt3" href="login.php">
        Al lid? Log In.
        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
        </a>

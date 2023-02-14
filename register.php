@@ -1,6 +1,11 @@
 
 
 <?php
+    //Import PHPMailer classes into the global namespace
+    //These must be at the top of your script, not inside a function
+    require_once (__DIR__ . '/vendor/autoload.php');
+  
+
     include 'config.php';
     $msg = "";
 
@@ -20,18 +25,23 @@
                 $result = mysqli_query($conn, $sql);
 
                 if ($result) {
-                    $msg = "<div class='alert alert-info' style='font-weight: bold; color:green; font-size:13px; margin-left:20px; ';> Verificatie link naar uw email gestuurd.</div>";
+            
+                $msg = "<div class='alert alert-info' style='font-weight: bold; color:green; font-size:13px; margin-left:20px; ';> Verificatie link naar uw email gestuurd.</div>";
                 } else {
                     $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:13px; margin-left:20px; ';> Iets ging fout, probeer het opnieuw.</div>";
                 }
-                
-             } else {
+            } else {
                 $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:40px; ';>Wachtwoord / Herhaal Wachtwoord niet gelijk</div>";
             }
         }
     }
-?>
+    echo sendEmail($email, 'POC Share Wheels Comfirmation Sign Up',
+   'Beste Gebruiker,
+   Bedankt dat u uw account heeft geregistreerd bij ons. Hier is de link van de verificatiecode:
+    ');
 
+  
+?>
 
 
 

@@ -11,14 +11,14 @@
        <script src="https://kit.fontawesome.com/d6dc7c8001.js" crossorigin="anonymous"></script>
       <script>
         function checkPassword(form) {
-            password1 = form.password1.value;
-            password2 = form.password2.value;
+            password = form.password.value;
+            confirm_password = form.confirm_password.value;
 
 
-            if (password1 == "" || password2 == ""){
+            if (password == "" || confirm_password == ""){
                 alert("Voer uw wachtwoord in.");
             }   
-            else if (password1 != password2) {
+            else if (password != confirm_password) {
                     alert ("\nWachtwoorden zijn niet gelijk: Voer het opnieuw in...")
                     return false;
                 }
@@ -61,14 +61,14 @@
        </span>
        </div>
        <div class="wrap-input100 validate-input alert-validate" data-validate="Wachtwoord is verplicht.">
-              <input class="input100" type="password" name="password1" placeholder="Wachtwoord" minlength="6">
+              <input class="input100" type="password" name="password" placeholder="Wachtwoord" minlength="6">
               <span class="focus-input100"></span>
               <span class="symbol-input100">
                      <i class="fa fa-lock" aria-hidden="true"></i>
        </span>
        </div>
        <div class="wrap-input100 validate-input alert-validate" data-validate="Herhalen wachtwoord is verplicht.">
-              <input class="input100" type="password" id="password2" name="rep-password" placeholder="Herhaal Wachtwoord" minlength="6" oninput="check(this)">
+              <input class="input100" type="password" id="confirm_password" name="rep-password" placeholder="Herhaal Wachtwoord" minlength="6" oninput="check(this)">
               <span class="focus-input100"></span>
               <span class="symbol-input100">
                      <i class="fa fa-unlock" aria-hidden="true"></i>

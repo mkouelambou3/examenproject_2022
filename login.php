@@ -1,3 +1,44 @@
+
+
+<?php
+    include 'config.php';
+    $msg = "";
+    if (isset($_GET['verification'])) {
+        if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users WHERE code='{$_GET['verification']}'")) > 0) {
+            $query = mysqli_query($conn, "UPDATE users SET code='' WHERE code='{$_GET['verification']}' ");
+
+            if ($query) {
+                $msg = "<div class= 'alert alert-success' style='font-weight: bold; color:green; font-size:13px; margin-left:65px; ';>Account verificatie is gelukt.</div>";
+            }
+        } else {
+            header("Location: login.php");
+        }
+    }
+
+    if (isset($_POST['submit'])) {
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $password = mysqli_real_escape_string($conn, md5($_POST['password']));
+
+        $sql = "SELECT * FROM users WHERE email='{$email}' AND password='{$password}'";
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) === 1) {
+            $row = mysqli_fetch_assoc($result);
+            
+            if (empty($row['code'])) {
+                
+            } else {
+                $msg = "<div class='alert alert-info' style='font-weight: bold; color:#58a3db; font-size:13px; margin-left:20px; ';>Verifieer uw account eerst en probeer het opnieuw.</div>";
+            }
+        } else {
+            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:40px; ';>Email of wachtwoord zijn niet gelijk.</div>";
+        }
+    }
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,8 +61,8 @@
     <div class="signup100-pic js-tilt" data-tilt="">
     <img src="images/signup-image_1.jpg" alt="IMG">
     </div>
-    <form class="signup100-form validate-form" action="">
-     <nav>
+    <form class="signup100-form validate-form" action="" method="post">  
+        <nav>
          <a href="home.html" class="logo">
                 <i class="fa-solid fa-car-side"></i>POC Share Wheels
          </a>
@@ -37,12 +78,13 @@
     </span>
     </div>
     <div class="wrap-input100 validate-input alert-validate" data-validate="Wachtwoord is verplicht.">
-           <input class="input100" type="password" name="password1" placeholder="Wachtwoord" minlength="6">
+           <input class="input100" type="password" id="password" name="password" placeholder="Wachtwoord" minlength="6">
            <span class="focus-input100"></span>
            <span class="symbol-input100">
                   <i class="fa fa-lock" aria-hidden="true"></i>
     </span>
     </div>
+    <?php echo $msg; ?>
     <div class="container-signup100-form-btn">
     <button class="signup100-form-btn" id="submit" name="submit">Log In</button>
     </div>

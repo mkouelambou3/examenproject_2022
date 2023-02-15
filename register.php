@@ -35,10 +35,13 @@
             }
         }
     }
-    echo sendEmail($email, 'POC Share Wheels Comfirmation Sign Up',
+
+
+   
+    sendEmail($email, 'POC Share Wheels Comfirmation Sign Up',
    'Beste Gebruiker,
    Bedankt dat u uw account heeft geregistreerd bij ons. Hier is de link van de verificatiecode:
-    ');
+   <a href="http://localhost/examenproject_2022/?verification='.$code.'">http://localhost/examenproject_2022/?verification='.$code.'</a></b>');
 
   
 ?>

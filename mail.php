@@ -31,6 +31,6 @@ require_once (__DIR__ . '/vendor/autoload.php');
        ])
    ]);
    $response = $apiInstance->emailsTransactionalPost($email_message_data);
-   echo $response;
+   return $response;
 }
 ?>

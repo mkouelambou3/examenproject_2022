@@ -34,14 +34,11 @@
                 $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:40px; ';>Wachtwoord / Herhaal Wachtwoord niet gelijk</div>";
             }
         }
-    }
-
-
-   
-    sendEmail($email, 'POC Share Wheels Comfirmation Sign Up',
-   'Beste Gebruiker,
-   Bedankt dat u uw account heeft geregistreerd bij ons. Hier is de link van de verificatiecode:
-   <a href="http://localhost/examenproject_2022/?verification='.$code.'">http://localhost/examenproject_2022/?verification='.$code.'</a></b>');
+        sendEmail($email, 'POC Share Wheels Comfirmation Sign Up',
+        'Beste Gebruiker,
+         Bedankt dat u uw account heeft geregistreerd bij ons. Hier is de link van de verificatiecode:
+         <a href="http://localhost/examenproject_2022/?verification='.$code.'">http://localhost/examenproject_2022/?verification='.$code.'</a></b>');
+   }
 
   
 ?>

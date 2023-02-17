@@ -811,13 +811,6 @@
             margin-right: -15px;
             margin-left: -15px;
         }
-
-        i.fa-solid{
-            font-size: 26px;
-            margin: 5px;
-            color: #58A3DB;
-        }
-
         .footer-page .footer-site-logo{
             margin-left: 5%;
             text-decoration: none;
@@ -833,6 +826,7 @@
         }
         
         h6{
+            border-radius: 10px;
             margin: 10px;
         }
 

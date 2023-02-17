@@ -1,6 +1,8 @@
 
 
 <?php
+    session_start();
+
     include 'config.php';
     $msg = "";
     if (isset($_GET['verification'])) {
@@ -26,12 +28,13 @@
             $row = mysqli_fetch_assoc($result);
             
             if (empty($row['code'])) {
-                
+                $_SESSION['SESSION_EMAIL'] = $email;
+                header("Location: welcome.php");
             } else {
-                $msg = "<div class='alert alert-info' style='font-weight: bold; color:#58a3db; font-size:13px; margin-left:20px; ';>Verifieer uw account eerst en probeer het opnieuw.</div>";
+                $msg = "<div class='alert alert-info' style='font-weight: bold; color:#58a3db; font-size:10px; margin-left:45px; ';>Verifieer uw account en probeer het opnieuw.</div>";
             }
         } else {
-            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:40px; ';>Email of wachtwoord zijn niet gelijk.</div>";
+            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:13px; margin-left:45px; ';>Email of wachtwoord zijn niet gelijk.</div>";
         }
     }
 ?>

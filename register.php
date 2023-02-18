@@ -6,6 +6,11 @@
     require_once (__DIR__ . '/vendor/autoload.php');
   
 
+
+    session_start();
+    
+
+
     include 'config.php';
     $msg = "";
 
@@ -34,10 +39,10 @@
                 $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:40px; ';>Wachtwoord / Herhaal Wachtwoord niet gelijk</div>";
             }
         }
-        sendEmail($email, 'POC Share Wheels Comfirmation Sign Up',
-        'Beste Gebruiker echo "<br>",
-         Bedankt dat u uw account heeft geregistreerd bij ons. echo "<br>"
-         Hier is de link van de verificatiecode: echo "<br>"
+        sendEmail($email, 'POC Share Wheels - Comfirmation Sign Up',
+        'Beste Gebruiker <br>,
+         Bedankt dat u uw account heeft geregistreerd bij ons. <br>
+         Hier is de link van de verificatiecode:  <br>
          <a href="http://localhost/examenproject_2022/login.php?verification='.$code.'">http://localhost/examenproject_2022/login.php?verification='.$code.'</a></b>');
    } 
 

@@ -61,9 +61,8 @@ if (isset($_POST['submit'])) {
          <p>Wachtwoord vergeten? Stel gerust je Wachtwoord opnieuw in. </p>
      </nav>
            <span class="signup100-form-title">Member Forgot Password</span>
-           
            <span class="signup100-form-error"> * Verplichte velden</span>
-    <div class="wrap-input100 validate-input alert-validate" data-validate="Email is verplicht: 123@gmail.com">
+            <div class="wrap-input100 validate-input alert-validate" data-validate="Email is verplicht: 123@gmail.com">
            <input class="input100" type="text" id="email" name="email" placeholder="Email">
            <span class="focus-input100"></span>
            <span class="symbol-input100">
@@ -72,7 +71,7 @@ if (isset($_POST['submit'])) {
     </div>
     <?php echo $msg; ?>
     <div class="container-signup100-form-btn">
-    <button class="signup100-form-btn" id="submit" name="submit"> Send Link</button>
+    <button class="signup100-form-btn" id="submit" name="submit">Send Link</button>
     </div>
     <div class="text-center p-t-136">
     <a class="txt4" href="login.php">

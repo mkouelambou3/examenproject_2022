@@ -2,10 +2,12 @@
 
 <?php
     session_start();
-    if (!isset($_SESSION['SESSION_EMAIL'])) {
+    if (isset($_SESSION['SESSION_EMAIL'])) {
         header("Location: welcome.php");
         die();
     }
+
+    
     include 'config.php';
     $msg = "";
     if (isset($_GET['verification'])) {

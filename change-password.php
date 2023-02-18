@@ -1,3 +1,36 @@
+<?php
+
+$msg = "";
+
+include 'config.php';
+
+if (isset($_GET['reset'])) {
+    if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users WHERE code='{$_GET['reset']}'")) > 0){
+        if (isset($_POST['submit'])) {
+            $password = mysqli_real_escape_string($conn, md5($_POST['password']));
+            $confirm_password = mysqli_real_escape_string($conn, md5($_POST['confirm_password']));
+
+            if ($password === $confirm_password) {
+                $query = mysqli_query($conn, "UPDATE users SET `password`='{$password}', code='' WHERE code='{$_GET['reset']}'");
+
+                if ($query) {
+                    header("Location: login.php");
+                }
+            } else {
+                $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:40px; ';>Wachtwoord / Herhaal Wachtwoord niet gelijk</div>";
+            }
+        }
+    } else {
+        $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:13px; margin-left:40px; ';>Reset Link ERROR!</div>";
+    }
+}else {
+    header("Location: forgot-password.php");
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +65,7 @@
             </a>
             <p>Reset je wachtwoord nog vandaag in bij POC Share Wheels.</p>
         </nav>
-              <span class="signup100-form-title">Member Sign Up</span>
+              <span class="signup100-form-title">Member Reset Password</span>
               <span class="signup100-form-error"> * Verplichte velden</span>
        <div class="wrap-input100 validate-input alert-validate" data-validate="Wachtwoord is verplicht.">
               <input class="input100" type="password" name="password" placeholder="Wachtwoord" minlength="6">
@@ -49,7 +82,7 @@
                      
        </span>
        </div>
-       <?//php// echo $msg; ?>
+       <?php echo $msg; ?>
        <div class="container-signup100-form-btn">
        <button class="signup100-form-btn" id="submit" name="submit">Change Password</button>
        </div>

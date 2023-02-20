@@ -81,7 +81,7 @@
   
 
   //TODO: Include mail.php in this file.
-  //TODO: Create functon to send email.
+  //TODO: Create function to send email.
   //TODO: Call function with email from post data.
 
 ?>

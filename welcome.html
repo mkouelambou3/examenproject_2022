@@ -1,22 +1,3 @@
-<?php
-include 'config.php';
-       session_start();
-
-       if (!isset($_SESSION['SESSION_EMAIL'])) {
-            header("Location: home.html");
-            die();
-        }
-
-       $query = mysqli_query($conn, "SELECT * FROM users WHERE email='{$_SESSION['SESSION_EMAIL']}'");
-
-       if (mysqli_num_rows($query) > 0) {
-              $row = mysqli_fetch_assoc($query);
-       }
-?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,9 +49,8 @@ include 'config.php';
                                 <div class="dropdown">
                                    <li><a href="#">Account</a></li>
                                    <div class="dropdown-content">
-                                   <?php echo "Welcome, "  . $row['naam']; ?>
                                           <a href="#">Profiel</a>
-                                          <a href="logout.php">Uitloggen</a>
+                                          <a href="#">Uitloggen</a>
                                    </div>
                                </div>
                                 <li><a href="contact.html">Contact</a></li>

@@ -43,7 +43,7 @@
    }
 
    nav .fa-solid{
-         margin-bottom: 10px;
+        margin-bottom: 10px;
         font-size: 40px;
         color: #58A3DB;
    }
@@ -56,7 +56,7 @@
    .nav-links ul li{
         display: inline-block;
         list-style: none;
-        padding: 8px 12px;
+        padding: 12px 12px;
         position: relative;
         text-transform: uppercase;
    }
@@ -580,6 +580,10 @@
             width: 60px;
         }
 
+        .reviews-col:hover {
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+        }
+
         .reviews-col h3{
             margin-left: -2px;
         }
@@ -850,3 +854,41 @@
 
         
         /*Footer Section End*/
+
+        /* User Homepage Start*/
+
+       .dropdown {
+        position: relative;
+        display: inline-block;
+       }
+
+       .dropdown-content {
+        display: none;
+        position: absolute;
+        color: #f9f9f9;
+        min-width: 130px;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+        padding: 8px 12px;
+        z-index: 1; 
+       }
+
+       .dropdown-content a {
+        text-align: center;
+        align-items: center;
+        color: #fff;
+        padding: 10px 16px;
+        text-decoration: none;
+        display: block;
+       }
+
+       .dropdown-content a:hover {
+        background-color: #000;
+       }
+
+       .dropdown:hover .dropdown-content {
+        display: block;
+       }
+
+       
+
+        

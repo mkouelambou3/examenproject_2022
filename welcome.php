@@ -1,5 +1,7 @@
 <?php
-include 'config.php';
+       include 'config.php';
+      
+
        session_start();
 
        if (!isset($_SESSION['SESSION_EMAIL'])) {
@@ -68,7 +70,9 @@ include 'config.php';
                                 <div class="dropdown">
                                    <li><a href="#">Account</a></li>
                                    <div class="dropdown-content">
-                                   <?php echo "Welcome, "  . $row['naam']; ?>
+                                   <div class="user-info">
+                                   <?php echo "Welcome, "  . $row['naam'] ; ?>
+                                   </div>
                                           <a href="#">Profiel</a>
                                           <a href="logout.php">Uitloggen</a>
                                    </div>

@@ -39,7 +39,7 @@
                 $msg = "<div class='alert alert-info' style='font-weight: bold; color:#58a3db; font-size:10px; margin-left:45px; ';>Verifieer uw account en probeer het opnieuw.</div>";
             }
         } else {
-            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:13px; margin-left:45px; ';>ERROR, uw account bestaat niet.</div>";
+            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:11px; margin-left:45px; ';>ERROR, email of wachtwoord klopt niet.</div>";
         }
     }
 ?>

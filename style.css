@@ -161,7 +161,7 @@
         
         /* Responsive Navbar Section Start */
         
-        @media(max-width: 700px) {
+        @media(max-width: 900px) {
             .text_box h2 {
                 font-size: 50px;
             }
@@ -173,6 +173,7 @@
                 font-size: 20px;
             }
             .nav-links ul li {
+                margin: 10px;
                 display: block;
             }
             .nav-links {
@@ -866,7 +867,8 @@
         display: none;
         position: absolute;
         color: #f9f9f9;
-        min-width: 130px;
+        min-width: 170px;
+        margin-left: -20px;
         box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
         padding: 8px 12px;
         z-index: 1; 
@@ -888,6 +890,13 @@
        .dropdown:hover .dropdown-content {
         display: block;
        }
+
+       .user-info {
+        text-align: center;
+        align-items: center;
+       }
+
+       
 
        
 

@@ -20,6 +20,7 @@
         $password = mysqli_real_escape_string($conn, md5($_POST['password']));
         $confirm_password = mysqli_real_escape_string($conn, md5($_POST['confirm_password']));
         $code = mysqli_real_escape_string($conn, md5(rand()));
+        
 
         
         if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users WHERE email='{$email}'")) > 0) {
@@ -39,6 +40,7 @@
                 $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:40px; ';>Wachtwoord / Herhaal Wachtwoord niet gelijk</div>";
             }
         }
+        
         sendEmail($email, 'POC Share Wheels - Comfirmation Sign Up',
         'Beste Gebruiker <br>,
          Bedankt dat u uw account heeft geregistreerd bij ons. <br>
@@ -63,7 +65,7 @@
        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" 
        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
        <script src="https://kit.fontawesome.com/d6dc7c8001.js" crossorigin="anonymous"></script>
-       <link rel="stylesheet" href="signup.css">
+       <link rel="stylesheet" href="register.css">
      
        
        
@@ -117,6 +119,7 @@
                      
        </span>
        </div>
+      
        <?php echo $msg; ?>
        <div class="container-signup100-form-btn">
        <button class="signup100-form-btn" id="submit" name="submit">Sign Up</button>

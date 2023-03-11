@@ -73,7 +73,7 @@
                                    <div class="user-info">
                                    <?php echo "Welcome, "  . $row['naam'] ; ?>
                                    </div>
-                                          <a href="#">Profiel</a>
+                                          <a href="profile.php">Profiel</a>
                                           <a href="logout.php">Uitloggen</a>
                                    </div>
                                </div>

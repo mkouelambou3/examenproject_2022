@@ -16,12 +16,6 @@ if (mysqli_num_rows($query) > 0) {
 
 ?>
 
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,11 +33,18 @@ if (mysqli_num_rows($query) > 0) {
 <div class="container">
 
        <div class="profile">
+       <nav>
+            <a href="home.html" class="logo">
+                   <i class="fa-solid fa-car-side"></i>POC Share Wheels
+            </a>
+            <p style="margin-bottom: 15px; font-size: 13px; font-weight: 700;">
+            Updaten van uw acccount, het kan elke dag bij POC Share Wheels.</p>
+        </nav>
               <img src="images/user-4.png" class="profile-img" style="
               width: 150px;">
               <h3> <?php echo "Welcome, "  . $row['naam'] ; ?> </h3>
-              <a href="update_profile.php" class="update-btn"> Update Profiel </a>
-              <a href="logout.php">Uitloggen</a>
+              <a href="update_profile.php" class="btn"> Update Profiel </a>
+              <a href="logout.php" class="delete-btn">Uitloggen</a>
               
        </div>
 

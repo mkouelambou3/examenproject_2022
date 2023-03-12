@@ -14,20 +14,25 @@
     include 'config.php';
     $msg = "";
 
+
     if (isset($_POST['submit'])) {
+
         $naam = mysqli_real_escape_string($conn, $_POST['naam']);
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $password = mysqli_real_escape_string($conn, md5($_POST['password']));
         $confirm_password = mysqli_real_escape_string($conn, md5($_POST['confirm_password']));
         $code = mysqli_real_escape_string($conn, md5(rand()));
+        //$image_path = mysqli_real_escape_string($conn, $image_path);
+
+        $image_path = ".images/" .$_FILES['avatar']['name'];
+        print_r($image_path);
         
 
-        
         if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users WHERE email='{$email}'")) > 0) {
             $msg = "<div class='alert alert-danger'style='font-weight:bold; color:#58a3db; font-size:11px; margin-left:45px;' ;>{$email} - Email adres bestaat al.</div>";
         } else {
             if ($password === $confirm_password) {
-                $sql = "INSERT INTO users (naam, email, password, code) VALUES ('{$naam}', '{$email}', '{$password}', '{$code}')";
+                $sql = "INSERT INTO users (naam, email, password, code, image_path) VALUES ('{$naam}', '{$email}', '{$password}', '{$code}', '{$image_path}')";
                 $result = mysqli_query($conn, $sql);
 
                 if ($result) {
@@ -39,6 +44,26 @@
             } else {
                 $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:40px; ';>Wachtwoord / Herhaal Wachtwoord niet gelijk</div>";
             }
+
+        if (preg_match("!image!", $_FILES['image_path']['type'])) {
+        
+        if (copy($_FILES['image_path']['tmp_name'], $image_path)) {
+
+            $_SESSION['naam'] = $naam;
+            $_SESSION['image_path'] = $image_path;
+
+            $sql = "INSERT INTO users (naam, email, password, code, image_path) VALUES ('{$naam}', '{$email}', '{$password}', '{$code}', '{$image_path}')";
+            if (mysqli_query($conn, $sql)){
+                return $result;
+            } else {
+                $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:40px; ';>ERROR!, Probeer het later opnieuw.</div>";
+            } 
+
+        }
+
+    } else {
+        $msg = "<div class='alert alert-info' style='font-weight: bold; color:#000; font-size:13px; margin-left:20px; ';> AUB Upload alleen JPG, PNG of GIF image! </div>";
+    }
         }
         
         sendEmail($email, 'POC Share Wheels - Comfirmation Sign Up',
@@ -119,6 +144,7 @@
                      
        </span>
        </div>
+       <input type="file" class="avatar" name="image_path">
       
        <?php echo $msg; ?>
        <div class="container-signup100-form-btn">

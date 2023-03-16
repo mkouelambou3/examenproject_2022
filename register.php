@@ -40,6 +40,9 @@ if (isset($_POST['submit'])) {
     }
 
 }
+
+
+
          sendEmail($email, 'POC Share Wheels - Comfirmation Sign Up',
         'Beste Gebruiker <br>,
          Bedankt dat u uw account heeft geregistreerd bij ons. <br>

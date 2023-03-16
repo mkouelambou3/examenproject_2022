@@ -39,15 +39,14 @@ if (isset($_POST['submit'])) {
 
     }
 
+    sendEmail($email, 'POC Share Wheels - Comfirmation Sign Up',
+    'Beste Gebruiker <br>,
+     Bedankt dat u uw account heeft geregistreerd bij ons. <br>
+     Hier is de link van de verificatiecode:  <br>
+     <a href="http://localhost/examenproject_2022/login.php?verification='.$code.'">http://localhost/examenproject_2022/login.php?verification='.$code.'</a></b>');
+
 }
 
-
-
-         sendEmail($email, 'POC Share Wheels - Comfirmation Sign Up',
-        'Beste Gebruiker <br>,
-         Bedankt dat u uw account heeft geregistreerd bij ons. <br>
-         Hier is de link van de verificatiecode:  <br>
-         <a href="http://localhost/examenproject_2022/login.php?verification='.$code.'">http://localhost/examenproject_2022/login.php?verification='.$code.'</a></b>');
 
 
 ?>

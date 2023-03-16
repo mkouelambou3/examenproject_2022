@@ -45,6 +45,9 @@
             }
 
         }
+        if ($_FILES['choosefile']['name'] = "") {
+            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:40px; ';>ERROR!, Upload een bestand AUB.</div>";        
+        }
 
     }
         

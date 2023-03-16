@@ -1,15 +1,10 @@
-
-
 <?php
     //Import PHPMailer classes into the global namespace
     //These must be at the top of your script, not inside a function
     require_once (__DIR__ . '/vendor/autoload.php');
-  
 
 
     session_start();
-    
-    error_reporting(0);
 
     include 'config.php';
     $msg = "";
@@ -58,8 +53,6 @@
          Hier is de link van de verificatiecode:  <br>
          <a href="http://localhost/examenproject_2022/login.php?verification='.$code.'">http://localhost/examenproject_2022/login.php?verification='.$code.'</a></b>');
 
-
-  
 ?>
 
 
@@ -197,3 +190,4 @@ Username / Password?
        </div>
 </body>
 </html>
+

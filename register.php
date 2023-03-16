@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
     $tempname = $_FILES["choosefile"]["tmp_name"];
 
     $folder = "image/" .$filename;
-
+    
     if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users WHERE email='{$email}'")) > 0) {
         $msg = "<div class='alert alert-danger'style='font-weight:bold; color:#58a3db; font-size:11px; margin-left:45px;' ;>{$email} - Email adres bestaat al.</div>";
     } else {

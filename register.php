@@ -1,60 +1,53 @@
 <?php
-    //Import PHPMailer classes into the global namespace
-    //These must be at the top of your script, not inside a function
-    require_once (__DIR__ . '/vendor/autoload.php');
+
+require_once (__DIR__ . '/vendor/autoload.php');
+
+session_start();
+
+include 'config.php';
+$msg = "";
 
 
-    session_start();
+if (isset($_POST['submit'])) {
 
-    include 'config.php';
-    $msg = "";
+    $naam = mysqli_escape_string($conn, $_POST['naam']);
+    $email = mysqli_escape_string($conn, $_POST['email']);
+    $password = mysqli_escape_string($conn, $_POST['password']);
+    $confirm_password = mysqli_escape_string($conn, $_POST['confirm_password']);
+    $code = mysqli_real_escape_string($conn, md5(rand()));
+    $filename = $_FILES["choosefile"]["name"];
+    $tempname = $_FILES["choosefile"]["tmp_name"];
 
+    $folder = "image/" .$filename;
 
-    if (isset($_POST['submit'])) {
+    if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users WHERE email='{$email}'")) > 0) {
+        $msg = "<div class='alert alert-danger'style='font-weight:bold; color:#58a3db; font-size:11px; margin-left:45px;' ;>{$email} - Email adres bestaat al.</div>";
+    } else {
+        if ($password === $confirm_password) {
+            $sql = "INSERT INTO users (naam, email, password, code, filename) VALUES ('{$naam}', '{$email}', '{$password}', '{$code}','{$filename}')";
+            $result = mysqli_query($conn, $sql);
 
-        $naam = mysqli_real_escape_string($conn, $_POST['naam']);
-        $email = mysqli_real_escape_string($conn, $_POST['email']);
-        $password = mysqli_real_escape_string($conn, md5($_POST['password']));
-        $confirm_password = mysqli_real_escape_string($conn, md5($_POST['confirm_password']));
-        $code = mysqli_real_escape_string($conn, md5(rand()));
-        $filename = $_FILES["choosefile"]["name"];
-        $tempname = $_FILES["choosefile"]["tmp_name"];
-
-        $folder = "image/" .$filename;
-
-        if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users WHERE email='{$email}'")) > 0) {
-            $msg = "<div class='alert alert-danger'style='font-weight:bold; color:#58a3db; font-size:11px; margin-left:45px;' ;>{$email} - Email adres bestaat al.</div>";
-        } else {
-            if ($password === $confirm_password) {
-                $sql = "INSERT INTO users (naam, email, password, code, filename) VALUES ('{$naam}', '{$email}', '{$password}', '{$code}','{$filename}')";
-                $result = mysqli_query($conn, $sql);
-
-                if ($result) {
-            
-                $msg = "<div class='alert alert-info' style='font-weight: bold; color:green; font-size:13px; margin-left:30px; ';> Verificatie link naar uw email gestuurd.</div>";
-                } else {
-                    $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:13px; margin-left:20px; ';> Iets ging fout, probeer het opnieuw.</div>";
-                }
+            if ($result) {
+        
+            $msg = "<div class='alert alert-info' style='font-weight: bold; color:green; font-size:12px; margin-left:40px; ';> Verificatie link naar uw email gestuurd.</div>";
             } else {
-                $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:40px; ';>Wachtwoord / Herhaal Wachtwoord niet gelijk</div>";
+                $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:13px; margin-left:20px; ';> Iets ging fout, probeer het opnieuw.</div>";
             }
-
-        }
-        if ($_FILES['choosefile']['name'] = "") {
-            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:40px; ';>ERROR!, Upload een bestand AUB.</div>";        
+        } else {
+            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:45px; ';>Wachtwoord / Herhaal Wachtwoord niet gelijk</div>";
         }
 
     }
-        
-        
-        sendEmail($email, 'POC Share Wheels - Comfirmation Sign Up',
+
+}
+         sendEmail($email, 'POC Share Wheels - Comfirmation Sign Up',
         'Beste Gebruiker <br>,
          Bedankt dat u uw account heeft geregistreerd bij ons. <br>
          Hier is de link van de verificatiecode:  <br>
          <a href="http://localhost/examenproject_2022/login.php?verification='.$code.'">http://localhost/examenproject_2022/login.php?verification='.$code.'</a></b>');
 
-?>
 
+?>
 
 
 
@@ -190,4 +183,3 @@ Username / Password?
        </div>
 </body>
 </html>
-

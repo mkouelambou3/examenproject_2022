@@ -318,7 +318,7 @@
                      font-size: 13px;
               }
 
-              .image {
+              input {
                      margin-left: 20px;
               }
           }
@@ -429,8 +429,9 @@
               font-size: 13px;
           }
 
-          .image {
+          input {
               margin-left: 10%;
+              padding: 10px;
           }
 
          

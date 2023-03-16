@@ -9,7 +9,7 @@
 
     session_start();
     
-
+    error_reporting(0);
 
     include 'config.php';
     $msg = "";
@@ -22,22 +22,21 @@
         $password = mysqli_real_escape_string($conn, md5($_POST['password']));
         $confirm_password = mysqli_real_escape_string($conn, md5($_POST['confirm_password']));
         $code = mysqli_real_escape_string($conn, md5(rand()));
-        //$image_path = mysqli_real_escape_string($conn, $image_path);
+        $filename = $_FILES["choosefile"]["name"];
+        $tempname = $_FILES["choosefile"]["tmp_name"];
 
-        $image_path = ".images/" .$_FILES['avatar']['name'];
-        print_r($image_path);
-        
+        $folder = "image/" .$filename;
 
         if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users WHERE email='{$email}'")) > 0) {
             $msg = "<div class='alert alert-danger'style='font-weight:bold; color:#58a3db; font-size:11px; margin-left:45px;' ;>{$email} - Email adres bestaat al.</div>";
         } else {
             if ($password === $confirm_password) {
-                $sql = "INSERT INTO users (naam, email, password, code, image_path) VALUES ('{$naam}', '{$email}', '{$password}', '{$code}', '{$image_path}')";
+                $sql = "INSERT INTO users (naam, email, password, code, filename) VALUES ('{$naam}', '{$email}', '{$password}', '{$code}','{$filename}')";
                 $result = mysqli_query($conn, $sql);
 
                 if ($result) {
             
-                $msg = "<div class='alert alert-info' style='font-weight: bold; color:green; font-size:13px; margin-left:20px; ';> Verificatie link naar uw email gestuurd.</div>";
+                $msg = "<div class='alert alert-info' style='font-weight: bold; color:green; font-size:13px; margin-left:30px; ';> Verificatie link naar uw email gestuurd.</div>";
                 } else {
                     $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:13px; margin-left:20px; ';> Iets ging fout, probeer het opnieuw.</div>";
                 }
@@ -45,33 +44,17 @@
                 $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:40px; ';>Wachtwoord / Herhaal Wachtwoord niet gelijk</div>";
             }
 
-        if (preg_match("!image!", $_FILES['image_path']['type'])) {
-        
-        if (copy($_FILES['image_path']['tmp_name'], $image_path)) {
-
-            $_SESSION['naam'] = $naam;
-            $_SESSION['image_path'] = $image_path;
-
-            $sql = "INSERT INTO users (naam, email, password, code, image_path) VALUES ('{$naam}', '{$email}', '{$password}', '{$code}', '{$image_path}')";
-            if (mysqli_query($conn, $sql)){
-                return $result;
-            } else {
-                $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:40px; ';>ERROR!, Probeer het later opnieuw.</div>";
-            } 
-
         }
 
-    } else {
-        $msg = "<div class='alert alert-info' style='font-weight: bold; color:#000; font-size:13px; margin-left:20px; ';> AUB Upload alleen JPG, PNG of GIF image! </div>";
     }
-        }
+        
         
         sendEmail($email, 'POC Share Wheels - Comfirmation Sign Up',
         'Beste Gebruiker <br>,
          Bedankt dat u uw account heeft geregistreerd bij ons. <br>
          Hier is de link van de verificatiecode:  <br>
          <a href="http://localhost/examenproject_2022/login.php?verification='.$code.'">http://localhost/examenproject_2022/login.php?verification='.$code.'</a></b>');
-   } 
+
 
   
 ?>
@@ -106,7 +89,7 @@
        <img src="images/signup-image.png" alt="IMG">
        </div>
        
-       <form class="signup100-form validate-form" action="" method="post">
+       <form class="signup100-form validate-form" action="" method="post" enctype="multipart/form-data">
         <nav>
             <a href="home.html" class="logo">
                    <i class="fa-solid fa-car-side"></i>POC Share Wheels
@@ -144,7 +127,7 @@
                      
        </span>
        </div>
-       <input type="file" class="avatar" name="image_path">
+       <input type="file" name="choosefile" value="">
       
        <?php echo $msg; ?>
        <div class="container-signup100-form-btn">

@@ -8,6 +8,9 @@
     }
 
     
+
+
+    
     include 'config.php';
     $msg = "";
     if (isset($_GET['verification'])) {
@@ -22,15 +25,19 @@
         }
     }
 
+
+    
+
     if (isset($_POST['submit'])) {
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $password = mysqli_real_escape_string($conn, md5($_POST['password']));
 
         $sql = "SELECT * FROM users WHERE email='{$email}' AND password='{$password}'";
         $result = mysqli_query($conn, $sql);
-
-        if (mysqli_num_rows($result) === 1) {
+        
+        if (mysqli_num_rows($result) >= 1) {
             $row = mysqli_fetch_assoc($result);
+            
             
             if (empty($row['code'])) {
                 $_SESSION['SESSION_EMAIL'] = $email;
@@ -39,7 +46,7 @@
                 $msg = "<div class='alert alert-info' style='font-weight: bold; color:#58a3db; font-size:10px; margin-left:45px; ';>Verifieer uw account en probeer het opnieuw.</div>";
             }
         } else {
-            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:11px; margin-left:45px; ';>ERROR, email of wachtwoord klopt niet.</div>";
+            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:11px; margin-left:55px; ';>ERROR, email of wachtwoord klopt niet.</div>";
         }
     }
 ?>

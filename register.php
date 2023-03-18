@@ -8,12 +8,13 @@ include 'config.php';
 $msg = "";
 
 
+
 if (isset($_POST['submit'])) {
 
     $naam = mysqli_escape_string($conn, $_POST['naam']);
     $email = mysqli_escape_string($conn, $_POST['email']);
-    $password = mysqli_escape_string($conn, $_POST['password']);
-    $confirm_password = mysqli_escape_string($conn, $_POST['confirm_password']);
+    $password = mysqli_escape_string($conn, md5($_POST['password']));
+    $confirm_password = mysqli_escape_string($conn, md5($_POST['confirm_password']));
     $code = mysqli_real_escape_string($conn, md5(rand()));
     $filename = $_FILES["choosefile"]["name"];
     $tempname = $_FILES["choosefile"]["tmp_name"];
@@ -40,7 +41,7 @@ if (isset($_POST['submit'])) {
     }
 
     sendEmail($email, 'POC Share Wheels - Comfirmation Sign Up',
-    'Beste Gebruiker <br>,
+    'Beste Gebruiker, <br>
      Bedankt dat u uw account heeft geregistreerd bij ons. <br>
      Hier is de link van de verificatiecode:  <br>
      <a href="http://localhost/examenproject_2022/login.php?verification='.$code.'">http://localhost/examenproject_2022/login.php?verification='.$code.'</a></b>');

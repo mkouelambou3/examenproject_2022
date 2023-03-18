@@ -20,8 +20,10 @@ if (isset($_POST['submit'])) {
     } else {
         $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:12px; margin-left:45px; ';>$email - Dit e-mail adres is niet gevonden.</div>";
     }
+
+    
     sendEmail($email, 'POC Share Wheels - Reset Account Password',
-        'Beste Gebruiker, <br>,
+        'Beste Gebruiker, <br>
          Bedankt dat u ons uw email heeft opgestuurd. <br>
          Hier is de link van de verificatiecode:  <br>
          <a href="http://localhost/examenproject_2022/change-password.php?reset='.$code.'">http://localhost/examenproject_2022/change-password.php?reset='.$code.'</a></b>');

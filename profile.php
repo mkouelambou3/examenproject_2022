@@ -40,8 +40,19 @@ if (mysqli_num_rows($query) > 0) {
             <p style="margin-bottom: 15px; font-size: 13px; font-weight: 700;">
             Updaten van uw acccount, het kan elke dag bij POC Share Wheels.</p>
         </nav>
-              <img src="images/user-4.png" class="profile-img" style="
-              width: 150px;">
+        <?php
+             $query = mysqli_query($conn, "SELECT * FROM users WHERE email='{$_SESSION['SESSION_EMAIL']}'");
+             if(mysqli_num_rows($query) > 0){
+             $row = mysqli_fetch_assoc($query);
+             }
+
+              if ($row['filename'] == ''){
+                     echo '<img src = "images/user4.jpg">';
+              } else {
+                     echo '<img src="images/'.$row['filename'].'">';
+              }
+              
+        ?>
               <h3> <?php echo "Welcome, "  . $row['naam'] ; ?> </h3>
               <a href="update_profile.php" class="btn"> Update Profiel </a>
               <a href="logout.php" class="delete-btn">Uitloggen</a>

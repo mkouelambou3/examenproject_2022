@@ -50,13 +50,6 @@ if (isset($_POST['update_profile'])) {
 
 
 
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

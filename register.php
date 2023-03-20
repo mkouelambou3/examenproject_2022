@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
                 $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:13px; margin-left:20px; ';> Iets ging fout, probeer het opnieuw.</div>";
             }
         } else {
-            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:45px; ';>Wachtwoord / Herhaal Wachtwoord niet gelijk</div>";
+            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:45px; ';>Wachtwoord / Herhaal Wachtwoord niet gelijk.</div>";
         }
 
     }

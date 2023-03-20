@@ -34,7 +34,7 @@
               display: none;
        }
        nav{
-              margin: -130px;
+              margin: -145px;
               padding-bottom: 60%;
               align-items: center;
               text-align: center;
@@ -246,7 +246,6 @@
               display: flex;
               flex-wrap: wrap;
               justify-content: center;
-              padding-top: 20px;
        }
 
        .profile100-form-btn {
@@ -306,6 +305,10 @@
 
               input {
                      margin-left: 20px;
+              }
+
+              .txt3 {
+                     margin-left: 155px;
               }
           }
 

@@ -1,3 +1,62 @@
+<?php
+
+include 'config.php';
+$msg = "";
+session_start();
+
+$email = $_SESSION['SESSION_EMAIL'];
+
+if (isset($_POST['update_profile'])) {
+    $update_naam = mysqli_real_escape_string($conn, $_POST['update_naam']);
+    $update_email = mysqli_real_escape_string($conn, $_POST['update_email']);
+
+    $query = mysqli_query($conn, "UPDATE `users` SET name = '{$update_naam}', email = '{$update_email}' WHERE email='{$_SESSION['SESSION_EMAIL']}'");
+
+    $old_password = $_POST['old_password'];
+    $update_password = mysqli_escape_string($conn, md5($_POST['update_password']));
+    $new_password = mysqli_escape_string($conn, md5($_POST['new_password']));
+    $new_confirm_password = mysqli_escape_string($conn, md5($_POST['new_confirm_password']));
+
+    if (!empty($update_password) || !empty($new_password) || !empty($new_confirm_password)) {
+        if ($update_password != $old_password) {
+            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:45px; ';>ERROR, Oud wachtword is niet gelijk.</div>";
+        } elseif ($new_password != $new_confirm_password) {
+            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:45px; ';> Nieuw wachtwoord / Herhaal nieuw wachtwoord is niet gelijk.</div>";
+        } else {
+           $query = mysqli_query($conn, "UPDATE `users` SET password = '{$new_confirm_password}' WHERE email='{$_SESSION['SESSION_EMAIL']}'");
+           $msg = "<div class='alert alert-info' style='font-weight: bold; color:green; font-size:12px; margin-left:40px; ';> Gelukt, Uw profiel is succesvol geupdatet.</div>";
+        }
+    }
+}
+
+    $update_filename = $_FILES['update_choosefile']['name'];
+    $update_tempname = $_FILES["update_choosefile"]["tmp_name"];
+    $update_folder = "image/" .$update_filename;
+
+    if (!empty($update_filename)) {
+        if ($update_filename > 2000000) {
+            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:45px; ';>ERROR, Uw bestand is te groot.</div>";
+        } else {
+            $filename_update_query = mysqli_query($conn, "UPDATE `users` SET filename = '{$update_filename}' WHERE email='{$_SESSION['SESSION_EMAIL']}'");
+            if($filename_update_query) {
+                move_uploaded_file($update_tempname, $update_folder);
+            }
+            $msg = "<div class='alert alert-info' style='font-weight: bold; color:green; font-size:12px; margin-left:40px; ';> Gelukt, Uw bestand is geupdatet.</div>";
+        }
+    }
+
+
+?>
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,21 +112,13 @@
 
        
        <div class="wrap-input100 validate-input alert-validate" data-validate="Oud wachtwoord is verplicht.">
-              <input class="input100" type="password" name="old_password" placeholder="Oud wachtwoord" minlength="6">
+              <input class="input100" type="hidden" name="old_password" placeholder="Oud wachtwoord" minlength="6">
+
+              <input class="input100" type="password" name="update_password" placeholder="Oud wachtwoord" minlength="6">
               <span class="focus-input100"></span>
               <span class="symbol-input100">
                      <i class="fa-solid fa-key" aria-hidden="true"></i>
        </span>
-       </div>
-       
-       
-       <div class="flex">
-       <div class="update-profile">
-              <div class="inputBox">
-              <span class="update-text">Update uw foto  :</span>
-              <input type="file" name="update_image" accept="image/jpg, image/jpeg, image/png" class="box">
-              </div>
-       </div>
        </div>
        
 
@@ -80,13 +131,24 @@
        </div>
 
        <div class="wrap-input100 validate-input alert-validate" data-validate="Update herhalen nieuw wachtwoord is verplicht.">
-              <input class="input100" type="password" id="confirm_password" name="new-confirm_password" placeholder="Herhaal nieuw Wachtwoord" minlength="6" oninput="check(this)">
+              <input class="input100" type="password" id="confirm_password" name="new_confirm_password" placeholder="Herhaal nieuw Wachtwoord" minlength="6" oninput="check(this)">
               <span class="focus-input100"></span>
               <span class="symbol-input100">
                      <i class="fa fa-unlock" aria-hidden="true"></i>
                      
        </span>
        </div>
+
+       <div class="flex">
+       <div class="update-profile">
+              <div class="inputBox">
+              <span class="update-text">Update uw foto  :</span>
+              <input type="file" name="update_choosefile" accept="image/jpg, image/jpeg, image/png" class="box">
+              </div>
+       </div>
+       </div>
+
+       <?php echo $msg; ?>
 
        <div class="container-profile100-form-btn">
        <button class="profile100-form-btn" value="update_profile" name="update_profile">Update Profiel</button>

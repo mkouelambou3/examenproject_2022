@@ -56,6 +56,7 @@ if (mysqli_num_rows($query) > 0) {
               <h3> <?php echo "Welcome, "  . $row['naam'] ; ?> </h3>
               <a href="update_profile.php" class="btn"> Update Profiel </a>
               <a href="logout.php" class="delete-btn">Uitloggen</a>
+              <a href="welcome.php" class="back-btn">Ga Terug</a>
               
        </div>
 

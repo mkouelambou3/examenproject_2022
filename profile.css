@@ -13,6 +13,7 @@
        }
 
        :root{
+              --gray: #777;
               --blue:#3498db;
               --dark-blue:#2980b9;
               --red:#e74c3c;
@@ -64,16 +65,24 @@
            .delete-btn:hover{
               background-color: var(--dark-red);
            }
+
+           .back-btn:hover {
+            background-color: var(--gray);
+           }
+
            
-           .message{
-              margin:10px 0;
-              width: 100%;
-              border-radius: 5px;
-              padding:10px;
-              text-align: center;
-              background-color: var(--red);
-              color:var(--white);
-              font-size: 20px;
+           .back-btn {
+            width: 100%;
+            border-radius: 5px;
+            padding: 10px 30px;
+            color: var(--white);
+            display: block;
+            text-align: center;
+            cursor: pointer;
+            font-size: 20px;
+            margin-top: 10px;
+            text-decoration: none;
+            background-color: #000;
            }
            
            .form-container{

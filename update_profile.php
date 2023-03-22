@@ -8,7 +8,6 @@ $email = $_SESSION['SESSION_EMAIL'];
 
 if (isset($_POST['update_profile'])) {
     $update_naam = mysqli_real_escape_string($conn, $_POST['update_naam']);
-    $update_email = mysqli_real_escape_string($conn, $_POST['update_email']);
 
     $update_filename = $_FILES['update_choosefile']['name'];
     $update_tempname = $_FILES["update_choosefile"]["tmp_name"];
@@ -16,7 +15,7 @@ if (isset($_POST['update_profile'])) {
 
 
 
-    $query = mysqli_query($conn, "UPDATE `users` SET naam = '{$update_naam}', email = '{$update_email}' WHERE email='{$_SESSION['SESSION_EMAIL']}'");
+    $query = mysqli_query($conn, "UPDATE `users` SET naam = '{$update_naam}' WHERE email='{$_SESSION['SESSION_EMAIL']}'");
 
     $old_password = mysqli_escape_string($conn, md5($_POST['old_password']));
     $new_password = mysqli_escape_string($conn, md5($_POST['new_password']));
@@ -29,6 +28,7 @@ if (isset($_POST['update_profile'])) {
             $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:72px; ';> Nieuw wachtwoord / Herhaal nieuw wachtwoord is niet gelijk.</div>";
         } else {
            $query = mysqli_query($conn, "UPDATE `users` SET password = '{$new_confirm_password}' WHERE email='{$_SESSION['SESSION_EMAIL']}'");
+
            $msg = "<div class='alert alert-info' style='font-weight: bold; color:green; font-size:11px; margin-left:40px; padding-bottom: 8px; ';> Gelukt, Uw profiel is succesvol geupdatet.</div>";
         }
     }
@@ -103,14 +103,6 @@ if (isset($_POST['update_profile'])) {
        <span class="focus-input100"></span>
        <span class="symbol-input100">
               <i class="fa fa-user" aria-hidden="true"></i>
-       </span>
-       </div>
-
-       <div class="wrap-input100 validate-input alert-validate" data-validate="Update email mag niet aangepast worden.">
-              <input class="input100" type="text" id="email" name="update_email" placeholder="Update email" value="<?php echo $row['email']; ?>">
-              <span class="focus-input100"></span>
-              <span class="symbol-input100">
-                     <i class="fa fa-envelope" aria-hidden="true"></i>
        </span>
        </div>
 

@@ -10,41 +10,44 @@ if (isset($_POST['update_profile'])) {
     $update_naam = mysqli_real_escape_string($conn, $_POST['update_naam']);
     $update_email = mysqli_real_escape_string($conn, $_POST['update_email']);
 
-    $query = mysqli_query($conn, "UPDATE `users` SET name = '{$update_naam}', email = '{$update_email}' WHERE email='{$_SESSION['SESSION_EMAIL']}'");
+    $update_filename = $_FILES['update_choosefile']['name'];
+    $update_tempname = $_FILES["update_choosefile"]["tmp_name"];
+    $update_folder = "images/" .$update_filename;
 
-    $old_password = $_POST['old_password'];
-    $update_password = mysqli_escape_string($conn, md5($_POST['update_password']));
+
+
+    $query = mysqli_query($conn, "UPDATE `users` SET naam = '{$update_naam}', email = '{$update_email}' WHERE email='{$_SESSION['SESSION_EMAIL']}'");
+
+    $old_password = mysqli_escape_string($conn, md5($_POST['old_password']));
     $new_password = mysqli_escape_string($conn, md5($_POST['new_password']));
     $new_confirm_password = mysqli_escape_string($conn, md5($_POST['new_confirm_password']));
 
     if (!empty($update_password) || !empty($new_password) || !empty($new_confirm_password)) {
-        if ($update_password != $old_password) {
-            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:45px; ';>ERROR, Oud wachtword is niet gelijk.</div>";
+        if ($new_password == $old_password) {
+            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:72px; ';>ERROR, Oud + Nieuw wachtwoord mag niet gelijk zijn.</div>";
         } elseif ($new_password != $new_confirm_password) {
-            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:45px; ';> Nieuw wachtwoord / Herhaal nieuw wachtwoord is niet gelijk.</div>";
+            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:72px; ';> Nieuw wachtwoord / Herhaal nieuw wachtwoord is niet gelijk.</div>";
         } else {
            $query = mysqli_query($conn, "UPDATE `users` SET password = '{$new_confirm_password}' WHERE email='{$_SESSION['SESSION_EMAIL']}'");
-           $msg = "<div class='alert alert-info' style='font-weight: bold; color:green; font-size:12px; margin-left:40px; ';> Gelukt, Uw profiel is succesvol geupdatet.</div>";
+           $msg = "<div class='alert alert-info' style='font-weight: bold; color:green; font-size:11px; margin-left:40px; padding-bottom: 8px; ';> Gelukt, Uw profiel is succesvol geupdatet.</div>";
         }
     }
 }
 
-    $update_filename = $_FILES['update_choosefile']['name'];
-    $update_tempname = $_FILES["update_choosefile"]["tmp_name"];
-    $update_folder = "image/" .$update_filename;
 
     if (!empty($update_filename)) {
-        if ($update_filename > 2000000) {
-            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:10px; margin-left:45px; ';>ERROR, Uw bestand is te groot.</div>";
+        if ($update_filename <= 1000000) {
+            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:12px; margin-left:60px; padding-bottom: 12px; ';>ERROR, Uw bestand is te groot.</div>";
         } else {
             $filename_update_query = mysqli_query($conn, "UPDATE `users` SET filename = '{$update_filename}' WHERE email='{$_SESSION['SESSION_EMAIL']}'");
             if($filename_update_query) {
                 move_uploaded_file($update_tempname, $update_folder);
             }
-            $msg = "<div class='alert alert-info' style='font-weight: bold; color:green; font-size:12px; margin-left:40px; ';> Gelukt, Uw bestand is geupdatet.</div>";
+            //$msg = "<div class='alert alert-info' style='font-weight: bold; color:green; font-size:12px; margin-left:40px; ';> Gelukt, Uw bestand is geupdatet.</div>";
         }
     }
 
+     
 
 ?>
 
@@ -73,12 +76,6 @@ if (isset($_POST['update_profile'])) {
              if(mysqli_num_rows($query) > 0){
              $row = mysqli_fetch_assoc($query);
              }
-
-              if ($row['filename'] == ''){
-                     echo '<img src = "images/user4.jpg">';
-              } else {
-                     echo '<img src="images/'.$row['filename'].'">';
-              }
               
         ?>
 
@@ -102,15 +99,15 @@ if (isset($_POST['update_profile'])) {
               <span class="profile100-form-title">Member Update Profile</span>
               <span class="profile100-form-error"> * Verplichte velden</span>
        <div class="wrap-input100 validate-input alert-validate" data-validate="Update naam is verplicht.">
-       <input class="input100" type="text" id="naam" name="update_naam" placeholder="Naam" pattern="[A-Za-z]{0-9}">
+       <input class="input100" type="text" id="naam" name="update_naam" placeholder="Update naam"  pattern="[A-Za-z]{0-9}" value="<?php echo $row['naam']; ?>">
        <span class="focus-input100"></span>
        <span class="symbol-input100">
               <i class="fa fa-user" aria-hidden="true"></i>
        </span>
        </div>
 
-       <div class="wrap-input100 validate-input alert-validate" data-validate="Update email is verplicht: 123@gmail.com">
-              <input class="input100" type="text" id="email" name="update_email" placeholder="Email">
+       <div class="wrap-input100 validate-input alert-validate" data-validate="Update email mag niet aangepast worden.">
+              <input class="input100" type="text" id="email" name="update_email" placeholder="Update email" value="<?php echo $row['email']; ?>">
               <span class="focus-input100"></span>
               <span class="symbol-input100">
                      <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -119,9 +116,7 @@ if (isset($_POST['update_profile'])) {
 
        
        <div class="wrap-input100 validate-input alert-validate" data-validate="Oud wachtwoord is verplicht.">
-              <input class="input100" type="hidden" name="old_password" placeholder="Oud wachtwoord" minlength="6">
-
-              <input class="input100" type="password" name="update_password" placeholder="Oud wachtwoord" minlength="6">
+              <input class="input100" type="password" name="old_password" placeholder="Oud wachtwoord" minlength="6">
               <span class="focus-input100"></span>
               <span class="symbol-input100">
                      <i class="fa-solid fa-key" aria-hidden="true"></i>

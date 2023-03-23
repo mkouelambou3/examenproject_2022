@@ -139,3 +139,38 @@
           }
           /* Responsive Navbar End */
 
+          /* Products Page Start */
+
+          .PageBlock {
+            position: relative;
+            margin: 0px !important;
+            padding: 0px;
+        }
+        
+        .verticalLine {
+            widtH: 5px;
+            height: 100px;
+            background: #24f8c7;
+            margin: 0 auto 40px;
+        }
+        
+        .Clear {
+            clear: both;
+        }
+        
+          .products {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+          p {
+            color: #777;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+
+          /* Products Page End */
+

@@ -6,6 +6,7 @@
        box-sizing: border-box;
        font-family: 'Poppins', sans-serif;
     }
+
     body {
        background-color: #4C96D7;
        text-align: center;
@@ -15,7 +16,7 @@
        margin-left: 20px;
    }
 
-   .header{
+   .header {
        margin-bottom: 10px;
        min-height: 100vh;
        width: 100%;
@@ -25,7 +26,7 @@
        background-size: cover;
        position: relative;
    }
-   nav{
+   nav {
         display: flex;
         padding: 2% 6%;
         align-items: center;
@@ -33,7 +34,7 @@
         justify-content: space-between;
    }
 
-   nav .logo{
+   nav .logo {
     
         margin-bottom: 20px;
         text-decoration: none;
@@ -42,11 +43,11 @@
         font-weight: bold;
    }
 
-   nav .fa-solid{
-        margin-bottom: 10px;
-        font-size: 40px;
+   nav .fa-solid { 
+        padding: 10px;
+        font-size: 30px;
         color: #58A3DB;
-   }
+    }
    
    .nav-links{
         flex: 1;
@@ -197,6 +198,14 @@
             .nav-links ul {
                 padding: 30px;
             }
+        }
+
+        @media(max-width : 450px) {
+            nav .fa-solid{
+                padding: 10px;
+                font-size: 30px;
+                color: #58A3DB;
+           }
         }
         /* Responsive Navbar End */
 

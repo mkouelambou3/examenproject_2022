@@ -281,7 +281,7 @@
 
        @media(max-width: 992px) {
               .wrap-profile100 {
-                  padding:177px 90px 33px 85px;
+                  padding:200px 90px 33px 85px;
               }
           
               .profile100-pic {
@@ -310,6 +310,29 @@
               .txt3 {
                      margin-left: 155px;
               }
+
+              nav .fa-solid {
+                     padding: 10px;
+                     font-size: 30px;
+                     color: #58A3DB;
+                 }
+
+              nav .logo{
+                     line-height: 1.2;
+                     margin-left: 10px;
+                     text-decoration: none;
+                     font-size: 15px;
+                     color: #000;
+                     font-weight: bold;
+                }
+
+                 p {
+                     text-align: center;
+                     margin-left: 10px;
+                     font-size: 11px;
+                     margin: 10px;
+                     
+              }
           }
 
           @media(max-width: 768px) {
@@ -329,13 +352,71 @@
 
           @media(max-width: 576px) {
               .wrap-profile100 {
-                  padding:100px 15px 33px;
+                  padding:160px 15px 33px;
               }
 
           }
           
           .validate-input {
               position: relative;
+          }
+
+          @media(max-width : 450px) {
+              .wrap-signup100 {
+                     padding:160px 30px 50px;
+              }
+
+              .validate-input {
+                     position: relative;
+                     margin-right: 15px;
+              }
+
+              .profile100-form-error {
+                     padding: 88px;
+                     font-family: 'Poppins', sans-serif;
+                     font-weight: 500;
+                     color: #ff000f;
+                 }
+
+                 .txt3 {
+                     margin-left: 130px;
+                 }
+
+                 .profile100-form-title {
+                     font-family: 'Poppins', sans-serif;
+                     font-weight: bold;
+                     font-size: 23px;
+                     color: #333;
+                     line-height: 1.2;
+                     text-align: center;
+                     width: 100%;
+                     display: block;
+                     padding-bottom: 60px;
+                     margin-left: 0px;
+                 }
+
+                nav .fa-solid {
+                     padding: 10px;
+                     font-size: 20px;
+                     color: #58A3DB;
+                 }
+
+              nav .logo{
+                     line-height: 1.2;
+                     margin-left: -10px;
+                     text-decoration: none;
+                     font-size: 15px;
+                     color: #000;
+                     font-weight: bold;
+                }
+
+                 p {
+                     text-align: center;
+                     margin-left: 10px;
+                     font-size: 11px;
+                     margin: 10px;
+                     
+              }
           }
 
           .alert-validate::before {

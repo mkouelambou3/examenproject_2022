@@ -308,6 +308,14 @@
               nav .logo{
                      width: 50%;
               }
+
+              .txt1 {
+                     margin-left: 115px;
+                     font-family: 'Poppins', sans-serif;
+                     font-size: 13px;
+                     line-height: 1.5;
+                     color: #999;
+              }
           }
 
            
@@ -323,12 +331,72 @@
               .signup100-form {
                   width: 100%;
               }
+
+              .txt1 {
+                     margin-left: 115px;
+                     font-family: 'Poppins', sans-serif;
+                     font-size: 13px;
+                     line-height: 1.5;
+                     color: #999;  
+              }
           }
 
           @media(max-width: 576px) {
               .wrap-signup100 {
                   padding:100px 15px 33px;
               }
+              
+              .txt1 {
+                     margin-left: 115px;
+                     font-family: 'Poppins', sans-serif;
+                     font-size: 13px;
+                     line-height: 1.5;
+                     color: #999;
+              }
+          }
+
+          @media(max-width: 450px) {
+              .wrap-signup100 {
+                  padding:140px 15px 33px;
+              }
+              
+              .txt1 {
+                     margin-left: 115px;
+                     font-family: 'Poppins', sans-serif;
+                     font-size: 13px;
+                     line-height: 1.5;
+                     color: #999;
+              }
+
+              .txt3 {
+                     margin-bottom: 30px;
+                     margin-left: 75px;
+                     font-family: 'Poppins', sans-serif;
+                     line-height: 1.5;
+                     font-size: 13px;
+                     color: #666;
+                     text-decoration: none;
+              }
+
+              .validate-input {
+                     position: relative;
+                     margin-right: 15px;
+              }
+
+              p {
+                     text-align: center;
+                     margin-left: 0px;
+                     font-size: 13px;
+              }
+
+              nav .logo{
+                     line-height: 1.2;
+                     margin-left: -10px;
+                     text-decoration: none;
+                     font-size: 15px;
+                     color: #000;
+                     font-weight: bold;
+                }
           }
           
           .validate-input {

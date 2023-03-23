@@ -59,9 +59,7 @@
                            <p>Bestelwagens. Lekker groot, compact and ideaal voor elke reis met POC Share Wheels.</p>
                      </div>
 </section>
-
-
-
+  
        <script src="script.js"></script>
 </body>
 </html>

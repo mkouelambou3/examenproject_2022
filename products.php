@@ -29,7 +29,7 @@
 </style>
 
 <body>
-       <section class="sub-header">
+<section class="sub-header">
               <nav>
                      <a href="home.html" class="logo">
                             <i class="fa-solid fa-car-side"></i> POC Share Wheels
@@ -50,15 +50,45 @@
                      <!-- Reposnive bar open and close -->
               </nav>
               <h1>Onze Producten</h1>
-       </section>
-
-<section class="products">
-              <div class="row">
-                     <div class="products-col">
-                           <h1>Bestelwagens</h1> 
-                           <p>Bestelwagens. Lekker groot, compact and ideaal voor elke reis met POC Share Wheels.</p>
-                     </div>
 </section>
+       <header class="page-header">
+              <div class="site-content-wrap site-content-wrap_small">
+                     <h2 class="heading-1">Onze Producten Bij POC Share Wheels</h2>
+                <div class="intro-text">
+                  <div class="markdown">
+                     <p>
+                            Bij POC Share Wheels als bedrijf introduceren wij onze producten die wij leveren aan onze klanten.
+                            Of je nou 1 dag, een weekend, een lang weekend een personenauto, bestelwagen of een luxe auto nodig 
+                            hebt, bij POC Share Wheels vind je altijd een auto die natuurlijk bij je past!
+                     </p>
+                  </div>
+                </div>
+              </div> 
+       </header>
+        <div class="car-overview-block site-content-wrap content-block" id="modellen">
+          <h2 class="heading-2 text-center block-title">Onze modellen</h2>
+            <div class="grid three-columms">
+               <div class="grid-item"></div>
+               <div class="grid-item"></div>
+               <div class="grid-item"></div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
        <script src="script.js"></script>
 </body>
 </html>

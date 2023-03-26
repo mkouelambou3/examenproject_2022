@@ -844,11 +844,6 @@
             margin: 10px;
         }
 
-
-        h3{
-            margin-left: 5%;
-        }
-
         .text-white{
             padding-top: 10px;
             align-self: auto;
@@ -903,6 +898,12 @@
        .user-info {
         text-align: center;
         align-items: center;
+       }
+
+       .copyright-text {
+        margin-left: 33%;
+        font-size: 15px;
+        padding-bottom: 10px;
        }
 
        

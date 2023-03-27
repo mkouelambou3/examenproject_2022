@@ -166,81 +166,8 @@
             text-align: center;
             padding-top: 100px;
         }
-         
-
-        .layout-stretch>main {
-            flex: 1;
-        }
-
-        .page-header {
-            padding-top: 3.75rem;
-        }
-
-        .site-content-wrap {
-            max-width: 76rem;
-            padding: 0 20px;
-            margin: 0 auto;
-        }
-
-        .heading-1 {
-            font-size: 2rem;
-            line-height: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            word-break: break-word;
-            letter-spacing: -0.02rem;
-        }
-
-        .page-header .intro-text {
-            margin-top: 1.8rem;
-        }
-
-        .intro-text {
-            font-size: 1.125rem;
-            line-height: 1.5rem;
-            font-weight: 500;
-            text-align: center;
-            color: #000;
-            letter-spacing: -0.01rem;
-        }
-
-
-        .markdown {
-            line-height: 1.5rem;
-        }
-
-        .site-content-wrap_small {
-            max-width: 51rem;
-        }
-
-        .block-title {
-            margin-bottom: 3.1rem;
-        }
-
-        .text-center {
-            padding: 30px;
-            text-align: center;
-        }
-
-        .heading-2 {
-            margin: 10px;
-            font-size: 1.5rem;
-            line-height: 1.75rem;
-            font-weight: 500;
-            color: #000;
-            letter-spacing: -0.02rem;
-        }
-        .grid {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 -15px;
-        }
-
-        @media only screen and (min-width : 978px) {
-            .page-header {
-                padding-top: 4.375rem;
-            }
-        }
+        
+    
 
         
 

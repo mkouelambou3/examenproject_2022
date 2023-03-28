@@ -7,16 +7,21 @@
               font-family: 'Poppins', sans-serif;
        }
 
-       body {
-              background-color: #4C96D7;
-              text-align: center;
-              color: #000;
-              line-height: 1.5;
+       *, *::before, *::after {
+            box-sizing: border-box;
        }
 
-       
+        body, h1, h2, h3, h4, p, ul, ol, li, figure, figcaption, blockquote, dl, dd, fieldset, legend {
+            margin: 0;
+            border: 0;
+        }
 
-       nav {
+        ul, ol, fieldset, legend {
+            padding: 0;
+        }
+
+
+        nav {
               display: flex;
               padding: 2% 6%;
               align-items: center;
@@ -166,10 +171,60 @@
             text-align: center;
             padding-top: 100px;
         }
-        
+
+        @media (min-width : 978px) {
+            .page-header {
+                padding-top: 4.5rem;
+                margin-bottom: 4.5rem;
+            }
+
+            .content-blocks {
+                margin-bottom: 4.5rem;
+            }
+
+        }
     
 
+        .site-content-wrap_small {
+            max-width: 51rem;
+        }
+
+        .site-content-wrap {
+            max-width: 76rem;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+
+        .heading-1 {
+            font-size: 2.2rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: -0.02em;
+        }
+
+        .page-header .intro-text {
+            margin-top: 1.875rem;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            font-weight: 500;
+            text-align: center;
+            color: #000;
+            letter-spacing: -0.01em;
+        }
+     
         
 
+     
+
+ 
+
+        
+        
+
+        
           /* Products Page End */
 

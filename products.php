@@ -1,4 +1,8 @@
+<?php
 
+include 'config.php';
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,23 +58,11 @@
               <h1>Onze Producten</h1>
 </section>
 </body>
-<main role="main">
-  <header class="page-header">
-    <div class="site-content-wrap site-content-wrap_small">
-       <h2 class="heading-1">Huren bij POC Share Wheels</h2>
-         <div class="intro-text">
-            <div class="markdown">
-              <p>
-                     Huur met de beste voorwaarden en een scherpe prijs. Of je nou 1
-                     dag, een weekend, een lang weekend een personenauto of bestelauto
-                     nodig hebt, bij POC Share Wheels vind je altijd de juiste huurauto die bij jou 
-                     past!
-              </p>
-            </div>
-         </div>
-    </div>
-  </header>  
-</main>
+
+
+
+
+
 
 
 

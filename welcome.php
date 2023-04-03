@@ -84,7 +84,7 @@
                         <i class="fa fa-bars" onclick="showMenu()"></i>
                         <!-- Reposnive bar open and close -->
               </nav>
-
+       </section>
 
               <div class="text_box">
                      <h2>GET IN TOUCH</h2>
@@ -95,7 +95,97 @@
                      <a href="about.html" class="hero_btn">Visit Us Today</a>
 
               </div>
-       </section>
+
+              
+              <header class="page-header">
+              <div class="site-content-wrap site-content-wrap_small">
+                  <h2 class="heading-1">Huren bij POC Share Wheels</h2>
+                  <div class="intro-text">
+                    <div class="markdown">
+                         <p>
+                                Huur met de beste voorwaarden en een scherpe prijs. Of
+                                je nou 1 dag, een weekend, een lang weekend een 
+                                personenauto of bestelauto nodig hebt, Bij POC Share Wheels vind je
+                                altijd een auto die jou het beste geschikt is!
+                         </p>
+                    </div>
+                  </div>
+              </div>
+       </header>
+
+              <div id="booking" class="section">
+                     <div class="section-center">
+                       <div class="container">
+                         <div class="row">
+                           <div class="booking-form">
+                             <form>
+                               <div class="col-md-8">
+                                 <div class="form-group">
+                                   <input
+                                     class="form-control"
+                                     type="text"
+                                     placeholder="Kies een stad, postcode of plaats" id="city" name="city"
+                                   />
+                                   <span class="form-label">Waar wil je ophalen?</span>
+                                 </div>
+                               </div>
+                               <div class="col-md-2">
+                                 <div class="form-group">
+                                   <select class="form-control" id="start-time" name="start-time">
+                                     <option>9:00</option>
+                                     <option>10:00</option>
+                                     <option>11:00</option>
+                                     <option>12:00</option>
+                                     <option>13:00</option>
+                                     <option>14:00</option>
+                                     <option>15:00</option>
+                                     <option>16:00</option>
+                                     <option>17:00</option>
+                                   </select>
+                                   <span class="select-arrow"></span>
+                                   <span class="form-label">Ophaaltijd</span>
+                                 </div>
+                               </div>
+                               <div class="col-md-2">
+                                 <div class="form-group">
+                                   <select class="form-control" id="end-time" name="end-time">
+                                     <option>9:00</option>
+                                     <option>10:00</option>
+                                     <option>11:00</option>
+                                     <option>12:00</option>
+                                     <option>13:00</option>
+                                     <option>14:00</option>
+                                     <option>15:00</option>
+                                     <option>16:00</option>
+                                     <option>17:00</option>
+                                   </select>
+                                   <span class="select-arrow"></span>
+                                   <span class="form-label">Inlevertijd</span>
+                                 </div>
+                               </div>
+                               <div class="col-md-4">
+                                 <div class="form-group">
+                                   <input class="form-control" type="date" id="check-in" name="check-in">
+                                   <span class="form-label">Check In</span>
+                                 </div>
+                               </div>
+                               <div class="col-md-4">
+                                 <div class="form-group">
+                                   <input class="form-control" type="date" required="" id="check-out" name="check-out">
+                                   <span class="form-label">Check Uit</span>
+                                 </div>
+                               </div>
+                               <div class="col-md-4">
+                                 <div class="form-btn">
+                                   <button class="submit-btn">Check Beschikbaarheid</button>
+                                 </div>
+                               </div>
+                             </form>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
        <!-- Course Section Start-->
        <section class="course">
               <div class="PageBlock">

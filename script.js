@@ -17,3 +17,4 @@ function doStuff (callback) {
   doStuff(function () {
     document.body.className = 'visible';
   });
+

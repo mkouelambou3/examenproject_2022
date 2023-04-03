@@ -93,9 +93,7 @@
               color: #fff;
           }
 
-          .sub-header h1 {
-              margin-top: 80px;
-          }
+          
 
           .content {
               position: fixed;
@@ -156,14 +154,14 @@
           .PageBlock {
             position: relative;
             margin: 0px !important;
-            padding: 0px;
+            padding: 50px;
         }
         
         .verticalLine {
             widtH: 5px;
             height: 100px;
             background: #24f8c7;
-            margin: 0 auto 40px;
+            margin: 0 auto 50px;
         }
         
         .Clear {
@@ -176,5 +174,57 @@
             text-align: center;
             padding-top: 100px;
         }
+
+      @media (min-width: 978px) {
+            .page-header {
+                padding-top: 4.375rem;
+            }
+        }
+
+        .page-header {
+            padding-top: 3.75rem;
+            padding-bottom: 2.75rem;
+        }
+
+        header {
+            display: block;
+        }
+
+        .site-content-wrap_small {
+            max-width: 51.125rem;
+        }
+        .site-content-wrap {
+            max-width: 76.25rem;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+
+        .heading-1 {
+            font-size: 2.125rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            word-break: break-word;
+            letter-spacing: -0.02em;
+        }
+
+        .page-header .intro-text {
+            margin-top: 1.875rem;
+        }
+
+        .intro-text {
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            color: #000;
+            letter-spacing: -0.01em;
+        }
+
+        .markdown {
+            line-height: 1.5rem;
+        }
+    
+          
 
         

@@ -516,6 +516,11 @@
             padding: 0 0.9375rem;
             display: flex;
             align-items: center;
+            font-weight: 400;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all .5s;
+            transition-property: background-color;
         }
 
         .main-categories_toggle span {

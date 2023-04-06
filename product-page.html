@@ -82,26 +82,26 @@
               <div class="main-categories_toggle">
                 <legend class="visually-hidden">Voertuigtype</legend>
                 <div class="main-categories_toggle-btn" onclick="carFunction()">
-                  <input type="radio" id="car" name="mainCatergory" class="visually-hidden" value="car">
+                  <input type="radio" id="car" name="main-catergory" class="visually-hidden" value="car">
                   <label for="car" class="image-lazyloaded">
                   <img width="176" height="72" src="car-products/car-type-car.png" class="lazy-img loaded" alt="Auto" loading="lazy">
-                  <span id="car-type-text">Auto</span>
+                  <span>Auto</span>
                 </label>
                 </div>
 
                 <div class="main-categories_toggle-btn" onclick="vanFunction()">
-                  <input type="radio" id="van" name="mainCatergory" class="visually-hidden" value="van">
+                  <input type="radio" id="van" name="main-catergory" class="visually-hidden" value="van">
                   <label for="van" class="image-lazyloaded" name="van">
                   <img width="184" height="76" src="car-products/car-type-van.png" class="lazy-img loaded" alt="bestelauto" loading="lazy">
-                  <span id="van-type-text">Bestelauto</span>
+                  <span>Bestelauto</span>
                 </label>
                 </div>
 
                 <div class="main-categories_toggle-btn" onclick="luxeFunction()">
-                  <input type="radio" id="luxe-car" name="mainCatergory" class="visually-hidden" value="luxe-car">
+                  <input type="radio" id="luxe-car" name="main-catergory" class="visually-hidden" value="luxe-car">
                   <label for="luxe-car" class="image-lazyloaded">
                   <img width="150" height="85" src="car-products/porsche_cayenne.png " class="lazy-img loaded" alt="luxe-car" loading="lazy">
-                  <span id="luxe-type-text">Luxe Auto</span>
+                  <span>Luxe Auto</span>
                 </label>
                 </div>
 
@@ -117,7 +117,7 @@
                    <div class="car-finder_title">
                      <p class="car-finder_heading">
                        Huur een
-                       <span>Auto</span>
+                       <span id="category-type-text">Auto</span>
                      </p>
                    </div>
                  </div>
@@ -179,7 +179,7 @@
                   </div>
                   <div class="col-md-4">
                     <div class="form-btn">
-                      <button class="submit-btn">Check Beschikbaarheid</button>
+                      <button class="submit-btn" id="submit-btn">Bekijk Auto's</button>
                     </div>
                   </div>
                 </form>

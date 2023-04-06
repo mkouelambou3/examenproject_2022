@@ -5,7 +5,7 @@
 <head>
        <meta charset="UTF-8">
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta name="viewport" content="width=device-width, initial-scale=0.75">
        <title>POC Share Wheels - Car Rental Website</title>
        <link rel="stylesheet" href="style.css">
        <link rel="stylesheet" 
@@ -44,7 +44,7 @@
                             <ul>
                                 <li><a href="home.html">Home</a></li>
                                 <li><a href="about.html">Over Ons</a></li>
-                                <li><a href="products.php">Producten</a></li>
+                                <li><a href="products.html">Producten</a></li>
                                 <li><a href="#">Reserveren</a></li>
                                 <li><a href="login.php">Login</a></li>
                                 <li><a href="contact.html">Contact</a></li>
@@ -81,79 +81,130 @@
               </div>
        </header>
 
+       
+
+
               <div id="booking" class="section">
-                     <div class="section-center">
-                       <div class="container">
-                         <div class="row">
-                           <div class="booking-form">
-                             <form>
-                               <div class="col-md-8">
-                                 <div class="form-group">
-                                   <input
-                                     class="form-control"
-                                     type="text"
-                                     placeholder="Kies een stad, postcode of plaats" id="city" name="city"
-                                   />
-                                   <span class="form-label">Waar wil je ophalen?</span>
+                <div class="content-blocks">
+                  <div>
+                    <div class="site-content-wrap">
+                      <section class="car-finder card car-finder_loaded">
+                        <form>
+                          <fieldset>
+                            <div class="main-categories_toggle">
+                              <legend class="visually-hidden">Voertuigtype</legend>
+                              <div class="main-categories_toggle-btn" onclick="carFunction()">
+                                <input type="radio" id="car" name="main-catergory" class="visually-hidden" value="car">
+                                <label for="car" class="image-lazyloaded">
+                                <img width="176" height="72" src="car-products/car-type-car.png" class="lazy-img loaded" alt="Auto" loading="lazy">
+                                <span>Auto</span>
+                              </label>
+                              </div>
+          
+                              <div class="main-categories_toggle-btn" onclick="vanFunction()">
+                                <input type="radio" id="van" name="main-catergory" class="visually-hidden" value="van">
+                                <label for="van" class="image-lazyloaded" name="van">
+                                <img width="184" height="76" src="car-products/car-type-van.png" class="lazy-img loaded" alt="bestelauto" loading="lazy">
+                                <span>Bestelauto</span>
+                              </label>
+                              </div>
+          
+                              <div class="main-categories_toggle-btn" onclick="luxeFunction()">
+                                <input type="radio" id="luxe-car" name="main-catergory" class="visually-hidden" value="luxe-car">
+                                <label for="luxe-car" class="image-lazyloaded">
+                                <img width="150" height="85" src="car-products/porsche_cayenne.png " class="lazy-img loaded" alt="luxe-car" loading="lazy">
+                                <span>Luxe Auto</span>
+                              </label>
+                              </div>
+          
+                            </div>
+                          </fieldset>
+                      </section>
+                      <div class="section-center">
+                        <div class="container" style="max-width: 1180px;">
+                         
+                          <div class="row">
+                            <div class="booking-form">
+                               <div class="car-finder_content">
+                                 <div class="car-finder_title">
+                                   <p class="car-finder_heading">
+                                     Huur een
+                                     <span id="category-type-text">Auto</span>
+                                   </p>
                                  </div>
                                </div>
-                               <div class="col-md-2">
-                                 <div class="form-group">
-                                   <select class="form-control" id="start-time" name="start-time">
-                                     <option>9:00</option>
-                                     <option>10:00</option>
-                                     <option>11:00</option>
-                                     <option>12:00</option>
-                                     <option>13:00</option>
-                                     <option>14:00</option>
-                                     <option>15:00</option>
-                                     <option>16:00</option>
-                                     <option>17:00</option>
-                                   </select>
-                                   <span class="select-arrow"></span>
-                                   <span class="form-label">Ophaaltijd</span>
-                                 </div>
-                               </div>
-                               <div class="col-md-2">
-                                 <div class="form-group">
-                                   <select class="form-control" id="end-time" name="end-time">
-                                     <option>9:00</option>
-                                     <option>10:00</option>
-                                     <option>11:00</option>
-                                     <option>12:00</option>
-                                     <option>13:00</option>
-                                     <option>14:00</option>
-                                     <option>15:00</option>
-                                     <option>16:00</option>
-                                     <option>17:00</option>
-                                   </select>
-                                   <span class="select-arrow"></span>
-                                   <span class="form-label">Inlevertijd</span>
-                                 </div>
-                               </div>
-                               <div class="col-md-4">
-                                 <div class="form-group">
-                                   <input class="form-control" type="date" id="check-in" name="check-in">
-                                   <span class="form-label">Check In</span>
-                                 </div>
-                               </div>
-                               <div class="col-md-4">
-                                 <div class="form-group">
-                                   <input class="form-control" type="date" required="" id="check-out" name="check-out">
-                                   <span class="form-label">Check Uit</span>
-                                 </div>
-                               </div>
-                               <div class="col-md-4">
-                                 <div class="form-btn">
-                                   <button class="submit-btn">Check Beschikbaarheid</button>
-                                 </div>
-                               </div>
-                             </form>
-                           </div>
-                         </div>
-                       </div>
-                     </div>
+                                <div class="col-md-8">
+                                  <div class="form-group">
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      placeholder="Kies een stad, postcode of plaats" id="city" name="city"
+                                    />
+                                    <span class="form-label">Waar wil je ophalen?</span>
+                                  </div>
+                                </div>
+                                <div class="col-md-2">
+                                  <div class="form-group">
+                                    <select class="form-control" id="start-time" name="start-time">
+                                      <option>9:00</option>
+                                      <option>10:00</option>
+                                      <option>11:00</option>
+                                      <option>12:00</option>
+                                      <option>13:00</option>
+                                      <option>14:00</option>
+                                      <option>15:00</option>
+                                      <option>16:00</option>
+                                      <option>17:00</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                    <span class="form-label">Ophaaltijd</span>
+                                  </div>
+                                </div>
+                                <div class="col-md-2">
+                                  <div class="form-group">
+                                    <select class="form-control" id="end-time" name="end-time">
+                                      <option>9:00</option>
+                                      <option>10:00</option>
+                                      <option>11:00</option>
+                                      <option>12:00</option>
+                                      <option>13:00</option>
+                                      <option>14:00</option>
+                                      <option>15:00</option>
+                                      <option>16:00</option>
+                                      <option>17:00</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                    <span class="form-label">Inlevertijd</span>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="form-group">
+                                    <input class="form-control" type="date" id="check-in" name="check-in" required="">
+                                    <span class="form-label">Check In</span>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="form-group">
+                                    <input class="form-control" type="date" required="" id="check-out" name="check-out">
+                                    <span class="form-label">Check Uit</span>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="form-btn">
+                                    <button class="submit-btn" id="submit-btn">Bekijk Auto's</button>
+                                  </div>
+                                </div>
+                              </form>
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                    </div>
+                    </div>
+                  </div>
+        
        <!-- Course Section Start-->
        <section class="course">
               <div class="PageBlock">
@@ -516,8 +567,8 @@
               }
               
               
-              var cities = ["Amsterdam-Noord", "Amsterdam-West", "Amsterdam Zuid (RAI) ", "Amsterdam Zuid", "Amsterdam Schiphol Airport", 
-                            "Utrecht", "Den Haag", "Maastricht", "Amstelveen", "Rotterdam"];
+              var cities = ["Amsterdam-Noord", "Amsterdam-West", "Amsterdam-Oost", "Amsterdam Zuid (RAI) ", "Amsterdam Zuid", "Amsterdam Schiphol Airport", 
+                            "Utrecht", "Den Haag", "Maastricht", "Amstelveen", "Rotterdam", "Leiden"];
               
               
               autocomplete(document.getElementById("city"), cities);

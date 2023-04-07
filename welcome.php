@@ -63,7 +63,7 @@
                             <!-- Reposnive bar open and close -->
                             <i class="fa fa-times" onclick="hideMenu()"></i>
                             <ul>
-                                <li><a href="home.html">Home</a></li>
+                                <li><a href="welcome.php">Home</a></li>
                                 <li><a href="about.html">Over Ons</a></li>
                                 <li><a href="product-page.html">Producten</a></li>
                                 <li><a href="#">Reserveren</a></li>
@@ -208,13 +208,13 @@
                                 </div>
                                 <div class="col-md-4">
                                   <div class="form-group">
-                                    <input class="form-control" type="date" id="check-in" name="check-in" required="">
+                                    <input class="form-control" type="date" id="check-in" name="check-in" required="" min="2023-04-07">
                                     <span class="form-label">Check In</span>
                                   </div>
                                 </div>
                                 <div class="col-md-4">
                                   <div class="form-group">
-                                    <input class="form-control" type="date" required="" id="check-out" name="check-out">
+                                    <input class="form-control" type="date" required="" id="check-out" name="check-out" max="2023-08-31">
                                     <span class="form-label">Check Uit</span>
                                   </div>
                                 </div>
@@ -244,7 +244,7 @@
                <h1>CHECK ONZE DIENSTEN <br> & ASSORTIMENT</h1>
                <p>Ontdek hier onze diensten/assortiment bij POC Share Wheels.</p>
 
-               <div class="row">
+               <div class="row-2">
                      <div class="course-col">
                             <img src="images/lease-icon.png" class="icon-1">
                             <h3>Lease</h3>
@@ -502,6 +502,106 @@
           </body>
 
        <!-- Footer Section End -->
+       <script>
+              function autocomplete(inp, arr) {
+               
+                var currentFocus;
+                
+                inp.addEventListener("input", function(e) {
+                    var a, b, i, val = this.value;
+                    
+                    closeAllLists();
+                    if (!val) { return false;}
+                    currentFocus = -1;
+                    
+                    a = document.createElement("DIV");
+                    a.setAttribute("id", this.id + "autocomplete-list");
+                    a.setAttribute("class", "autocomplete-items");
+                    
+                    this.parentNode.appendChild(a);
+                    
+                    for (i = 0; i < arr.length; i++) {
+                      
+                      if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                        
+                        b = document.createElement("DIV");
+                        
+                        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                        b.innerHTML += arr[i].substr(val.length);
+                       
+                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                        /*execute a function when someone clicks on the item value (DIV element):*/
+                        b.addEventListener("click", function(e) {
+                            /*insert the value for the autocomplete text field:*/
+                            inp.value = this.getElementsByTagName("input")[0].value;
+                            /*close the list of autocompleted values,
+                            (or any other open lists of autocompleted values:*/
+                            closeAllLists();
+                        });
+                        a.appendChild(b);
+                      }
+                    }
+                });
+                /*execute a function presses a key on the keyboard:*/
+                inp.addEventListener("keydown", function(e) {
+                    var x = document.getElementById(this.id + "autocomplete-list");
+                    if (x) x = x.getElementsByTagName("div");
+                    if (e.keyCode == 40) {
+                      
+                      currentFocus++;
+                      
+                      addActive(x);
+                    } else if (e.keyCode == 38) { //up
+                   
+                      currentFocus--;
+                      
+                      addActive(x);
+                    } else if (e.keyCode == 13) {
+                      
+                      e.preventDefault();
+                      if (currentFocus > -1) {
+                        
+                        if (x) x[currentFocus].click();
+                      }
+                    }
+                });
+                function addActive(x) {
+                  
+                  if (!x) return false;
+                  removeActive(x);
+                  if (currentFocus >= x.length) currentFocus = 0;
+                  if (currentFocus < 0) currentFocus = (x.length - 1);
+                  
+                  x[currentFocus].classList.add("autocomplete-active");
+                }
+                function removeActive(x) {
+                  
+                  for (var i = 0; i < x.length; i++) {
+                    x[i].classList.remove("autocomplete-active");
+                  }
+                }
+                function closeAllLists(elmnt) {
+                  
+                  var x = document.getElementsByClassName("autocomplete-items");
+                  for (var i = 0; i < x.length; i++) {
+                    if (elmnt != x[i] && elmnt != inp) {
+                      x[i].parentNode.removeChild(x[i]);
+                    }
+                  }
+                }
+                
+                document.addEventListener("click", function (e) {
+                    closeAllLists(e.target);
+                });
+              }
+              
+              
+              var cities = ["Amsterdam-Noord", "Amsterdam-West", "Amsterdam-Oost", "Amsterdam Zuid (RAI) ", "Amsterdam Zuid", "Amsterdam Schiphol Airport", 
+                            "Utrecht", "Den Haag", "Maastricht", "Amstelveen", "Rotterdam", "Leiden"];
+              
+              
+              autocomplete(document.getElementById("city"), cities);
+              </script>
        
        <script src="script.js"></script>
 </body>

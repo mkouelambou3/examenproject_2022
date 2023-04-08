@@ -544,3 +544,118 @@
         
        
        /*Booking Form Part End*/    
+
+       /*Products Section Start*/
+
+        .block-title {
+            margin-bottom: 3.125rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .heading-2 {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+            font-weight: 700;
+            color: #000;
+            letter-spacing: -0.02em;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .grid-item {
+            padding-left: 10px;
+            padding-right: 15px;
+            position: relative;
+        }
+
+
+        .vehicle-overview-block .grid-item {
+            margin-bottom: 30px;
+        }
+
+        .link-car{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card {
+            background-color: #fff;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, .25);
+            transition: box-shadow ease-in-out .3s;
+            border-radius: 2px;
+        }
+
+        .vehicle-overview-block_card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding: 15px 10px 10px;
+        }
+
+        .vehicle-header {
+            position: relative;
+            color: #d4002a;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .vehicle-header_title {
+            font-size: 0.875rem;
+            font-size: 600;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            line-height: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .vehicle-header_title span {
+            font-weight: 400;
+        }
+
+        .vehicle-header_subtitle {
+            font-size: 0.875rem;
+            color: #65615d;
+        }
+
+        .vehicle-image {
+            position: relative;
+            height: 0;
+            padding-bottom: 50%;
+        }
+
+
+        @media (min-width : 978px) {
+            .content-blocks>* {
+                margin-bottom: 4.375rem;
+            }
+
+            .three-colums .grid-item {
+                width: 33.333333%;
+            }
+        }
+
+        @media (min-width : 768px) {
+            .three-colums .grid-item {
+                width: 50%;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+       /*Products Section End*/

@@ -123,7 +123,7 @@
                             <div class="main-categories_toggle">
                               <legend class="visually-hidden">Voertuigtype</legend>
                               <div class="main-categories_toggle-btn" onclick="carFunction()">
-                                <input type="radio" id="car" name="main-catergory" class="visually-hidden" value="car">
+                                <input type="radio" id="car" name="main-category" class="visually-hidden" value="car">
                                 <label for="car" class="image-lazyloaded">
                                 <img width="176" height="72" src="car-products/car-type-car.png" class="lazy-img loaded" alt="Auto" loading="lazy">
                                 <span>Auto</span>
@@ -131,7 +131,7 @@
                               </div>
           
                               <div class="main-categories_toggle-btn" onclick="vanFunction()">
-                                <input type="radio" id="van" name="main-catergory" class="visually-hidden" value="van">
+                                <input type="radio" id="van" name="main-category" class="visually-hidden" value="van">
                                 <label for="van" class="image-lazyloaded" name="van">
                                 <img width="184" height="76" src="car-products/car-type-van.png" class="lazy-img loaded" alt="bestelauto" loading="lazy">
                                 <span>Bestelauto</span>
@@ -139,7 +139,7 @@
                               </div>
           
                               <div class="main-categories_toggle-btn" onclick="luxeFunction()">
-                                <input type="radio" id="luxe-car" name="main-catergory" class="visually-hidden" value="luxe-car">
+                                <input type="radio" id="luxe-car" name="main-category" class="visually-hidden" value="luxe-car">
                                 <label for="luxe-car" class="image-lazyloaded">
                                 <img width="150" height="85" src="car-products/porsche_cayenne.png " class="lazy-img loaded" alt="luxe-car" loading="lazy">
                                 <span>Luxe Auto</span>

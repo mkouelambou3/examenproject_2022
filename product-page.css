@@ -360,6 +360,15 @@
             }
         }
 
+        @media only screen and (max-width : 1600px) {
+            .booking-form {
+                background-color: #f8f9f5;
+                padding: 10px 15px 0;
+                border-radius: 5px;
+                overflow: auto;
+            }
+        }
+
         
         @media only screen and (min-width: 978px) {
             .page-header {
@@ -372,6 +381,14 @@
 
             .three-colums .grid-item {
                 width: 33.333333%;
+            }
+
+            .two-columns .grid-item, .two-columns.from-desktop .grid-item {
+                width: 50%;
+            }
+
+            .visual-and-text-block_content {
+                padding-right: 10%;
             }
         }
 
@@ -551,6 +568,10 @@
         .car-finder-hero .car-finder {
             margin-left: -10px;
             margin-right: -10px;
+        }
+
+        .two-columns .grid-item .two-columns.from-desktop .grid-item {
+            width: 100%;
         }
     }
 
@@ -813,4 +834,196 @@
             border-color: #d4002a;
         }
 
+        .content-block_title {
+            margin-bottom: 1.875rem;
+        }
+
+        .markdown p+* {
+            margin-top: 1.875rem;
+        }
+
+        .content-block_links {
+            margin-top: 2.625rem;
+        }
+
+        .btn-large:not(.btn-link) {
+            font-size: 0.875rem;
+            padding: 0.875rem 1.875rem;
+        }
+
+        .content-block_links a {
+            margin-top: 1.25rem;
+            margin-right: 0.9375rem;
+        }
+
+        .btn-secondary {
+            color: #d4002a;
+            border: 1px solid #d4002a;
+            border-radius: 50px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: .07em;
+        }
+
+        .image-block {
+            position: relative;
+            background-color: #d4002a;
+        }
+
+        .image-block picture {
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-bottom: 50%;
+            position: relative;
+        }
+
+        .image-block img {
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .content-block_links a:hover {
+            color: #fff;
+            transition: ease-in-out .3s;
+            background-color: #d4002a;
+        }
+        .btn-secondary {
+            position: relative;
+            z-index: 0;
+        }
+
        /*Products Section End*/
+
+       /*Call to Action Start*/
+
+       .cta {
+        margin: 100px auto;
+        width: 80%;
+        height: 500px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(images/car-back.png);
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        text-align: center;
+        padding: 100px 0;
+    }
+    
+    .cta h1 {
+        font-size: 50px;
+        font-weight: 800;
+        margin: 30px 0px;
+        line-height: 1.1;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    .cta h4{
+        margin: 40px 0px;
+        color: #fff;
+    }
+
+    @media(max-width: 767px){
+        .cta h1{
+            font-size: 26px;
+        }
+    }
+    .hero_btn-contact{
+        font-weight: 600;
+        position: relative;
+        display: inline-block;
+        color: #fff;
+        border: 1px solid #fff3f3;
+        border-radius: 5px;
+        padding: 12px 34px;
+        font-size: 18px;
+        background: transparent;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .hero_btn-contact:hover{
+        border: 1px solid #d4002a;
+        background: #d4002a;
+        transition: 0.8s;
+    }
+
+
+    /*Call to Action End*/
+
+    /*Footer Section Start*/
+
+    footer{
+        display: block;
+    }
+
+    .footer-page {
+        padding: 5rem 0;
+        background-color: #000;
+        color: #777;
+    }
+
+    .container {
+        @media (min-width: 768px)
+        {
+            max-width: 720px;
+        }
+    }
+
+    .container{
+        width: 2000px;
+    }
+
+    .mb-6{
+        margin-bottom: 3rem! important;
+    }
+    
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .footer-page .footer-site-logo{
+        margin-left: 5%;
+        text-decoration: none;
+        color: #fff3f3;
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        display: block;
+    }
+
+    h5{
+        margin: 10px;
+        font-size: 1.1rem;
+    }
+    
+    h6{
+        border-radius: 10px;
+    }
+
+    
+
+    .text-white{
+        padding-top: 10px;
+        align-self: auto;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .d-flex{
+        margin: 10px;
+    }
+
+    .copyright-text {
+        font-size: 18px;
+        text-align: center;
+    }
+
+
+    /*Footer Section End*/

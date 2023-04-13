@@ -123,7 +123,7 @@
                             <div class="main-categories_toggle">
                               <legend class="visually-hidden">Voertuigtype</legend>
                               <div class="main-categories_toggle-btn" onclick="carFunction()">
-                                <input type="radio" id="car" name="main-category" class="visually-hidden" value="car">
+                                <input type="radio" id="car" name="main-category" class="visually-hidden" value="car" required="">
                                 <label for="car" class="image-lazyloaded">
                                 <img width="176" height="72" src="car-products/car-type-car.png" class="lazy-img loaded" alt="Auto" loading="lazy">
                                 <span>Auto</span>
@@ -131,7 +131,7 @@
                               </div>
           
                               <div class="main-categories_toggle-btn" onclick="vanFunction()">
-                                <input type="radio" id="van" name="main-category" class="visually-hidden" value="van">
+                                <input type="radio" id="van" name="main-category" class="visually-hidden" value="van" required="">
                                 <label for="van" class="image-lazyloaded" name="van">
                                 <img width="184" height="76" src="car-products/car-type-van.png" class="lazy-img loaded" alt="bestelauto" loading="lazy">
                                 <span>Bestelauto</span>
@@ -139,7 +139,7 @@
                               </div>
           
                               <div class="main-categories_toggle-btn" onclick="luxeFunction()">
-                                <input type="radio" id="luxe-car" name="main-category" class="visually-hidden" value="luxe-car">
+                                <input type="radio" id="luxe-car" name="main-category" class="visually-hidden" value="luxe-car" required="">
                                 <label for="luxe-car" class="image-lazyloaded">
                                 <img width="150" height="85" src="car-products/porsche_cayenne.png " class="lazy-img loaded" alt="luxe-car" loading="lazy">
                                 <span>Luxe Auto</span>
@@ -167,7 +167,7 @@
                                     <input
                                       class="form-control"
                                       type="text"
-                                      placeholder="Kies een stad, postcode of plaats" id="city" name="city"
+                                      placeholder="Kies een stad, postcode of plaats" id="city" name="city" required=""
                                     />
                                     <span class="form-label">Waar wil je ophalen?</span>
                                   </div>
@@ -214,13 +214,13 @@
                                 </div>
                                 <div class="col-md-4">
                                   <div class="form-group">
-                                    <input class="form-control" type="date" required="" id="check-out" name="check-out" max="2023-08-31">
+                                    <input class="form-control" type="date" required="" id="check-out" name="check-out" max="2023-05-01">
                                     <span class="form-label">Check Uit</span>
                                   </div>
                                 </div>
                                 <div class="col-md-4">
                                   <div class="form-btn">
-                                    <button class="submit-btn" id="submit-btn">Bekijk Auto's</button>
+                                    <button class="submit-btn" id="submit-btn" name="submit-btn">Bekijk Auto's</button>
                                   </div>
                                 </div>
                               </form>
@@ -244,7 +244,7 @@
                <h1>CHECK ONZE DIENSTEN <br> & ASSORTIMENT</h1>
                <p>Ontdek hier onze diensten/assortiment bij POC Share Wheels.</p>
 
-               <div class="row-2">
+               <div class="row">
                      <div class="course-col">
                             <img src="images/lease-icon.png" class="icon-1">
                             <h3>Lease</h3>

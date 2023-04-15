@@ -114,125 +114,125 @@
        </header>
 
        <div id="booking" class="section">
-                <div class="content-blocks">
-                  <div>
-                    <div class="site-content-wrap">
-                      <section class="car-finder card car-finder_loaded">
-                        <form>
-                          <fieldset>
-                            <div class="main-categories_toggle">
-                              <legend class="visually-hidden">Voertuigtype</legend>
-                              <div class="main-categories_toggle-btn" onclick="carFunction()">
-                                <input type="radio" id="car" name="main-category" class="visually-hidden" value="car" required="">
-                                <label for="car" class="image-lazyloaded">
-                                <img width="176" height="72" src="car-products/car-type-car.png" class="lazy-img loaded" alt="Auto" loading="lazy">
-                                <span>Auto</span>
-                              </label>
-                              </div>
-          
-                              <div class="main-categories_toggle-btn" onclick="vanFunction()">
-                                <input type="radio" id="van" name="main-category" class="visually-hidden" value="van" required="">
-                                <label for="van" class="image-lazyloaded" name="van">
-                                <img width="184" height="76" src="car-products/car-type-van.png" class="lazy-img loaded" alt="bestelauto" loading="lazy">
-                                <span>Bestelauto</span>
-                              </label>
-                              </div>
-          
-                              <div class="main-categories_toggle-btn" onclick="luxeFunction()">
-                                <input type="radio" id="luxe-car" name="main-category" class="visually-hidden" value="luxe-car" required="">
-                                <label for="luxe-car" class="image-lazyloaded">
-                                <img width="150" height="85" src="car-products/porsche_cayenne.png " class="lazy-img loaded" alt="luxe-car" loading="lazy">
-                                <span>Luxe Auto</span>
-                              </label>
-                              </div>
-          
-                            </div>
-                          </fieldset>
-                      </section>
-                      <div class="section-center">
-                        <div class="container" style="max-width: 1180px;">
-                         
-                          <div class="row">
-                            <div class="booking-form">
-                               <div class="car-finder_content">
-                                 <div class="car-finder_title">
-                                   <p class="car-finder_heading">
-                                     Huur een
-                                     <span id="category-type-text">Auto</span>
-                                   </p>
-                                 </div>
-                               </div>
-                                <div class="col-md-8">
-                                  <div class="form-group">
-                                    <input
-                                      class="form-control"
-                                      type="text"
-                                      placeholder="Kies een stad, postcode of plaats" id="city" name="city" required=""
-                                    />
-                                    <span class="form-label">Waar wil je ophalen?</span>
-                                  </div>
-                                </div>
-                                <div class="col-md-2">
-                                  <div class="form-group">
-                                    <select class="form-control" id="start-time" name="start-time">
-                                      <option>9:00</option>
-                                      <option>10:00</option>
-                                      <option>11:00</option>
-                                      <option>12:00</option>
-                                      <option>13:00</option>
-                                      <option>14:00</option>
-                                      <option>15:00</option>
-                                      <option>16:00</option>
-                                      <option>17:00</option>
-                                    </select>
-                                    <span class="select-arrow"></span>
-                                    <span class="form-label">Ophaaltijd</span>
-                                  </div>
-                                </div>
-                                <div class="col-md-2">
-                                  <div class="form-group">
-                                    <select class="form-control" id="end-time" name="end-time">
-                                      <option>9:00</option>
-                                      <option>10:00</option>
-                                      <option>11:00</option>
-                                      <option>12:00</option>
-                                      <option>13:00</option>
-                                      <option>14:00</option>
-                                      <option>15:00</option>
-                                      <option>16:00</option>
-                                      <option>17:00</option>
-                                    </select>
-                                    <span class="select-arrow"></span>
-                                    <span class="form-label">Inlevertijd</span>
-                                  </div>
-                                </div>
-                                <div class="col-md-4">
-                                  <div class="form-group">
-                                    <input class="form-control" type="date" id="check-in" name="check-in" required="" min="2023-04-07">
-                                    <span class="form-label">Check In</span>
-                                  </div>
-                                </div>
-                                <div class="col-md-4">
-                                  <div class="form-group">
-                                    <input class="form-control" type="date" required="" id="check-out" name="check-out" max="2023-05-01">
-                                    <span class="form-label">Check Uit</span>
-                                  </div>
-                                </div>
-                                <div class="col-md-4">
-                                  <div class="form-btn">
-                                    <button class="submit-btn" id="submit-btn" name="submit-btn">Bekijk Auto's</button>
-                                  </div>
-                                </div>
-                              </form>
-                             
-                            </div>
-                          </div>
+  <div class="content-blocks">
+    <div>
+      <div class="site-content-wrap">
+        <div class="section-center">
+          <div class="container" style="max-width: 1160px;">
+           
+            <div class="row">
+              <div class="booking-form">
+                <section class="car-finder card car-finder_loaded">
+                  <form>
+                    <fieldset>
+                      <div class="main-categories_toggle">
+                        <legend class="visually-hidden">Voertuigtype</legend>
+                        <div class="main-categories_toggle-btn" onclick="carFunction()">
+                          <input type="radio" id="car" name="main-category" class="visually-hidden" value="car" required="">
+                          <label for="car" class="image-lazyloaded">
+                          <img width="176" height="72" src="car-products/car-type-car.png" class="lazy-img loaded" alt="Auto" loading="lazy">
+                          <span>Auto</span>
+                        </label>
                         </div>
+        
+                        <div class="main-categories_toggle-btn" onclick="vanFunction()">
+                          <input type="radio" id="van" name="main-category" class="visually-hidden" value="van" required="">
+                          <label for="van" class="image-lazyloaded" name="van">
+                          <img width="184" height="76" src="car-products/car-type-van.png" class="lazy-img loaded" alt="bestelauto" loading="lazy">
+                          <span>Bestelauto</span>
+                        </label>
+                        </div>
+        
+                        <div class="main-categories_toggle-btn" onclick="luxeFunction()">
+                          <input type="radio" id="luxe-car" name="main-category" class="visually-hidden" value="luxe-car" required="">
+                          <label for="luxe-car" class="image-lazyloaded">
+                          <img width="150" height="85" src="car-products/porsche_cayenne.png " class="lazy-img loaded" alt="luxe-car" loading="lazy">
+                          <span>Luxe Auto</span>
+                        </label>
+                        </div>
+        
                       </div>
-                    </div>
+                    </fieldset>
+                </section>
+                 <div class="car-finder_content">
+                   <div class="car-finder_title">
+                     <p class="car-finder_heading">
+                       Huur een
+                       <span id="category-type-text">Auto</span>
+                     </p>
                    </div>
+                 </div>
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Kies een stad, postcode of plaats" id="city" name="city" required=""
+                      />
+                      <span class="form-label">Waar wil je ophalen?</span>
                     </div>
                   </div>
+                  <div class="col-md-2">
+                    <div class="form-group">
+                      <select class="form-control" id="start-time" name="start-time">
+                        <option>9:00</option>
+                        <option>10:00</option>
+                        <option>11:00</option>
+                        <option>12:00</option>
+                        <option>13:00</option>
+                        <option>14:00</option>
+                        <option>15:00</option>
+                        <option>16:00</option>
+                        <option>17:00</option>
+                      </select>
+                      <span class="select-arrow"></span>
+                      <span class="form-label">Ophaaltijd</span>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="form-group">
+                      <select class="form-control" id="end-time" name="end-time">
+                        <option>9:00</option>
+                        <option>10:00</option>
+                        <option>11:00</option>
+                        <option>12:00</option>
+                        <option>13:00</option>
+                        <option>14:00</option>
+                        <option>15:00</option>
+                        <option>16:00</option>
+                        <option>17:00</option>
+                      </select>
+                      <span class="select-arrow"></span>
+                      <span class="form-label">Inlevertijd</span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <input class="form-control" type="date" id="check-in" name="check-in" required="" min="2023-04-07">
+                      <span class="form-label">Check In</span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <input class="form-control" type="date" required="" id="check-out" name="check-out" max="2023-05-01">
+                      <span class="form-label">Check Uit</span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-btn">
+                      <button class="submit-btn" id="submit-btn">Bekijk Auto's</button>
+                    </div>
+                  </div>
+                </form>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+      </div>
+    </div>
 
               
        <!-- Course Section Start-->

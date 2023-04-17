@@ -665,7 +665,7 @@
         .card {
             background-color: #fff;
             box-shadow: 0 1px 5px rgba(0, 0, 0, .25);
-            transition: .3s;
+            transition: ease-in-out .3s;
             border-radius: 2px;
         }
 
@@ -715,7 +715,6 @@
         .vehicle-image img {
             position: absolute;
             width: 100%;
-            
         }
 
         .lazy-img {

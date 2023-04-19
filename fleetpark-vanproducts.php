@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>POC Share Wheels - Fleetpark Car Products</title>
+    <title>POC Share Wheels - Fleetpark Van Products</title>
     <link rel="stylesheet" href="fleekpark-products.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC++EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
@@ -55,7 +55,7 @@
         <i class="fa fa-bars" onclick="showMenu()"></i>
         <!-- Reposnive bar open and close -->
       </nav>
-      <h1 class="heading-products-text">Ons wagenpark</h1>
+      <h1 class="heading-products-text">bestelauto's</h1>
     </section>
 
     <div class="fleet-page">
@@ -241,13 +241,13 @@
                                           <div class="vehicle-header">
                                             <h2 class="vehicle-header_title">
                                               Volkswagen Caddy
-                                              <span>(VCVN)</span>
+                                              <span name="token-id">(VCVN)</span>
                                             </h2>
                                             <span class="vehicle-header_subtitle"> Of gelijkwaardig / Bestelauto </span>
                                           </div>
                                           <figure class="vehicle-image">
                                              <picture class="image-lazyloaded">
-                                               <img width="353" height="199" src="car-products/volkswagen_caddy.png" class="lazy-img loaded" loading="lazy">
+                                               <img width="353" height="199" src="car-products/volkswagen_caddy.png" class="lazy-img loaded" loading="lazy" alt="bestelauto">
                                              </picture>
                                           </figure>
                                           <div class="vehicle_image-actions text-center"></div>
@@ -411,13 +411,13 @@
                                           <div class="vehicle-header">
                                             <h2 class="vehicle-header_title">
                                               Mercedes Benz Vito
-                                              <span>(MBVN)</span>
+                                              <span name="token-id">(MBVN)</span>
                                             </h2>
                                             <span class="vehicle-header_subtitle"> Of gelijkwaardig / Bestelauto </span>
                                           </div>
                                           <figure class="vehicle-image">
                                              <picture class="image-lazyloaded">
-                                               <img width="353" height="199" src="car-products/mercedes_benz_vito.png" class="lazy-img loaded" loading="lazy">
+                                               <img width="353" height="199" src="car-products/mercedes_benz_vito.png" class="lazy-img loaded" loading="lazy" alt="bestelauto">
                                              </picture>
                                           </figure>
                                           <div class="vehicle_image-actions text-center"></div>
@@ -578,13 +578,13 @@
                                           <div class="vehicle-header">
                                             <h2 class="vehicle-header_title">
                                               Peugot Expert
-                                              <span>(PTVN)</span>
+                                              <span name="token-id">(PTVN)</span>
                                             </h2>
                                             <span class="vehicle-header_subtitle"> Of gelijkwaardig / Bestelauto </span>
                                           </div>
                                           <figure class="vehicle-image">
                                              <picture class="image-lazyloaded">
-                                                <img width="353" height="199" src="car-products/peugot_expert.png" class="lazy-img loaded" loading="lazy">
+                                                <img width="353" height="199" src="car-products/peugot_expert.png" class="lazy-img loaded" loading="lazy" alt="bestelauto">
                                              </picture>
                                           </figure>
                                           <div class="vehicle_image-actions text-center"></div>
@@ -740,6 +740,121 @@
                          </section>
                       </div>
                    </div>
+
+                   <section class="cta">
+              <h1>GET READY FOR CONTACT</h1>
+              <h4>Heeft u meer vragen over onze producten, prijzen en voorwaarden? <br> Neem gerust contact met ons op.</h4>
+              <a href="contact.html" class="hero_btn-contact">CONTACT US</a>
+          </section> 
+       <!-- Call to Action End -->
+
+       <!-- Footer Section Start -->
+       <body>
+              <div class="container my-5">
+
+                     <footer
+                     class="text-center text-lg-start text-white" style="background-color: #000; border-radius: 25px;">
+
+                     <section class="d-flex justify-content-between p-4" 
+                     style="background-color: #777">
+                     <div class="me-5">
+                            <span>Volg ons op onze sociale media:</span>
+                          </div>
+                          <div>
+                            <a href="https://www.facebook.com/" class="text-white me-4">
+                                 <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.twitter.com/" class="text-white me-4">
+                                   <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" class="text-white me-4">
+                                   <i class="fab fa-instagram"></i>
+                                 </a>
+                            <a href="https://www.linkedin.com/feed/" class="text-white me-4">
+                                   <i class="fab fa-linkedin"></i>
+                            </a>
+                            </div>
+                     </section>
+
+                     <section class="">
+                            <div class="container text-center text-md-start mt-5">
+                              <!-- Grid row -->
+                              <div class="row mt-3">
+                                <!-- Grid column -->
+                                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                                  <!-- Content -->
+                                  <h6 class="text-uppercase fw-bold">POC Share Wheels</h6>
+                                  <h6>
+                                    Bij POC Share Wheels bieden wij de toekomst van auto's huren.
+                                    Altijd alles tegen een scherpe lage prijs, zeer goede kwaliteit.
+                                    De toekomst van huren. POC Share Wheels.
+                                  </h6>
+                                </div>
+                                <!-- Grid column -->
+                      
+                                <!-- Grid column -->
+                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                  <!-- Links -->
+                                  <h6 class="text-uppercase fw-bold">Over Ons</h6>
+                                  <p>
+                                    <a href="about.html" class="text-white">Lease</a>
+                                  </p>
+                                  <p>
+                                    <a href="about.html" class="text-white">Levering en Service</a>
+                                  </p>
+                                  <p>
+                                    <a href="about.html" class="text-white">Prijzen en Voorwaarden</a>
+                                  </p>
+                                 
+                                </div>
+                                <!-- Grid column -->
+                      
+                                <!-- Grid column -->
+                                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                  <!-- Links -->
+                                  <h6 class="text-uppercase fw-bold">Producten</h6>
+                                  <p>
+                                    <a href="about.html" class="text-white">Personenauto's</a>
+                                  </p>
+                                  <p>
+                                    <a href="about.html" class="text-white">Bestelwagens</a>
+                                  </p>
+                                  <p>
+                                    <a href="about.html" class="text-white">Sportauto's</a>
+                                  </p>
+                                </div>
+                                <!-- Grid column -->
+                      
+                                <!-- Grid column -->
+                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                                  <!-- Links -->
+                                  <h6 class="text-uppercase fw-bold">Contact</h6>
+                                  <p style="color: #fff;"><i class="fas fa-home mr-3"></i> Apollolaan 1, 1076 NN, AM</p>
+                                  <p style="color: #fff; font-size: 16px;"><i class="fas fa-envelope mr-3"></i> pocsharewheels@gmail.com</p>
+                                  <p style="color: #fff;"><i class="fas fa-phone mr-3"></i> +31 06 86 10 37 26</p>
+                                </div>
+                                <!-- Grid column -->
+
+                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                   <!-- Links -->
+                                   <h6 class="text-uppercase fw-bold">Conacttijden</h6>
+                                   <h5>MA : 9:00 - 17:00</h5>
+                                   <h5>DI : 9:00 - 17:00</h5>
+                                   <h5>WO : 9:00 - 17:00</h5>
+                                   <h5>DO : 9:00 - 17:00</h5>
+                                   <h5>VR : 9:00 - 17:00</h5>
+                                   <h5>ZA : 9:00 - 12:00</h5>
+                                   <h5>ZO : 9:00 - 12:00</h5>
+                                 </div>
+                              </div>
+                              <!-- Grid row -->
+                            </div>
+                            <h2 class="copyright-text">&copy; POC Share Wheels. 2022 Rights Reserved. Version : 1.0.</h2>
+                          </section>
+                        
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+          </body>
 
               </div>
             </div>

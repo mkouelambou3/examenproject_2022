@@ -64,8 +64,8 @@
                             <i class="fa fa-times" onclick="hideMenu()"></i>
                             <ul>
                                 <li><a href="welcome.php">Home</a></li>
-                                <li><a href="about.html">Over Ons</a></li>
-                                <li><a href="product-page.html">Producten</a></li>
+                                <li><a href="about.php">Over Ons</a></li>
+                                <li><a href="product-page.php">Producten</a></li>
                                 <li><a href="#">Reserveren</a></li>
                                 <div class="dropdown">
                                    <li><a href="#">Account</a></li>
@@ -77,7 +77,7 @@
                                           <a href="logout.php">Uitloggen</a>
                                    </div>
                                </div>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="contact-page.php">Contact</a></li>
 
                             </ul>
                         </div>
@@ -476,7 +476,7 @@
                                   <!-- Links -->
                                   <h6 class="text-uppercase fw-bold">Contact</h6>
                                   <p style="color: #fff;"><i class="fas fa-home mr-3"></i> Apollolaan 1, 1076 NN, AM</p>
-                                  <p style="color: #fff;"><i class="fas fa-envelope mr-3"></i> mkouelambou@gmail.com</p>
+                                  <p style="color: #fff;"><i class="fas fa-envelope mr-3"></i> infopocsharewheels@gmail.com</p>
                                   <p style="color: #fff;"><i class="fas fa-phone mr-3"></i> +31 06 86 10 37 26</p>
                                 </div>
                                 <!-- Grid column -->

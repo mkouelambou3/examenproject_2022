@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
        *{
               margin: 0;
@@ -135,9 +135,8 @@
 
        /* Responsive Navbar End */
 
-
        /*About Section Start*/
-          .sub-header {
+       .sub-header {
               height: 50vh;
               width: 100%;
               background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), 
@@ -154,128 +153,19 @@
 
        /*About Section End*/
 
-       /*Header Fleetpark Section Start*/
+       /*Section one-third-columm Section Start*/
 
-       .page-header {
-              padding-top: 3.75rem;
+       .car-finder-results-page {
+              min-height: 100vh;
        }
 
-       .site-content-wrap_small {
-              max-width: 51.125rem;
+       .car-finder-results {
+              position: relative;
        }
 
-       .heading-1 {
-              font-size: 2.125rem;
-              line-height: 2.5rem;
-              font-weight: 700;
-              text-align: center;
-              letter-spacing: -0.02em;
-       }
-
-       .page-header .intro-text {
-              margin-top: 1.875rem;
-       }
-
-       .intro-text {
-              font-size: 1.125rem;
-              line-height: 1.5rem;
-              font-weight: 700;
-              text-align: center;
-              color: #000;
-              letter-spacing: -0.01em;
-       }
-
-       .markdown {
-              line-height: 1.5rem;
-       }
-
-       @media only screen and (max-width : 978px) {
-          .page-header {
-              padding-top: 4.375rem;
-          }  
-       }
-
-
-       /*Header Fleetpark Section End*/
-
-       /*Products Section Start*/
-
-       img {
-              max-width: 100%;
-              height: auto;
-              display: block;
-       }
-
-       .main-categories {
-              display: flex;
+       .grid.justify-content-center {
               justify-content: center;
        }
-
-       .main-categories_link.active {
-              background-color: #f6f5f4;
-       }
-
-       .main-categories_link:hover {
-              background-color: #f6f5f4;
-              transition: ease-in-out .3s;
-       }
-
-       .main-categories_link.main-categories_link, 
-       .main-categories_link label, .main-categories_toggle.main-categories_link, 
-       .main-categories_toggle label {
-              font-weight: 400;
-              font-size: 0.875rem;
-              color: #000;
-              cursor: pointer;
-              transition: all .5s;
-              transition-property: background-color;
-       }
-
-       .main-categories_link {
-              min-height: 3.125rem;
-              flex: 0 0 33.333333%;
-              margin-right: 0.5rem;
-              text-align: center;
-              background-color: #e1ded9;
-       }
-
-       .main-categories_link-image {
-              height: 2.25rem;
-              padding-top: 0.25rem;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-       }
-
-       .main-categories_link-label {
-              color: inherit;
-              font-size: 0.75rem;
-              line-height: 1.5rem;
-       }
-
-       @media only screen and (min-width: 768px) {
-              .main-categories_link {
-                     display: flex;
-                     align-items: center;
-                     flex: 0 0 12.5rem;
-                     margin-right: 0.125rem;
-                     padding: 0 0.625rem;
-              }
-
-              .main-categories_link-image {
-                     flex: 1 1 auto;
-              }
-
-              .main-categories_link-label {
-                     font-size: 0.875rem;
-                     margin-left: 0.625rem;
-                     flex: 1 1 auto;
-              }
-       }
-
-       /*Products Section End*/
-
-       /*Result Products List Section one-third column Start*/
 
        .site-content-wrap {
               max-width: 76.25rem;
@@ -283,16 +173,20 @@
               margin: 0 auto;
        }
 
-       .site-content-wrap .site-content-wrap {
-              padding: 0;
-       }
-
        .grid {
+              
               display: flex;
               flex-wrap: wrap;
               margin: 0 -15px;
        }
-            
+
+       .grid-item {
+              width: 100%;
+              padding-left: 15px;
+              padding-right: 15px;
+              position: relative;
+       }
+
        .grid.without-gutter {
               margin: 0;
        }
@@ -317,13 +211,8 @@
        .grid.align-items-end {
               align-items: flex-end;
        }
-            
-       .grid-item {
-              width: 100%;
-              padding-left: 15px;
-              padding-right: 15px;
-              position: relative;
-       }
+
+       
 
        .vehicle-filters {
               padding-top: 1.25rem;
@@ -333,8 +222,7 @@
               border: 1px solid #b2b0ae;
        }
 
-       .vehicle-filters_modal-btn, 
-       .vehicle-filters_modal-header {
+       .vehicle-filters_modal-btn, .vehicle-filters_modal-header {
               color: #000;
               font-size: 0.75rem;
               font-weight: 700;
@@ -345,27 +233,13 @@
               text-transform: uppercase;
        }
 
-       button {
-              background: transparent;
-              border: none;
-              padding: 0;
-              margin: 0;
-              color: #000;
-       }
-
-       .vehicle-filters_modal-btn .icon-filter, 
-       .vehicle-filters_modal-header .icon-filter {
+       .vehicle-filters_modal-btn .icon-filter, .vehicle-filters_modal-header .icon-filter {
               position: absolute;
               top: 50%;
               transform: translateY(-50%);
               width: 1.5rem;
               height: 1.5rem;
               left: 10px;
-       }
-
-       .vehicle-filters_active-filters-heading {
-              display: flex;
-              align-items: center;
        }
 
        .vehicle-filters_active-filter-count {
@@ -397,31 +271,19 @@
               height: 100%;
        }
 
-       .vehicle-filters_modal-btn .icon-close, 
-       .vehicle-filters_modal-header .icon-close {
+       button {
+              background: transparent;
+              border: none;
+              padding: 0;
+              margin: 0;
+              color: #000;
+       }
+
+       .vehicle-filters_modal-btn .icon-close, .vehicle-filters_modal-header .icon-close {
               vertical-align: middle;
               height: 0.75rem;
               width: 0.75rem;
        }
-
-       .vehicle-filters_active-filters-heading .vehicle-filters_reset-btn {
-              padding-top: 1.25rem;
-       }
-
-       .vehicle-filters_reset-btn {
-              border-bottom: #d4002a solid 1px;
-              transition: color ease-in-out .3s;
-              color: #000;
-              font-size: 0.875rem;
-              line-height: 1.5rem;
-              height: auto;
-              display: none;
-       }
-
-       .vehicle-filters_reset-btn:hover {
-              cursor: pointer;
-              color: #d4002a;
-          }
 
        .vehicle-filters_groups {
               padding-bottom: 3.125rem;
@@ -487,7 +349,7 @@
        .checkbox-filter label>svg {
               width: 1rem;
               height: 1rem;
-              left: -0.01rem;
+              left: -0.05rem;
        }
 
        .checkbox-base label>svg {
@@ -502,8 +364,30 @@
               color: #fff;
        }
 
+       .vehicle-filters_active-filters-heading .vehicle-filters_reset-btn {
+              padding-top: 1.25rem;
+       }
 
-       @media only screen and (min-width: 978px) {
+       .vehicle-filters_reset-btn {
+              border-bottom: #d4002a solid 1px;
+              transition: color ease-in-out .3s;
+              color: #000;
+              font-size: 0.875rem;
+              line-height: 1.5rem;
+              height: auto;
+              display: none;
+       }
+
+       
+
+       @media only screen and (min-width : 978px) {
+              .two-columns .one-third-column, .three-columns .grid-item {
+                     width: 33.333333%;
+              }  
+
+              .two-columns .grid-item, .two-columns.from-desktop .grid-item {
+                     width: 50%;
+              }
 
               .car-finder-results .vehicle-filters {
                      max-width: 19.375rem;
@@ -521,9 +405,15 @@
                      justify-content: space-between;
                      padding-top: 22px;
                      padding-bottom: 1.5625rem;
-                     border-bottom: 1px solid rgba(0, 3, 51, .2);
+                     border-bottom: 1px solid rgba(0,3,51,.2);
+                     margin: 0;
               }
 
+              .vehicle-filters_active-filters-heading {
+                     display: flex;
+                     align-items: center;
+              }
+       
               .vehicle-filters_active-filters-heading h2 {
                      display: block;
                      position: relative;
@@ -533,38 +423,24 @@
 
               .vehicle-filters_active-filters-heading .vehicle-filters_reset-btn {
                      padding-top: 0;
-                 }
-       }
-
-       @media only screen and (min-width : 768px) {
-              .two-columns .one-third-columm {
-                     width: 100%;
-              }
-
-              .two-columns .grid-item {
-                     width: 50%;
               }
        
        }
 
+       @media only screen and (min-width : 768px) {
+              .two-columns .one-third-column, .two-columns .two-thirds-column, .two-columns.from-desktop .grid-item {
+                     width: 100%;
+              } 
 
-       /*Result Products List one-third column Section End*/
+              .two-columns .grid-item, .three-columns .grid-item, .four-columns .grid-item {
+                     width: 50%;
+              }
+       }
 
+        /*Section one-third-columm Section End*/
 
 
        /*Result Products List two-third column Section Start*/
-
-       .tmpl-bg-grey {
-              background: #f6f5f4;
-       }
-
-       .fleet-page_results {
-              padding: 50px 0 10px;
-       }
-
-       .car-finder-results {
-              position: relative;
-       }
 
        .car-finder-results_results>:first-child {
               margin-top: 25px;
@@ -584,6 +460,10 @@
               font-size: 0.875rem;
               line-height: 1.25rem;
               color: #65615d;
+       }
+
+       .car-finder-results_subtitle span {
+              display: block;
        }
 
        ul[class] {
@@ -638,6 +518,10 @@
               color: #65615d;
        }
 
+       .vehicle-header_title span {
+              font-weight: 400;
+       }
+
        .vehicle-image {
               position: relative;
               height: 0;
@@ -682,22 +566,11 @@
               color: #65615d;
        }
 
-       .vehicle-overview-block_card .icon-list {
-              display: flex; 
-              flex-direction: row;
-              flex-wrap: wrap;
-              width: 100%;
-       }
-
        .vehicle_features .icon-list {
               --icon-list-line-height: 1.5rem;
               --icon-list-icon-size: 1.5rem;
               columns: 2;
-              margin: 15px -25px;
-       }
-
-       .vehicle-overview-block_card .icon-list_item {
-              width: 50%;
+              margin: 15px -30px;
        }
 
        .vehicle_features .icon-list_item {
@@ -738,6 +611,69 @@
               line-height: var(--icon-list-line-height, calc(var(--icon-list-font-size, 0.8125rem) * 1.5));
        }
 
+       .vehicle_divider {
+              width: 100%;
+              margin: 15px 0;
+              border: none;
+              border-top: 1px solid #e1ded9;
+       }
+
+       .vehicle_pricing-row {
+              display: flex;
+              align-items: baseline;
+              margin-bottom: 0.9375rem;
+       }
+
+       .vehicle_pricing-day {
+              font-size: 0.875rem;
+       }
+
+       .vehicle_pricing-total {
+              margin-left: auto;
+              text-align: right;
+              font-size: 0.875rem;
+       }
+
+       .vehicle_pricing-total strong {
+              margin-right: 0.5rem;
+              font-size: 1.375rem;
+              line-height: 1.75rem;
+       }
+
+       .vehicle .notice {
+              margin: 10px 0;
+       }
+
+       .notice {
+              margin: 15px 0;
+              padding: 10px;
+              border-radius: 2px;
+              font-size: 0.8125rem;
+              line-height: 1.1875rem;
+       }
+
+       .notice_info {
+              background: #f6f5f4;
+              border: 1px solid #e1ded9;
+              box-shadow: none;
+              color: #000;
+              font-weight: 400;
+       }
+
+       .notice .markdown {
+              display: inline;
+              line-height: inherit;
+       }
+
+       .markdown {
+              display: inline;
+              line-height: 1.5rem;
+       }
+
+       .extra-info {
+              display: inline;
+       }
+
        .vehicle .vehicle_cta {
               padding: 0.5625rem 1.875rem;
               display: inline-block;
@@ -756,6 +692,7 @@
               border-radius: 5rem;
               width: 100%;
        }
+
 
        .vehicle .vehicle_cta {
               width: 100%;
@@ -791,12 +728,6 @@
               border-radius: inherit;
               z-index: -1;
               transition: opacity ease-in-out .3s;
-       }
-
-       .vehicle_card-expander-btn {
-              width: fit-content;
-              margin: 0.3125rem auto 0;
-              
        }
 
        .btn-transparent {
@@ -844,12 +775,13 @@
               border: 1px solid transparent;
        }
 
-       .btn-icon {
-              display: inline-flex;
-              justify-content: center;
-              align-items: center;
+       @media only screen and (min-width : 978px) {
+              .car-finder-results_results>:first-child {
+                     margin-top: 35px;
+              }
        }
 
+       
 
        @media only screen and (min-width: 978px) {
               .two-columns .grid-item, .two-columns.from-desktop .grid-item {
@@ -869,130 +801,4 @@
               }
        }
 
-
-       /*Call to Action Start*/
-
-       .cta {
-              margin: 100px auto;
-              width: 80%;
-              height: 500px;
-              background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(images/car-back.png);
-              background-size: cover;
-              background-position: center;
-              border-radius: 10px;
-              text-align: center;
-              padding: 100px 0;
-          }
-          
-          .cta h1 {
-              font-size: 50px;
-              font-weight: 800;
-              margin: 30px 0px;
-              line-height: 1.1;
-              text-transform: uppercase;
-              color: #fff;
-          }
-          .cta h4{
-              margin: 40px 0px;
-              color: #fff;
-          }
-      
-          @media(max-width: 767px){
-              .cta h1{
-                  font-size: 26px;
-              }
-          }
-          .hero_btn-contact{
-              font-weight: 600;
-              position: relative;
-              display: inline-block;
-              color: #fff;
-              border: 1px solid #fff3f3;
-              border-radius: 5px;
-              padding: 12px 34px;
-              font-size: 18px;
-              background: transparent;
-              cursor: pointer;
-              text-decoration: none;
-          }
-          .hero_btn-contact:hover{
-              border: 1px solid #d4002a;
-              background: #d4002a;
-              transition: 0.8s;
-          }
-      
-      
-          /*Call to Action End*/
-      
-          /*Footer Section Start*/
-      
-          footer{
-              display: block;
-          }
-      
-          .footer-page {
-              padding: 5rem 0;
-              background-color: #000;
-              color: #777;
-          }
-      
-          .container {
-              @media (min-width: 768px)
-              {
-                  max-width: 720px;
-              }
-          }
-      
-          .container{
-              width: 2000px;
-          }
-      
-          .mb-6{
-              margin-bottom: 3rem! important;
-          }
-          
-          .row{
-              display: flex;
-              flex-wrap: wrap;
-              margin-right: -15px;
-              margin-left: -15px;
-          }
-          .footer-page .footer-site-logo{
-              margin-left: 5%;
-              text-decoration: none;
-              color: #fff3f3;
-              font-size: 26px;
-              font-weight: bold;
-              margin-bottom: 30px;
-              display: block;
-          }
-      
-          h5{
-              font-size: 0.875rem;
-          }
-          
-          h6{
-              border-radius: 10px;
-          }
-      
-          
-      
-          .text-white{
-              padding-top: 10px;
-              align-self: auto;
-              text-decoration: none;
-              font-weight: 500;
-          }
-      
-          .d-flex{
-              margin: 10px;
-          }
-      
-          .copyright-text {
-              font-size: 18px;
-              text-align: center;
-          }
-      
-      
-          /*Footer Section End*/
-
+       /*Result Products List two-third column Section End*/

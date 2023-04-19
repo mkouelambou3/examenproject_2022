@@ -49,6 +49,16 @@ function checkBoxCar() {
       text.style.display = "none";
       document.getElementById("vehicle-filter-count").innerHTML = 0;
   }
+
+  let deleteinput = document.getElementById("vehicle_reset_btn");
+
+  deleteinput.onclick = function() {
+    if (checkbox.checked) {
+       text.style.display = "none";
+       document.getElementById("vehicle-filter-count").innerHTML = 0;
+       checkbox.checked = false;
+    }
+  }
 }
 
 function checkBoxVan() {
@@ -65,22 +75,41 @@ function checkBoxVan() {
     text.style.display = "none";
     document.getElementById("vehicle-filter-count-van").innerHTML = 0;
   }
+
+  let deleteinput = document.getElementById("vehicle_reset_btn");
+
+  deleteinput.onclick = function() {
+    if (checkbox.checked) {
+       text.style.display = "none";
+       document.getElementById("vehicle-filter-count-van").innerHTML = 0;
+       checkbox.checked = false;
+    }
+  }
 }
 
 
-function setCheck3On() {
+function checkBoxLuxeCar() {
   var checkbox = document.getElementById("checkbox-luxeauto");
   var text = document.getElementById("vehicle_reset_btn");
+  var count = 0;
   if (checkbox.checked == true) {
+      count++;
       text.style.display = "block";
+      document.getElementById("vehicle-filter-count-luxury").innerHTML = count;
   } else {
+      count--;
       text.style.display = "none";
+      document.getElementById("vehicle-filter-count-luxury").innerHTML = 0;
   }
 
-  if (checkbox.checked == false) {
-    text.style.display = "none";
-  } else {
-    text.style.display = "block";
+  let deleteinput = document.getElementById("vehicle_reset_btn");
+
+  deleteinput.onclick = function() {
+    if (checkbox.checked) {
+       text.style.display = "none";
+       document.getElementById("vehicle-filter-count-luxury").innerHTML = 0;
+       checkbox.checked = false;
+    }
   }
 }
 

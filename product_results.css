@@ -674,6 +674,7 @@
               display: inline;
        }
 
+
        .vehicle .vehicle_cta {
               padding: 0.5625rem 1.875rem;
               display: inline-block;
@@ -736,7 +737,7 @@
               color: #000;
        }
 
-       .btn-transparent span {
+       .btn-transparent span{
               padding: 0.5625rem 1.875rem;
               display: inline-block;
               font-size: 0.75rem;
@@ -751,6 +752,19 @@
               transition: ease-in-out .3s;
               transition-property: color,border-color,background-color;
               border: 1px solid transparent;
+       }
+
+       .vehicle_card-expander-btn svg {
+              margin: -36px;
+              transition: transform .3s cubic-bezier(0.5, 1, 0.89, 1);
+              transform: rotateZ(90deg);
+       }
+
+       .btn-icon>svg {
+              margin-right: 18px;
+              display: inline;
+              width: 1.125rem;
+              height: 1.125rem;
        }
 
        .btn-transparent:hover:not([disabled]) {

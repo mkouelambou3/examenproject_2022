@@ -1,7 +1,6 @@
 <?php
-       include 'config.php';
-      
 
+       include 'config.php';
        session_start();
 
        if (!isset($_SESSION['SESSION_EMAIL'])) {
@@ -14,6 +13,8 @@
        if (mysqli_num_rows($query) > 0) {
               $row = mysqli_fetch_assoc($query);
        }
+
+       
 ?>
 
 
@@ -114,8 +115,7 @@
             <div class="row">
               <div class="booking-form">
                 <section class="car-finder card car-finder_loaded">
-                  <form action="" method="post">
-
+                  <form class="booking-car-form" action="" method="post" enctype="multipart/form-data">
                   <fieldset>
                       <div class="main-categories_toggle">
                         <legend class="visually-hidden">Voertuigtype</legend>
@@ -145,6 +145,7 @@
         
                       </div>
                     </fieldset>
+                    
                 </section>
                  <div class="car-finder_content">
                    <div class="car-finder_title">
@@ -1628,7 +1629,7 @@
                         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                            <!-- Links -->
                            <h6 class="text-uppercase fw-bold" style="margin-left: 10px;">Conacttijden</h6>
-                           <h5 style="font-size: 14px;">MA : 9:00 - 17:00</h5>
+                           <h5>MA : 9:00 - 17:00</h5>
                            <h5>DI : 9:00 - 17:00</h5>
                            <h5>WO : 9:00 - 17:00</h5>
                            <h5>DO : 9:00 - 17:00</h5>

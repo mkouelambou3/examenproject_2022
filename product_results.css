@@ -816,3 +816,130 @@
        }
 
        /*Result Products List two-third column Section End*/
+
+
+       /*Call to Action Start*/
+
+       .cta {
+              margin: 100px auto;
+              width: 80%;
+              height: 500px;
+              background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(images/car-back.png);
+              background-size: cover;
+              background-position: center;
+              border-radius: 10px;
+              text-align: center;
+              padding: 100px 0;
+          }
+          
+          .cta h1 {
+              font-size: 50px;
+              font-weight: 800;
+              margin: 30px 0px;
+              line-height: 1.1;
+              text-transform: uppercase;
+              color: #fff;
+          }
+          .cta h4{
+              margin: 40px 0px;
+              color: #fff;
+          }
+      
+          @media(max-width: 767px){
+              .cta h1{
+                  font-size: 26px;
+              }
+          }
+          .hero_btn-contact{
+              font-weight: 600;
+              position: relative;
+              display: inline-block;
+              color: #fff;
+              border: 1px solid #fff3f3;
+              border-radius: 5px;
+              padding: 12px 34px;
+              font-size: 18px;
+              background: transparent;
+              cursor: pointer;
+              text-decoration: none;
+          }
+          .hero_btn-contact:hover{
+              border: 1px solid #d4002a;
+              background: #d4002a;
+              transition: 0.8s;
+          }
+      
+      
+          /*Call to Action End*/
+      
+          /*Footer Section Start*/
+      
+          footer{
+              display: block;
+          }
+      
+          .footer-page {
+              padding: 5rem 0;
+              background-color: #000;
+              color: #777;
+          }
+      
+          .container {
+              @media (min-width: 768px)
+              {
+                  max-width: 720px;
+              }
+          }
+      
+          .container{
+              width: 2000px;
+          }
+      
+          .mb-6{
+              margin-bottom: 3rem! important;
+          }
+          
+          .row{
+              display: flex;
+              flex-wrap: wrap;
+              margin-right: -15px;
+              margin-left: -15px;
+          }
+          .footer-page .footer-site-logo{
+              margin-left: 5%;
+              text-decoration: none;
+              color: #fff3f3;
+              font-size: 26px;
+              font-weight: bold;
+              margin-bottom: 30px;
+              display: block;
+          }
+      
+          h5{
+              font-size: 0.875rem;
+          }
+          
+          h6{
+              border-radius: 10px;
+          }
+      
+          
+      
+          .text-white{
+              padding-top: 10px;
+              align-self: auto;
+              text-decoration: none;
+              font-weight: 500;
+          }
+      
+          .d-flex{
+              margin: 10px;
+          }
+      
+          .copyright-text {
+              font-size: 18px;
+              text-align: center;
+          }
+      
+      
+          /*Footer Section End*/

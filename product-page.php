@@ -12,9 +12,7 @@
 
        if (mysqli_num_rows($query) > 0) {
               $row = mysqli_fetch_assoc($query);
-       }
-
-       
+       }  
 ?>
 
 
@@ -105,6 +103,39 @@
     </div>
 </header>
 
+<?php 
+
+       include 'db-products.php';
+
+       $msg = "";
+       
+      if (isset($_POST['submit'])) {
+
+        $result_query = mysqli_query($conn, "SELECT `main_category`,  `city`, `start_time`, `end_time`, `check_in`, `check_out` FROM `cars` WHERE `main_category` = main_category;");
+        
+        if ($main_category === 'car') {
+          $result_query = mysqli_query($conn, "SELECT `main_category`, `city`, `start_time`, `end_time`, `check_in`, `check_out` FROM `cars` WHERE `main_category` = 'car';");
+
+          if ($result_query) {
+            header("Location : car-results.php");
+          } else {
+             $msg = "ERROR!";
+             die();
+          }
+
+          if (isset($result_query)) {
+            $result = mysqli_store_result($conn);
+          } else {
+            $result = mysqli_query($conn, "INSERT INTO `cars` (`main_category`, `city`, `start_time`, `end_time`, `check_in`, `check_out`) VALUES ('car', '$city', '$start_time', '$end_time', '$check_in', '$check_out');");
+          }
+        }
+      }
+
+
+
+?>
+
+
 <div id="booking" class="section">
   <div class="content-blocks">
     <div>
@@ -115,12 +146,12 @@
             <div class="row">
               <div class="booking-form">
                 <section class="car-finder card car-finder_loaded">
-                  <form class="booking-car-form" action="" method="post" enctype="multipart/form-data">
+                  <form action="" method="post" enctype="multipart/form-data">
                   <fieldset>
                       <div class="main-categories_toggle">
                         <legend class="visually-hidden">Voertuigtype</legend>
                         <div class="main-categories_toggle-btn" onclick="carFunction()">
-                          <input type="radio" id="car" name="main-category" class="visually-hidden" value="car" required="">
+                          <input type="radio" id="car" name="main_category" class="visually-hidden" value="car" required="">
                           <label for="car" class="image-lazyloaded">
                           <img width="176" height="72" src="car-products/car-type-car.png" class="lazy-img loaded" alt="Auto" loading="lazy">
                           <span>Auto</span>
@@ -128,7 +159,7 @@
                         </div>
         
                         <div class="main-categories_toggle-btn" onclick="vanFunction()">
-                          <input type="radio" id="van" name="main-category" class="visually-hidden" value="van" required="">
+                          <input type="radio" id="van" name="main_category" class="visually-hidden" value="van" required="">
                           <label for="van" class="image-lazyloaded" name="van">
                           <img width="184" height="76" src="car-products/car-type-van.png" class="lazy-img loaded" alt="bestelauto" loading="lazy">
                           <span>Bestelauto</span>
@@ -136,7 +167,7 @@
                         </div>
         
                         <div class="main-categories_toggle-btn" onclick="luxeFunction()">
-                          <input type="radio" id="luxe-car" name="main-category" class="visually-hidden" value="luxe-car" required="">
+                          <input type="radio" id="luxe-car" name="main_category" class="visually-hidden" value="luxe-car" required="">
                           <label for="luxe-car" class="image-lazyloaded">
                           <img width="150" height="85" src="car-products/porsche_cayenne.png " class="lazy-img loaded" alt="luxe-car" loading="lazy">
                           <span>Luxe Auto</span>
@@ -167,7 +198,7 @@
                   </div>
                   <div class="col-md-2">
                     <div class="form-group">
-                      <select class="form-control" id="start-time" name="start-time">
+                      <select class="form-control" id="start-time" name="start_time">
                         <option>9:00</option>
                         <option>10:00</option>
                         <option>11:00</option>
@@ -184,7 +215,7 @@
                   </div>
                   <div class="col-md-2">
                     <div class="form-group">
-                      <select class="form-control" id="end-time" name="end-time">
+                      <select class="form-control" id="end-time" name="end_time">
                         <option>9:00</option>
                         <option>10:00</option>
                         <option>11:00</option>
@@ -201,19 +232,19 @@
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input class="form-control" type="date" id="check-in" name="check-in" required="" min="2023-04-07">
+                      <input class="form-control" type="date" id="check-in" name="check_in" required="" min="2023-04-07">
                       <span class="form-label">Check In</span>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input class="form-control" type="date" required="" id="check-out" name="check-out" max="2023-05-01">
+                      <input class="form-control" type="date" required="" id="check-out" name="check_out" max="2023-05-01">
                       <span class="form-label">Check Uit</span>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-btn">
-                      <button type="submit" class="submit-btn" id="submit-btn">Bekijk Auto's</button>
+                      <button type="submit" class="submit-btn">Bekijk Auto's</button>
                     </div>
                   </div>
       </form>

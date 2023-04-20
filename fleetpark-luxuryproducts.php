@@ -1,3 +1,25 @@
+<?php
+
+       include 'config.php';
+       session_start();
+
+       if (!isset($_SESSION['SESSION_EMAIL'])) {
+            header("Location: home.html");
+            die();
+        }
+
+       $query = mysqli_query($conn, "SELECT * FROM users WHERE email='{$_SESSION['SESSION_EMAIL']}'");
+
+       if (mysqli_num_rows($query) > 0) {
+              $row = mysqli_fetch_assoc($query);
+       }  
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,12 +66,21 @@
           <!-- Reposnive bar open and close -->
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">Over Ons</a></li>
-            <li><a href="product-page.html">Producten</a></li>
+            <li><a href="welcome.php">Home</a></li>
+            <li><a href="about.php">Over Ons</a></li>
+            <li><a href="product-page.php">Producten</a></li>
             <li><a href="#">Reserveren</a></li>
-            <li><a href="login.php">Login</a></li>
-            <li><a href="contact.html">Contact</a></li>
+                <div class="dropdown">
+                  <li><a href="#">Account</a></li>
+                    <div class="dropdown-content">
+                      <div class="user-info">
+                      <?php echo "Welcome, "  . $row['naam'] ; ?>
+                    </div>
+                  <a href="profile.php">Profiel</a>
+                <a href="logout.php">Uitloggen</a>
+              </div>
+            </div>
+          <li><a href="contact-page.php">Contact</a></li>
           </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>

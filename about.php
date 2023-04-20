@@ -51,7 +51,7 @@
 <body>
        <section class="sub-header">
               <nav>
-                     <a href="home.html" class="logo">
+                     <a href="welcome.php" class="logo">
                             <i class="fa-solid fa-car-side"></i> POC Share Wheels
                      </a>
                      <div class="nav-links" id="navLinks">
@@ -227,7 +227,7 @@
        <section class="cta">
               <h1>GET READY FOR CONTACT</h1>
               <h4>Heeft u meer vragen over onze producten, prijzen en voorwaarden? <br> Neem gerust contact met ons op.</h4>
-              <a href="contact.html" class="hero_btn-contact">CONTACT US</a>
+              <a href="contact-form.php" class="hero_btn-contact">CONTACT US</a>
           </section> 
        <!-- Call to Action End -->
 

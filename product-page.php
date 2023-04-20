@@ -244,7 +244,7 @@
                   </div>
                   <div class="col-md-4">
                     <div class="form-btn">
-                      <button type="submit" class="submit-btn">Bekijk Auto's</button>
+                      <button type="submit" class="submit-btn" id="submit-btn">Bekijk Auto's</button>
                     </div>
                   </div>
       </form>

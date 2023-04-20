@@ -14,6 +14,33 @@
        if (mysqli_num_rows($query) > 0) {
               $row = mysqli_fetch_assoc($query);
        }
+
+       $msg = "";
+
+       if (isset($_POST["submit"])) {
+
+        $main_category = mysqli_escape_string($conn, $_POST['main_category']);
+        $city = mysqli_escape_string($conn, $_POST['city']);
+        $start_time = $_POST['start_time'];
+        $end_time = $_POST['end_time'];
+        $check_in = $_POST['check_in'];
+        $check_out = $_POST['check_out'];
+
+        if ($check_in >= $check_out) {
+          $query = mysqli_query($conn, "SELECT `main_category`, `category`, `city`, `start_time`, `end_time`, `check_in`, `check_out` FROM `cars` WHERE `main_category` = main_category;");
+
+          if ($main_category == 'car') {
+            header("Location: car-results.php");
+          } else {
+            header("Location: welcome.php");
+          }
+          
+
+          if ($check_in <= $check_out) {
+            $msg = "ERROR, check-uit datum mag niet eerder zijn dan check-in datum.";
+          }
+        }
+       }
 ?>
 
 
@@ -56,7 +83,7 @@
        <section class="header">
 
               <nav>             
-                     <a href="home.html" class="logo">
+                     <a href="welcome.php" class="logo">
                      <i class="fa-solid fa-car-side"></i> POC Share Wheels 
                      </a>
                      <div class="nav-links" id="navLinks">
@@ -92,7 +119,7 @@
                      <p class="text">POC Share Wheels zijn opgericht als een manier om duurzaam te rijden. <br>
                      Het is efficent voor toegankelijke  reguliere chauffeurs. "Wat mensen nodig <br> hebben, 
                      is regulier vervoer."</p>
-                     <a href="about.html" class="hero_btn">Visit Us Today</a>
+                     <a href="about.php" class="hero_btn">Visit Us Today</a>
 
               </div>
 
@@ -221,9 +248,10 @@
                   </div>
                   <div class="col-md-4">
                     <div class="form-btn">
-                      <button type="submit" class="submit-btn">Bekijk Auto's</button>
+                      <button type="submit" class="submit-btn" id="submit-btn">Bekijk Auto's</button>
                     </div>
                   </div>
+                  <?php var_dump($msg); ?>
       </form>
                
               </div>
@@ -252,7 +280,7 @@
                             <p>Lekker gemakkelijk, efficent en snel. 
                              Bij POC Share Wheels kunt u altijd een lease auto huren
                             voor de beste tarief en prijs.</p>
-                            <a href="about.html" class="hero_btn-2">Lees Meer</a>
+                            <a href="about.php" class="hero_btn-2">Lees Meer</a>
                      </div>
                      <div class="course-col">
                             <img src="images/car-service.png" class="icon-2">
@@ -260,7 +288,7 @@
                             <p>Levering en Service gaat lekker soepel bij POC Share Wheels.
                              Wij zorgen voor uitstekende levering en service is zo lekker snel geregeld.
                             </p>
-                            <a href="about.html" class="hero_btn-3">Lees Meer</a>
+                            <a href="about.php" class="hero_btn-3">Lees Meer</a>
                      </div>
                      <div class="course-col">
                             <img src="images/car-price.png" class="icon-3">
@@ -269,7 +297,7 @@
                              Bij POC Share Wheels kunt u kiezen uit meerdere verschillende auto's,
                              van normale auto's tot aan bestelwagens en eventueel vrachtauto's.
                             </p>
-                            <a href="about.html" class="hero_btn-4">Lees Meer</a>
+                            <a href="about.php" class="hero_btn-4">Lees Meer</a>
                      </div>
                  </div>
        </section>
@@ -290,7 +318,7 @@
                          <div class="layer-1">
                              <h3>Personenauto's</h3>
                          </div>
-                         <a href="#" class="hero_btn-5">Check Het Assortiment</a>
+                         <a href="fleetpark-carproducts.php" class="hero_btn-5">Check Het Assortiment</a>
 
                      </div>
                      <div class="campus-col">
@@ -298,14 +326,14 @@
                          <div class="layer-2">
                              <h3>Bestelwagens</h3>
                          </div>
-                         <a href="#" class="hero_btn-6">Check Het Assortiment</a>
+                         <a href="fleetpark-vanproducts.php" class="hero_btn-6">Check Het Assortiment</a>
                      </div>
                      <div class="campus-col">
                             <img src="images/hyper-car.png" alt="" class="i-3">
                          <div class="layer-3">
                             <h3>Sportauto's</h3> 
                          </div>
-                         <a href="#" class="hero_btn-7">Check Het Assortiment</a>
+                         <a href="fleetpark-luxuryproducts.php" class="hero_btn-7">Check Het Assortiment</a>
                      </div>
                  </div>
        </section>
@@ -391,7 +419,7 @@
         <section class="cta">
               <h1>GET READY FOR CONTACT</h1>
               <h4>Heeft u meer vragen over onze producten, prijzen en voorwaarden? <br> Neem gerust contact met ons op.</h4>
-              <a href="contact.html" class="hero_btn-contact">CONTACT US</a>
+              <a href="contact-form.php" class="hero_btn-contact">CONTACT US</a>
           </section> 
        <!-- Call to Action End -->
 

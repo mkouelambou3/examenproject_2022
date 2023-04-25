@@ -14,33 +14,6 @@
        if (mysqli_num_rows($query) > 0) {
               $row = mysqli_fetch_assoc($query);
        }
-
-       $msg = "";
-
-       if (isset($_POST["submit"])) {
-
-        $main_category = mysqli_escape_string($conn, $_POST['main_category']);
-        $city = mysqli_escape_string($conn, $_POST['city']);
-        $start_time = $_POST['start_time'];
-        $end_time = $_POST['end_time'];
-        $check_in = $_POST['check_in'];
-        $check_out = $_POST['check_out'];
-
-        if ($check_in >= $check_out) {
-          $query = mysqli_query($conn, "SELECT `main_category`, `category`, `city`, `start_time`, `end_time`, `check_in`, `check_out` FROM `cars` WHERE `main_category` = main_category;");
-
-          if ($main_category == 'car') {
-            header("Location: car-results.php");
-          } else {
-            header("Location: welcome.php");
-          }
-          
-
-          if ($check_in <= $check_out) {
-            $msg = "ERROR, check-uit datum mag niet eerder zijn dan check-in datum.";
-          }
-        }
-       }
 ?>
 
 
@@ -251,7 +224,7 @@
                       <button type="submit" class="submit-btn" id="submit-btn">Bekijk Auto's</button>
                     </div>
                   </div>
-                  <?php var_dump($msg); ?>
+                  
       </form>
                
               </div>
@@ -505,7 +478,7 @@
                                   <!-- Links -->
                                   <h6 class="text-uppercase fw-bold">Contact</h6>
                                   <p style="color: #fff;"><i class="fas fa-home mr-3"></i> Apollolaan 1, 1076 NN, AM</p>
-                                  <p style="color: #fff;"><i class="fas fa-envelope mr-3"></i> infopocsharewheels@gmail.com</p>
+                                  <p style="color: #fff; font-size: 14px";><i class="fas fa-envelope mr-3"></i> infopocsharewheels@gmail.com</p>
                                   <p style="color: #fff;"><i class="fas fa-phone mr-3"></i> +31 06 86 10 37 26</p>
                                 </div>
                                 <!-- Grid column -->

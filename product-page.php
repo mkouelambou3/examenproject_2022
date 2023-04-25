@@ -1,7 +1,10 @@
 <?php
 
-       include 'config.php';
        session_start();
+
+
+       include 'config.php';
+       $msg = "";
 
        if (!isset($_SESSION['SESSION_EMAIL'])) {
             header("Location: home.html");
@@ -12,7 +15,29 @@
 
        if (mysqli_num_rows($query) > 0) {
               $row = mysqli_fetch_assoc($query);
-       }  
+       } 
+
+       if (isset($_POST["finder-btn"])) {
+        $main_category = mysqli_escape_string($conn, $_POST["main_category"]);
+        $city = mysqli_escape_string($conn, $_POST["city"]);
+        $start_time = mysqli_escape_string($conn, $_POST["start_time"]);
+        $end_time = mysqli_escape_string($conn, $_POST["end_time"]);
+        $check_in = mysqli_escape_string($conn, $_POST["check_in"]);
+        $check_out = mysqli_escape_string($conn, $_POST["check_out"]);
+
+        $sql =  "SELECT `main_category`, `city`, `start_time`, `end_time`, `check_in`, `check_out` FROM cars WHERE `main_category` = '{$main_category}' ";
+        $result = mysqli_query($conn, $sql);
+
+        if ($check_in > $check_out) {
+          $msg = "<div class= 'info alert-danger' style='font-weight: bold; color:#c80000; font-size: 13px; margin-left: 30%; margin-right: 30%; margin-bottom: 15px; ';> ERROR, check-in datum mag niet later zijn dan de check-uit datum.</div>";
+        } else {
+          if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM cars WHERE main_category='{$main_category}' AND city='{$city}'")) > 0) {
+            header("Location: ".$main_category. "-results.php");
+          } else {
+            $msg = "<div class= 'info alert-danger' style='font-weight: bold; color:#c80000; font-size: 13px; margin-left: 35%; margin-right: 31%; margin-bottom: 15px; ';> ERROR, er zijn helaas geen resultaten teruggevonden.</div>";
+          }
+        }
+      }
 ?>
 
 
@@ -103,38 +128,6 @@
     </div>
 </header>
 
-<?php 
-
-       include 'db-products.php';
-
-       $msg = "";
-       
-      if (isset($_POST['submit'])) {
-
-        $result_query = mysqli_query($conn, "SELECT `main_category`,  `city`, `start_time`, `end_time`, `check_in`, `check_out` FROM `cars` WHERE `main_category` = main_category;");
-        
-        if ($main_category === 'car') {
-          $result_query = mysqli_query($conn, "SELECT `main_category`, `city`, `start_time`, `end_time`, `check_in`, `check_out` FROM `cars` WHERE `main_category` = 'car';");
-
-          if ($result_query) {
-            header("Location : car-results.php");
-          } else {
-             $msg = "ERROR!";
-             die();
-          }
-
-          if (isset($result_query)) {
-            $result = mysqli_store_result($conn);
-          } else {
-            $result = mysqli_query($conn, "INSERT INTO `cars` (`main_category`, `city`, `start_time`, `end_time`, `check_in`, `check_out`) VALUES ('car', '$city', '$start_time', '$end_time', '$check_in', '$check_out');");
-          }
-        }
-      }
-
-
-
-?>
-
 
 <div id="booking" class="section">
   <div class="content-blocks">
@@ -169,7 +162,7 @@
                         <div class="main-categories_toggle-btn" onclick="luxeFunction()">
                           <input type="radio" id="luxe-car" name="main_category" class="visually-hidden" value="luxe-car" required="">
                           <label for="luxe-car" class="image-lazyloaded">
-                          <img width="150" height="85" src="car-products/porsche_cayenne.png " class="lazy-img loaded" alt="luxe-car" loading="lazy">
+                          <img width="150" height="85" src="car-products/porsche_taycan.png " class="lazy-img loaded" alt="luxe-car" loading="lazy">
                           <span>Luxe Auto</span>
                         </label>
                         </div>
@@ -244,10 +237,11 @@
                   </div>
                   <div class="col-md-4">
                     <div class="form-btn">
-                      <button type="submit" class="submit-btn" id="submit-btn">Bekijk Auto's</button>
+                      <button type="submit" class="submit-btn" id="submit-btn" name="finder-btn" onclick="findCarButton()">Bekijk Auto's</button>
                     </div>
                   </div>
-      </form>
+                  <?php echo $msg;?>
+                </form>
                
               </div>
             </div>
@@ -300,13 +294,13 @@
             <h2 class="heading-2 text-center block-title">Onze auto's</h2>
             <div class="grid three-columms">
               <div class="grid-item">
-                <a href = "?main-category=car&category=RCAR" class="link-car">
+                <a href = "car-finder.php?main_category=car&token-id=RCAR" class="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title" name="category">
                           Renault Clio 
-                          <span>(RCAR)</span>
+                          <span name="token-id">(RCAR)</span>
                         </h2>
                         <span class="vehicle-header_subtitle">Of Gelijkwaardig / Personenauto</span>
                       </div>
@@ -418,7 +412,7 @@
                     </div>
 
                     <div>
-                      <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                      <div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                     </div>
                   </div>
                 </a>
@@ -427,13 +421,13 @@
 
               
               <div class="grid-item">
-                <a href = "?main-category=car&category=TYAR" class="link-car">
+                <a href = "car-finder.php?main_category=car&token-id=TYAR" class="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title" name="category">
                           Toyota Yaris CBE 
-                          <span>(TYAR)</span>
+                          <span name="token-id">(TYAR)</span>
                         </h2>
                         <span class="vehicle-header_subtitle">Of Gelijkwaardig / Personenauto</span>
                       </div>
@@ -545,7 +539,7 @@
                     </div>
 
                     <div>
-                      <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                       <div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                     </div>
                   </div>
                 </a>
@@ -558,13 +552,13 @@
 
 
               <div class="grid-item">
-                <a href = "?main-category=car&category=OMAR" class="link-car">
+                <a href = "car-finder.php?main_category=car&token-id=OMAR" class="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title" name="category">
                           Opel Mokka 
-                          <span>(OMAR)</span>
+                          <span name="token-id">(OMAR)</span>
                         </h2>
                         <span class="vehicle-header_subtitle">Of Gelijkwaardig / Personenauto</span>
                       </div>
@@ -676,7 +670,7 @@
                     </div>
 
                     <div>
-                      <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                      <div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                     </div>
                   </div>
                 </a>
@@ -690,13 +684,13 @@
             <h2 class="heading-2 text-center block-title">Onze bestelauto's</h2>
             <div class="grid three-columms">
               <div class="grid-item">
-                <a href="?main-category=van&category=VCVN" class="link-car">
+                <a href="car-finder.php?main_category=van&token-id=VCVN" class="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title">
                           Volkswagen Caddy
-                          <span>(VCVN)</span>
+                          <span name="token-id">(VCVN)</span>
                         </h2>
                         <span class="vehicle-header_subtitle"> Of gelijkwaardig / Bestelauto </span>
                       </div>
@@ -837,7 +831,7 @@
                     </div>
 
                     <div>
-                      <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                      <div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                     </div>
 
 
@@ -846,13 +840,13 @@
               </div>
 
               <div class="grid-item">
-                <a href="?main-category=van&category=MBVN" class="link-car">
+                <a href="car-finder.php?main_category=van&token-id=MBVN" class="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title">
                           Mercedes Benz Vito
-                          <span>(MBVN)</span>
+                          <span name="token-id">(MBVN)</span>
                         </h2>
                         <span class="vehicle-header_subtitle"> Of gelijkwaardig / Bestelauto </span>
                       </div>
@@ -993,7 +987,7 @@
                     </div>
 
                     <div>
-                      <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                      <div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                     </div>
 
 
@@ -1002,13 +996,13 @@
               </div>
 
               <div class="grid-item">
-                <a href="?main-category=van&category=PTVN" class="link-car">
+                <a href="car-finder.php?main_category=van&token-id=PTVN" class="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title">
                           Peugot Expert
-                          <span>(PTVN)</span>
+                          <span name="token-id">(PTVN)</span>
                         </h2>
                         <span class="vehicle-header_subtitle"> Of gelijkwaardig / Bestelauto </span>
                       </div>
@@ -1149,7 +1143,7 @@
                     </div>
 
                     <div>
-                      <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                    <div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                     </div>
 
 
@@ -1167,13 +1161,13 @@
             <h2 class="heading-2 text-center block-title">Onze Luxe auto's</h2>
             <div class="grid three-columms">
               <div class="grid-item">
-                <a href="?main-category=luxe-car&category=PPLR" class="link-car">
+                <a href="car-finder.php?main_category=luxe-car&token-id=PPLR" class="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title">
-                          Porsche Panamera Turbo S
-                          <span>(PPLR)</span>
+                          Porsche 911 RS
+                          <span name="token-id">(PPLR)</span>
                         </h2>
                         <span class="vehicle-header_subtitle"> Of gelijkwaardig / Luxe auto </span>
                       </div>
@@ -1286,7 +1280,7 @@
                       </div>
                       <hr class="vehicle_divider">
                       <div>
-                        <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                        	<div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                       </div>
                       
 
@@ -1297,13 +1291,13 @@
 
 
               <div class="grid-item">
-                <a href="?main-category=luxe-car&category=RPLR" class="link-car">
+                <a href="car-finder.php?main_category=luxe-car&token-id=RPLR" class="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title">
                           Rolls Royce Phantom CM
-                          <span>(RPLR)</span>
+                          <span name="token-id">(RPLR)</span>
                         </h2>
                         <span class="vehicle-header_subtitle"> Of gelijkwaardig / Luxe auto </span>
                       </div>
@@ -1416,7 +1410,7 @@
                       </div>
                       <hr class="vehicle_divider">
                       <div>
-                        <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                        <div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                       </div>
                       
 
@@ -1427,13 +1421,13 @@
 
 
               <div class="grid-item">
-                <a href="?main-category=luxe-car&category=CCLR" class="link-car">
+                <a href="car-finder.php?main_category=luxe-car&token-id=CCLR" class="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title">
                           Corvette C8
-                          <span>(CCLR)</span>
+                          <span name="token-id">(CCLR)</span>
                         </h2>
                         <span class="vehicle-header_subtitle"> Of gelijkwaardig / Luxe auto </span>
                       </div>
@@ -1546,7 +1540,7 @@
                       </div>
                       <hr class="vehicle_divider">
                       <div>
-                        <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                        <div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                       </div>
                       
 

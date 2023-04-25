@@ -1,7 +1,9 @@
 <?php
 
-       include 'config.php';
        session_start();
+
+       include 'config.php';
+       $msg = "";
 
        if (!isset($_SESSION['SESSION_EMAIL'])) {
             header("Location: home.html");
@@ -12,7 +14,22 @@
 
        if (mysqli_num_rows($query) > 0) {
               $row = mysqli_fetch_assoc($query);
-       }  
+       }
+
+       if (isset($_GET["main_category"])) {
+         $category = mysqli_escape_string($conn, $_POST["category"]);
+         $token_id = mysqli_escape_string($conn, $_POST["token-id"]);
+
+            $sql = "SELECT * FROM cars WHERE category='{$category}' AND token-id='{$token_id}'";
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($result) >= 1) {
+              
+            }
+            
+       }
+
+       
 ?>
 
 
@@ -200,7 +217,16 @@
                           <div id="results-ref">
                             <section class="vehicle-result-list">
                                <ul class="vehicle-result-list_list">
-                                 <li class="vehicle-result-list_item"></li>
+                                 <li class="vehicle-result-list_item">
+                                <div>
+                                  <div class="alert alert_success" role="alert" id="alert-text-success">
+                                      <svg class="icon-checkmark" xmlns="http://www.w3.org/2000/svg" width="19" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 19 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                      </svg> 
+                                    <span class="checkmark-text">Je gekozen auto is al voor je geselecteerd. </span> 
+                                  </div>
+                                </div>
+                              </li>
                                  <li class="vehicle-result-list_item">
                                    <div class="vehicle vehicle-result" id="RCAR">
                                      <div>
@@ -365,6 +391,7 @@
                                    <div class="vehicle vehicle-result" id="TYAR">
                                      <div>
                                         <div class="card vehicle_card">
+                                        
                                           <div class="grid two-columns align-items-start">
                                             <div class="grid-item">
                                               <div class="vehicle-header">
@@ -789,7 +816,7 @@
                                    <h6 class="text-uppercase fw-bold">Conacttijden</h6>
                                    <h5>MA : 9:00 - 17:00</h5>
                                    <h5>DI : 9:00 - 17:00</h5>
-                                   <h5>WO : 9:00 - 17:00</h5>
+                                   <h5 style="font-size: 14px;">WO : 9:00 - 17:00</h5>
                                    <h5>DO : 9:00 - 17:00</h5>
                                    <h5>VR : 9:00 - 17:00</h5>
                                    <h5>ZA : 9:00 - 12:00</h5>

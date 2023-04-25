@@ -17,7 +17,7 @@
         if(mysqli_num_rows($query) > 0) {
           $heading = "Waar en wanneer wil je de {$result} ($token_id) halen?";
         }
-      
+    
 
 ?>
 
@@ -288,5 +288,13 @@
   </script>
 
     <script src="script.js"></script>
+        <script>    
+        let globalCategory = "<?php echo $main_category; ?>";
+         $(document).ready(function() {
+            document.getElementById("<?php echo $main_category; ?>").click();
+            document.getElementById("selected-car-text").style.display = "block";
+         });
+
+       </script>
 </body>
 </html>

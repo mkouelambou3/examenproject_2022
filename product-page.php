@@ -294,7 +294,7 @@
             <h2 class="heading-2 text-center block-title">Onze auto's</h2>
             <div class="grid three-columms">
               <div class="grid-item">
-                <a href = "car-finder.php?main_category=car&token-id=RCAR" class="link-car">
+                <a href = "car-finder.php?main_category=car&token-id=RCAR" class="link-car" id="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">

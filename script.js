@@ -18,37 +18,49 @@ function doStuff (callback) {
     document.body.className = 'visible';
   });
 
-  function findCarButton() {
-    var finderbtn = document.getElementById("submit-btn");
-    var checktext = document.getElementById("alert-text-success");
-
-   if (finderbtn.clicked == true) {
-      checktext.style.display == "block";
-   } else {
-      checktext.style.display == "none";
-   }
-  }
-
 var span = document.getElementById("category-type-text");
 var btn = document.getElementById("submit-btn");
+var categorytext=  document.getElementById("selected-car-text");
 
 function vanFunction() {
   span.textContent = "Bestelauto";
   btn.textContent = "Bekijk bestelauto's";
-  document.getElementById("selected-car-text").style.display = "none";
+  if (globalCategory != 'van')
+  {
+    categorytext.style.display = "none";
+  }
+  else
+  {
+      categorytext.style.display = "block";
+  }
+
 }
 
 function carFunction() {
   span.textContent = "auto";
   btn.textContent = "Bekijk auto's";
-  document.getElementById("selected-car-text").style.display = "block";
- 
+  if (globalCategory != 'car')
+  {
+    categorytext.style.display = "none";
+  }
+  else
+  {
+      categorytext.style.display = "block";
+  }
+
 }
 
 function luxeFunction() {
   span.textContent = "Luxe auto";
   btn.textContent = "Bekijk luxe auto's";
-  document.getElementById("selected-car-text").style.display = "none";
+  if (globalCategory != 'luxe-car')
+  {
+     categorytext.style.display = "none";
+  }
+  else
+  {
+    categorytext.style.display = "block";
+  }
 }
 
 function checkBoxCar() {
@@ -127,5 +139,9 @@ function checkBoxLuxeCar() {
     }
   }
 }
+
+
+
+
 
 

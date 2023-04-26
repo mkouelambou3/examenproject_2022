@@ -1,3 +1,20 @@
+<?php
+       include 'config.php';
+
+       session_start();
+
+       if (!isset($_SESSION['SESSION_EMAIL'])) {
+            header("Location: home.php");
+            die();
+        }
+
+       $query = mysqli_query($conn, "SELECT * FROM users WHERE email='{$_SESSION['SESSION_EMAIL']}'");
+
+       if (mysqli_num_rows($query) > 0) {
+              $row = mysqli_fetch_assoc($query);
+       }
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,21 +53,31 @@
 <body>
 <section class="sub-header">
               <nav>
-                     <a href="home.html" class="logo">
+                     <a href="home.php" class="logo">
                             <i class="fa-solid fa-car-side"></i> POC Share Wheels
                      </a>
                      <div class="nav-links" id="navLinks">
                             <!-- Reposnive bar open and close -->
                             <i class="fa fa-times" onclick="hideMenu()"></i>
                             <ul>
-                                   <li><a href="home.html">Home</a></li>
-                                   <li><a href="about.html">Over Ons</a></li>
-                                   <li><a href="product-page.html">Producten</a></li>
-                                   <li><a href="#">Reserveren</a></li>
-                                   <li><a href="login.php">Login</a></li>
-                                   <li><a href="contact.html">Contact</a></li>
+                                <li><a href="home.php">Home</a></li>
+                                <li><a href="about.php">Over Ons</a></li>
+                                <li><a href="product-page.php">Producten</a></li>
+                                <li style="display: none;"><a href="#">Reserveren</a></li>
+                                <div class="dropdown">
+                                   <li><a href="#">Account</a></li>
+                                   <div class="dropdown-content">
+                                   <div class="user-info">
+                                   <?php echo "Welcome, "  . $row['naam'] ; ?>
+                                   </div>
+                                          <a href="profile.php">Profiel</a>
+                                          <a href="logout.php">Uitloggen</a>
+                                   </div>
+                               </div>
+                                <li><a href="contact-page.php">Contact</a></li>
+
                             </ul>
-                     </div>
+                        </div>
                      <i class="fa fa-bars" onclick="showMenu()"></i>
                      <!-- Reposnive bar open and close -->
               </nav>
@@ -58,144 +85,8 @@
 </section>
 </body>
 <body>
-  <header class="page-header">
-    <div class="site-content-wrap site-content-wrap_small">
-        <h2 class="heading-1">Huren bij POC Share Wheels</h2>
-        <div class="intro-text">
-          <div class="markdown">
-               <p>
-                      Huur met de beste voorwaarden en een scherpe prijs. Of
-                      je nou 1 dag, een weekend, een lang weekend een 
-                      personenauto of bestelauto nodig hebt, Bij POC Share Wheels vind je
-                      altijd een auto die jou het beste geschikt is!
-               </p>
-          </div>
-        </div>
-    </div>
-</header>
 
-<div id="booking" class="section">
-  <div class="content-blocks">
-    <div>
-      <div class="site-content-wrap">
-        <div class="section-center">
-          <div class="container" style="max-width: 1160px;">
-           
-            <div class="row">
-              <div class="booking-form">
-                <section class="car-finder card car-finder_loaded">
-                  <form>
-                    <fieldset>
-                      <div class="main-categories_toggle">
-                        <legend class="visually-hidden">Voertuigtype</legend>
-                        <div class="main-categories_toggle-btn" onclick="carFunction()">
-                          <input type="radio" id="car" name="main-category" class="visually-hidden" value="car" required="">
-                          <label for="car" class="image-lazyloaded">
-                          <img width="176" height="72" src="car-products/car-type-car.png" class="lazy-img loaded" alt="Auto" loading="lazy">
-                          <span>Auto</span>
-                        </label>
-                        </div>
-        
-                        <div class="main-categories_toggle-btn" onclick="vanFunction()">
-                          <input type="radio" id="van" name="main-category" class="visually-hidden" value="van" required="">
-                          <label for="van" class="image-lazyloaded" name="van">
-                          <img width="184" height="76" src="car-products/car-type-van.png" class="lazy-img loaded" alt="bestelauto" loading="lazy">
-                          <span>Bestelauto</span>
-                        </label>
-                        </div>
-        
-                        <div class="main-categories_toggle-btn" onclick="luxeFunction()">
-                          <input type="radio" id="luxe-car" name="main-category" class="visually-hidden" value="luxe-car" required="">
-                          <label for="luxe-car" class="image-lazyloaded">
-                          <img width="150" height="85" src="car-products/porsche_cayenne.png " class="lazy-img loaded" alt="luxe-car" loading="lazy">
-                          <span>Luxe Auto</span>
-                        </label>
-                        </div>
-        
-                      </div>
-                    </fieldset>
-                </section>
-                 <div class="car-finder_content">
-                   <div class="car-finder_title">
-                     <p class="car-finder_heading">
-                       Huur een
-                       <span id="category-type-text">Auto</span>
-                     </p>
-                   </div>
-                 </div>
-                  <div class="col-md-8">
-                    <div class="form-group">
-                      <input
-                        class="form-control"
-                        type="text"
-                        placeholder="Kies een stad, postcode of plaats" id="city" name="city" required=""
-                      />
-                      <span class="form-label">Waar wil je ophalen?</span>
-                    </div>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <select class="form-control" id="start-time" name="start-time">
-                        <option>9:00</option>
-                        <option>10:00</option>
-                        <option>11:00</option>
-                        <option>12:00</option>
-                        <option>13:00</option>
-                        <option>14:00</option>
-                        <option>15:00</option>
-                        <option>16:00</option>
-                        <option>17:00</option>
-                      </select>
-                      <span class="select-arrow"></span>
-                      <span class="form-label">Ophaaltijd</span>
-                    </div>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <select class="form-control" id="end-time" name="end-time">
-                        <option>9:00</option>
-                        <option>10:00</option>
-                        <option>11:00</option>
-                        <option>12:00</option>
-                        <option>13:00</option>
-                        <option>14:00</option>
-                        <option>15:00</option>
-                        <option>16:00</option>
-                        <option>17:00</option>
-                      </select>
-                      <span class="select-arrow"></span>
-                      <span class="form-label">Inlevertijd</span>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <input class="form-control" type="date" id="check-in" name="check-in" required="" min="2023-04-07">
-                      <span class="form-label">Check In</span>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <input class="form-control" type="date" required="" id="check-out" name="check-out" max="2023-05-01">
-                      <span class="form-label">Check Uit</span>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-btn">
-                      <button class="submit-btn" id="submit-btn">Bekijk Auto's</button>
-                    </div>
-                  </div>
-                </form>
-               
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-     </div>
-      </div>
-    </div>
-
-      <div>
+      <div style="margin-top: 65px;">
         <div class="site-content-wrap visual-and-text-block">
           <div class="grid two-columns from-desktop visual-and-text-block_content">
             <div class="grid-item visual-and-text-block_text-first">
@@ -237,13 +128,13 @@
             <h2 class="heading-2 text-center block-title">Onze auto's</h2>
             <div class="grid three-columms">
               <div class="grid-item">
-                <a href = "?main-category=car&category=RCAR" class="link-car">
+                <a href = "book-finder.php?main_category=car&token-id=RCAR" class="link-car" id="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title" name="category">
                           Renault Clio 
-                          <span>(RCAR)</span>
+                          <span name="token-id">(RCAR)</span>
                         </h2>
                         <span class="vehicle-header_subtitle">Of Gelijkwaardig / Personenauto</span>
                       </div>
@@ -355,7 +246,7 @@
                     </div>
 
                     <div>
-                      <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                      <div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                     </div>
                   </div>
                 </a>
@@ -364,13 +255,13 @@
 
               
               <div class="grid-item">
-                <a href = "?main-category=car&category=TYAR" class="link-car">
+                <a href = "book-finder.php?main_category=car&token-id=TYAR" class="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title" name="category">
                           Toyota Yaris CBE 
-                          <span>(TYAR)</span>
+                          <span name="token-id">(TYAR)</span>
                         </h2>
                         <span class="vehicle-header_subtitle">Of Gelijkwaardig / Personenauto</span>
                       </div>
@@ -482,7 +373,7 @@
                     </div>
 
                     <div>
-                      <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                       <div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                     </div>
                   </div>
                 </a>
@@ -495,13 +386,13 @@
 
 
               <div class="grid-item">
-                <a href = "?main-category=car&category=OMAR" class="link-car">
+                <a href = "book-finder.php?main_category=car&token-id=OMAR" class="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title" name="category">
                           Opel Mokka 
-                          <span>(OMAR)</span>
+                          <span name="token-id">(OMAR)</span>
                         </h2>
                         <span class="vehicle-header_subtitle">Of Gelijkwaardig / Personenauto</span>
                       </div>
@@ -613,7 +504,7 @@
                     </div>
 
                     <div>
-                      <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                      <div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                     </div>
                   </div>
                 </a>
@@ -627,13 +518,13 @@
             <h2 class="heading-2 text-center block-title">Onze bestelauto's</h2>
             <div class="grid three-columms">
               <div class="grid-item">
-                <a href="?main-category=van&category=VCVN" class="link-car">
+                <a href="book-finder.php?main_category=van&token-id=VCVN" class="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title">
                           Volkswagen Caddy
-                          <span>(VCVN)</span>
+                          <span name="token-id">(VCVN)</span>
                         </h2>
                         <span class="vehicle-header_subtitle"> Of gelijkwaardig / Bestelauto </span>
                       </div>
@@ -774,7 +665,7 @@
                     </div>
 
                     <div>
-                      <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                      <div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                     </div>
 
 
@@ -783,13 +674,13 @@
               </div>
 
               <div class="grid-item">
-                <a href="?main-category=van&category=MBVN" class="link-car">
+                <a href="book-finder.php?main_category=van&token-id=MBVN" class="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title">
                           Mercedes Benz Vito
-                          <span>(MBVN)</span>
+                          <span name="token-id">(MBVN)</span>
                         </h2>
                         <span class="vehicle-header_subtitle"> Of gelijkwaardig / Bestelauto </span>
                       </div>
@@ -930,7 +821,7 @@
                     </div>
 
                     <div>
-                      <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                      <div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                     </div>
 
 
@@ -939,13 +830,13 @@
               </div>
 
               <div class="grid-item">
-                <a href="?main-category=van&category=PTVN" class="link-car">
+                <a href="book-finder.php?main_category=van&token-id=PTVN" class="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title">
                           Peugot Expert
-                          <span>(PTVN)</span>
+                          <span name="token-id">(PTVN)</span>
                         </h2>
                         <span class="vehicle-header_subtitle"> Of gelijkwaardig / Bestelauto </span>
                       </div>
@@ -1086,7 +977,7 @@
                     </div>
 
                     <div>
-                      <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                    <div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                     </div>
 
 
@@ -1104,13 +995,13 @@
             <h2 class="heading-2 text-center block-title">Onze Luxe auto's</h2>
             <div class="grid three-columms">
               <div class="grid-item">
-                <a href="?main-category=luxe-car&category=PPLR" class="link-car">
+                <a href="book-finder.php?main_category=luxe-car&token-id=PPLR" class="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title">
-                          Porsche Panamera Turbo S
-                          <span>(PPLR)</span>
+                          Porsche 911 RS
+                          <span name="token-id">(PPLR)</span>
                         </h2>
                         <span class="vehicle-header_subtitle"> Of gelijkwaardig / Luxe auto </span>
                       </div>
@@ -1223,7 +1114,7 @@
                       </div>
                       <hr class="vehicle_divider">
                       <div>
-                        <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                        	<div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                       </div>
                       
 
@@ -1234,13 +1125,13 @@
 
 
               <div class="grid-item">
-                <a href="?main-category=luxe-car&category=RPLR" class="link-car">
+                <a href="book-finder.php?main_category=luxe-car&token-id=RPLR" class="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title">
                           Rolls Royce Phantom CM
-                          <span>(RPLR)</span>
+                          <span name="token-id">(RPLR)</span>
                         </h2>
                         <span class="vehicle-header_subtitle"> Of gelijkwaardig / Luxe auto </span>
                       </div>
@@ -1353,7 +1244,7 @@
                       </div>
                       <hr class="vehicle_divider">
                       <div>
-                        <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                        <div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                       </div>
                       
 
@@ -1364,13 +1255,13 @@
 
 
               <div class="grid-item">
-                <a href="?main-category=luxe-car&category=CCLR" class="link-car">
+                <a href="book-finder.php?main_category=luxe-car&token-id=CCLR" class="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
                         <h2 class="vehicle-header_title">
                           Corvette C8
-                          <span>(CCLR)</span>
+                          <span name="token-id">(CCLR)</span>
                         </h2>
                         <span class="vehicle-header_subtitle"> Of gelijkwaardig / Luxe auto </span>
                       </div>
@@ -1483,7 +1374,7 @@
                       </div>
                       <hr class="vehicle_divider">
                       <div>
-                        <div class="btn btn-tertiary">Reserveer dit voertuig</div>
+                        <div class="btn btn-tertiary" type="submit" name="selected-product-btn">Reserveer dit voertuig</div>
                       </div>
                       
 
@@ -1556,13 +1447,13 @@
                           <!-- Links -->
                           <h6 class="text-uppercase fw-bold">Over Ons</h6>
                           <p>
-                            <a href="about.html" class="text-white">Lease</a>
+                            <a href="about.php" class="text-white">Lease</a>
                           </p>
                           <p>
-                            <a href="about.html" class="text-white">Levering en Service</a>
+                            <a href="about.php" class="text-white">Levering en Service</a>
                           </p>
                           <p>
-                            <a href="about.html" class="text-white">Prijzen en Voorwaarden</a>
+                            <a href="about.php" class="text-white">Prijzen en Voorwaarden</a>
                           </p>
                          
                         </div>
@@ -1573,13 +1464,13 @@
                           <!-- Links -->
                           <h6 class="text-uppercase fw-bold">Producten</h6>
                           <p>
-                            <a href="about.html" class="text-white">Personenauto's</a>
+                            <a href="fleetpark-carproducts.php" class="text-white">Personenauto's</a>
                           </p>
                           <p>
-                            <a href="about.html" class="text-white">Bestelwagens</a>
+                            <a href="fleetpark-vanproducts.php" class="text-white">Bestelwagens</a>
                           </p>
                           <p>
-                            <a href="about.html" class="text-white">Sportauto's</a>
+                            <a href="fleetpark-luxuryproducts.php" class="text-white">Sportauto's</a>
                           </p>
                         </div>
                         <!-- Grid column -->
@@ -1589,7 +1480,7 @@
                           <!-- Links -->
                           <h6 class="text-uppercase fw-bold">Contact</h6>
                           <p style="color: #fff;"><i class="fas fa-home mr-3"></i> Apollolaan 1, 1076 NN, AM</p>
-                          <p style="color: #fff; font-size: 16px;"><i class="fas fa-envelope mr-3"></i> pocsharewheels@gmail.com</p>
+                          <p style="color: #fff; font-size: 14px;"><i class="fas fa-envelope mr-3"></i> infopocsharewheels@gmail.com</p>
                           <p style="color: #fff;"><i class="fas fa-phone mr-3"></i> +31 06 86 10 37 26</p>
                         </div>
                         <!-- Grid column -->
@@ -1711,30 +1602,12 @@
   }
   
   
-  var cities = ["Amsterdam-Noord", "Amsterdam-West", "Amsterdam-Oost", "Amsterdam Zuid (RAI) ", "Amsterdam Zuid", "Amsterdam Schiphol Airport", 
-                "Utrecht", "Den Haag", "Maastricht", "Amstelveen", "Rotterdam", "Leiden"];
+  var cities = ["Amsterdam-Noord", "Amsterdam-West", "Amsterdam-Oost", "Amsterdam Zuid (RAI) ", "Amsterdam Schiphol Airport", 
+                "Utrecht", "Den Haag", "Amstelveen", "Rotterdam", "Leiden"];
   
   
   autocomplete(document.getElementById("city"), cities);
   </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <script src="script.js"></script>
 </body>

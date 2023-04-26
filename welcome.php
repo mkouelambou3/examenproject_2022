@@ -1,11 +1,11 @@
 <?php
        include 'config.php';
-      
+       $msg = "";
 
        session_start();
 
        if (!isset($_SESSION['SESSION_EMAIL'])) {
-            header("Location: home.html");
+            header("Location: home.php");
             die();
         }
 
@@ -14,6 +14,30 @@
        if (mysqli_num_rows($query) > 0) {
               $row = mysqli_fetch_assoc($query);
        }
+
+
+
+       if (isset($_POST["finder-btn"])) {
+        $main_category = mysqli_escape_string($conn, $_POST["main_category"]);
+        $city = mysqli_escape_string($conn, $_POST["city"]);
+        $start_time = mysqli_escape_string($conn, $_POST["start_time"]);
+        $end_time = mysqli_escape_string($conn, $_POST["end_time"]);
+        $check_in = mysqli_escape_string($conn, $_POST["check_in"]);
+        $check_out = mysqli_escape_string($conn, $_POST["check_out"]);
+
+        $sql =  "SELECT `main_category`, `city`, `start_time`, `end_time`, `check_in`, `check_out` FROM cars WHERE `main_category` = '{$main_category}' ";
+        $result = mysqli_query($conn, $sql);
+
+        if ($check_in > $check_out) {
+          $msg = "<div class= 'info alert-danger' style='font-weight: bold; color:#c80000; font-size: 13px; margin-left: 30%; margin-right: 30%; margin-bottom: 15px; ';> ERROR, check-in datum mag niet later zijn dan de check-uit datum.</div>";
+        } else {
+          if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM cars WHERE main_category='{$main_category}' AND city='{$city}'")) > 0) {
+            header("Location: ".$main_category. "-results.php");
+          } else {
+            $msg = "<div class= 'info alert-danger' style='font-weight: bold; color:#c80000; font-size: 13px; margin-left: 35%; margin-right: 31%; margin-bottom: 15px; ';> ERROR, er zijn helaas geen resultaten teruggevonden.</div>";
+          }
+        }
+      }
 ?>
 
 
@@ -48,7 +72,7 @@
        }
 
        body {
-              animation: fadeIn 4s;
+            animation: fadeIn 3s;
        }
 </style>
 <body>
@@ -66,7 +90,7 @@
                                 <li><a href="welcome.php">Home</a></li>
                                 <li><a href="about.php">Over Ons</a></li>
                                 <li><a href="product-page.php">Producten</a></li>
-                                <li><a href="#">Reserveren</a></li>
+                                <li style="display: none;"><a href="#">Reserveren</a></li>
                                 <div class="dropdown">
                                    <li><a href="#">Account</a></li>
                                    <div class="dropdown-content">
@@ -97,23 +121,24 @@
               </div>
 
               
-              <header class="page-header">
-              <div class="site-content-wrap site-content-wrap_small">
-                  <h2 class="heading-1">Huren bij POC Share Wheels</h2>
-                  <div class="intro-text">
-                    <div class="markdown">
-                         <p>
-                                Huur met de beste voorwaarden en een scherpe prijs. Of
-                                je nou 1 dag, een weekend, een lang weekend een 
-                                personenauto of bestelauto nodig hebt, Bij POC Share Wheels vind je
-                                altijd een auto die jou het beste geschikt is!
-                         </p>
-                    </div>
-                  </div>
-              </div>
-       </header>
+  <header class="page-header">
+    <div class="site-content-wrap site-content-wrap_small">
+        <h2 class="heading-1">Huren bij POC Share Wheels</h2>
+        <div class="intro-text">
+          <div class="markdown">
+               <p>
+                      Huur met de beste voorwaarden en een scherpe prijs. Of
+                      je nou 1 dag, een weekend, een lang weekend een 
+                      personenauto of bestelauto nodig hebt, Bij POC Share Wheels vind je
+                      altijd een auto die jou het beste geschikt is!
+               </p>
+          </div>
+        </div>
+    </div>
+</header>
 
-       <div id="booking" class="section">
+
+<div id="booking" class="section">
   <div class="content-blocks">
     <div>
       <div class="site-content-wrap">
@@ -146,7 +171,7 @@
                         <div class="main-categories_toggle-btn" onclick="luxeFunction()">
                           <input type="radio" id="luxe-car" name="main_category" class="visually-hidden" value="luxe-car" required="">
                           <label for="luxe-car" class="image-lazyloaded">
-                          <img width="150" height="85" src="car-products/porsche_cayenne.png " class="lazy-img loaded" alt="luxe-car" loading="lazy">
+                          <img width="150" height="85" src="car-products/porsche_taycan.png " class="lazy-img loaded" alt="luxe-car" loading="lazy">
                           <span>Luxe Auto</span>
                         </label>
                         </div>
@@ -221,11 +246,11 @@
                   </div>
                   <div class="col-md-4">
                     <div class="form-btn">
-                      <button type="submit" class="submit-btn" id="submit-btn">Bekijk Auto's</button>
+                      <button type="submit" class="submit-btn" id="submit-btn" name="finder-btn" onclick="findCarButton()">Bekijk Auto's</button>
                     </div>
                   </div>
-                  
-      </form>
+                  <?php echo $msg;?>
+                </form>
                
               </div>
             </div>

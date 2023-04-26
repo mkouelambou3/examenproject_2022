@@ -4,7 +4,7 @@ include 'config.php';
 session_start();
 
 if (!isset($_SESSION['SESSION_EMAIL'])) {
-     header("Location: home.html");
+     header("Location: home.php");
      die();
  }
 
@@ -47,7 +47,7 @@ if (mysqli_num_rows($query) > 0) {
              }
 
               if ($row['filename'] == ''){
-                     echo '<img src = "images/user4.jpg">';
+                     echo '<img src = "images/user-4.png">';
               } else {
                      echo '<img src="images/'.$row['filename'].'">';
               }

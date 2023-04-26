@@ -41,7 +41,7 @@
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>POC Share Wheels - Products Page</title>
-       <link rel="stylesheet" href="car-finder.css">
+       <link rel="stylesheet" href="book-finder.css">
        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
               integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
@@ -61,13 +61,13 @@
     <div>
       <div class="site-content-wrap">
         <div class="section-center">
-          <div class="container" style="max-width: 1160px;">
+          <div class="container" style="max-width: 760px;">
            
             <div class="row">
               <div class="booking-form">
-                <section class="car-finder card car-finder_loaded">
+               <!-- <section class="car-finder card car-finder_loaded">
                   <form action="" method="post" enctype="multipart/form-data">
-                  <fieldset>
+                  <<fieldset>
                       <div class="main-categories_toggle">
                         <legend class="visually-hidden">Voertuigtype</legend>
                         <div class="main-categories_toggle-btn" onclick="carFunction()">
@@ -95,9 +95,9 @@
                         </div>
         
                       </div>
-                    </fieldset>
+                    </fieldset> 
                     
-                </section>
+                </section> !-->
                  <div class="car-finder_content">
                    <div class="car-finder_title">
                      <p class="car-finder_heading">
@@ -107,6 +107,7 @@
                      <span class="heading-3 car-finder_preffered-category" id="selected-car-text"> <?php echo $heading; ?> </span>
                    </div>
                  </div>
+                 <form>
                   <div class="col-md-8">
                     <div class="form-group">
                       <input
@@ -117,7 +118,18 @@
                       <span class="form-label">Waar wil je ophalen?</span>
                     </div>
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Voer uw naam in" id="surname" name="surname" required=""
+                      />
+                      <span class="form-label">Voornaam</span>
+                    </div>
+                  </div>
+                  
+                  <!--<div class="col-md-2">
                     <div class="form-group">
                       <select class="form-control" id="start-time" name="start_time">
                         <option>9:00</option>
@@ -150,22 +162,42 @@
                       <span class="select-arrow"></span>
                       <span class="form-label">Inlevertijd</span>
                     </div>
+                  </div> !-->
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Voer uw achternaam in" id="name" name="name" required=""
+                      />
+                      <span class="form-label">Achternaam</span>
+                    </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Voer uw email in" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required=""
+                      />
+                      <span class="form-label">Email</span>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
                     <div class="form-group">
                       <input class="form-control" type="date" id="check-in" name="check_in" required="" min="2023-04-07">
                       <span class="form-label">Check In</span>
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-8">
                     <div class="form-group">
                       <input class="form-control" type="date" required="" id="check-out" name="check_out" max="2023-05-01">
                       <span class="form-label">Check Uit</span>
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-8">
                     <div class="form-btn">
-                      <button type="submit" class="submit-btn" id="submit-btn" name="car-product-btn" onclick="findCarButton()">Bekijk Auto's</button>
+                      <button type="submit" class="submit-btn" id="submit-btn" name="car-product-btn">Book NU</button>
                     </div>
                   </div>
                 </form>

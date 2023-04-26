@@ -6,7 +6,7 @@
        $msg = "";
 
        if (!isset($_SESSION['SESSION_EMAIL'])) {
-            header("Location: home.html");
+            header("Location: home.php");
             die();
         }
 
@@ -14,22 +14,7 @@
 
        if (mysqli_num_rows($query) > 0) {
               $row = mysqli_fetch_assoc($query);
-       }
-
-       if (isset($_GET["main_category"])) {
-         $category = mysqli_escape_string($conn, $_POST["category"]);
-         $token_id = mysqli_escape_string($conn, $_POST["token-id"]);
-
-            $sql = "SELECT * FROM cars WHERE category='{$category}' AND token-id='{$token_id}'";
-            $result = mysqli_query($conn, $sql);
-
-            if (mysqli_num_rows($result) >= 1) {
-              
-            }
-            
-       }
-
-       
+       }     
 ?>
 
 
@@ -76,18 +61,18 @@
   <body>
   <section class="sub-header">
       <nav>
-        <a href="home.html" class="logo">
+        <a href="home.php" class="logo">
           <i class="fa-solid fa-car-side"></i> POC Share Wheels
         </a>
         <div class="nav-links" id="navLinks">
           <!-- Reposnive bar open and close -->
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">Over Ons</a></li>
+            <li><a href="home.php">Home</a></li>
+            <li><a href="about.php">Over Ons</a></li>
             <li><a href="product-page.php">Producten</a></li>
-            <li><a href="#">Reserveren</a></li>
-                <div class="dropdown">
+            <li style="display: none;"><a href="#">Reserveren</a></li>
+                <div class="dropdown" style="display: none;">
                   <li><a href="#">Account</a></li>
                     <div class="dropdown-content">
                       <div class="user-info">
@@ -364,13 +349,13 @@
                                                  <div class="notice notice_info">
                                                    <strong> Let op | </strong>  
                                                    <div class="markdown">
-                                                   <p class="extra-info">Beschikabaarheid op aanvraag</p>
+                                                   <p class="extra-info">Beschikbaarheid op aanvraag</p>
                                                    </div> 
                                                  </div>
 
-                                                 <button class="btn btn-primary vehicle_cta">
-                                                   Reserveer deze auto
-                                                 </button> 
+                                                 <a class="btn btn-primary vehicle_cta" href="book-finder.php?main_category=car&token-id=RCAR">
+                                                    Reserveer deze auto
+                                                 </a>
                                                  <div class="text-center">
                                                    <button class="btn btn-transparent btn-icon vehicle_card-expander-btn">
                                                      <span>Meer informatie</span>
@@ -525,13 +510,13 @@
                                                  <div class="notice notice_info">
                                                    <strong> Let op | </strong>  
                                                    <div class="markdown">
-                                                   <p class="extra-info">Beschikabaarheid op aanvraag</p>
+                                                   <p class="extra-info">Beschikbaarheid op aanvraag</p>
                                                    </div> 
                                                  </div>
 
-                                                 <button class="btn btn-primary vehicle_cta">
-                                                   Reserveer deze auto
-                                                 </button> 
+                                                 <a class="btn btn-primary vehicle_cta" href="book-finder.php?main_category=car&token-id=TYAR">
+                                                    Reserveer deze auto
+                                                 </a>
                                                  <div class="text-center">
                                                    <button class="btn btn-transparent btn-icon vehicle_card-expander-btn">
                                                      <span>Meer informatie</span>
@@ -685,13 +670,13 @@
                                                  <div class="notice notice_info">
                                                    <strong> Let op | </strong>  
                                                    <div class="markdown">
-                                                     <p class="extra-info">Beschikabaarheid op aanvraag</p>
+                                                     <p class="extra-info">Beschikbaarheid op aanvraag</p>
                                                    </div> 
                                                  </div>
 
-                                                 <button class="btn btn-primary vehicle_cta">
-                                                   Reserveer deze auto
-                                                 </button> 
+                                                 <a class="btn btn-primary vehicle_cta" href="book-finder.php?main_category=car&token-id=OMAR">
+                                                    Reserveer deze auto
+                                                 </a>
                                                  <div class="text-center">
                                                   <button class="btn btn-transparent btn-icon vehicle_card-expander-btn">
                                                      <span>Meer informatie</span>
@@ -720,7 +705,7 @@
        <section class="cta">
               <h1>GET READY FOR CONTACT</h1>
               <h4>Heeft u meer vragen over onze producten, prijzen en voorwaarden? <br> Neem gerust contact met ons op.</h4>
-              <a href="contact.html" class="hero_btn-contact">CONTACT US</a>
+              <a href="contact-page.php" class="hero_btn-contact">CONTACT US</a>
           </section> 
        <!-- Call to Action End -->
 
@@ -773,13 +758,13 @@
                                   <!-- Links -->
                                   <h6 class="text-uppercase fw-bold">Over Ons</h6>
                                   <p>
-                                    <a href="about.html" class="text-white">Lease</a>
+                                    <a href="about.php" class="text-white">Lease</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Levering en Service</a>
+                                    <a href="about.php" class="text-white">Levering en Service</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Prijzen en Voorwaarden</a>
+                                    <a href="about.php" class="text-white">Prijzen en Voorwaarden</a>
                                   </p>
                                  
                                 </div>
@@ -790,13 +775,13 @@
                                   <!-- Links -->
                                   <h6 class="text-uppercase fw-bold">Producten</h6>
                                   <p>
-                                    <a href="about.html" class="text-white">Personenauto's</a>
+                                    <a href="fleetpark-carproducts.php" class="text-white">Personenauto's</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Bestelwagens</a>
+                                    <a href="fleetpark-vanproducts.php" class="text-white">Bestelwagens</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Sportauto's</a>
+                                    <a href="fleetpark-luxuryproducts.php" class="text-white">Sportauto's</a>
                                   </p>
                                 </div>
                                 <!-- Grid column -->

@@ -4,7 +4,7 @@
        session_start();
 
        if (!isset($_SESSION['SESSION_EMAIL'])) {
-            header("Location: home.html");
+            header("Location: home.php");
             die();
         }
 
@@ -273,7 +273,7 @@
                                         <div class="grid-item">
                                           <div class="vehicle-header">
                                             <h2 class="vehicle-header_title">
-                                              Porsche Panamera Turbo S
+                                              Porsche 911 RS
                                               <span name="token-id">(PPLR)</span>
                                             </h2>
                                             <span class="vehicle-header_subtitle"> Of gelijkwaardig / Luxe auto </span>
@@ -390,7 +390,7 @@
                                           </div>
 
                                           <div class="vehicle_prices">
-                                            <a class="btn btn-primary vehicle_cta" href="?main-category=luxe-car&category=PPLR">
+                                            <a class="btn btn-primary vehicle_cta" href="booking-finder.php?main_category=luxe-car&token-id=PPLR">
                                               Reserveer deze auto
                                             </a>
 
@@ -533,7 +533,7 @@
                                           </div>
 
                                           <div class="vehicle_prices">
-                                            <a class="btn btn-primary vehicle_cta" href="?main-category=luxe-car&category=RPLR">
+                                            <a class="btn btn-primary vehicle_cta" href="book-finder.php?main_category=luxe-car&token-id=RPLR">
                                               Reserveer deze auto
                                             </a>
 
@@ -676,7 +676,7 @@
                                           </div>
 
                                           <div class="vehicle_prices">
-                                            <a class="btn btn-primary vehicle_cta" href="?main-category=luxe-car&category=CCLR">
+                                            <a class="btn btn-primary vehicle_cta" href="car-finder.php?main_category=luxe-car&token-id=CCLR">
                                               Reserveer deze auto
                                             </a>
 
@@ -700,7 +700,7 @@
                    <section class="cta">
               <h1>GET READY FOR CONTACT</h1>
               <h4>Heeft u meer vragen over onze producten, prijzen en voorwaarden? <br> Neem gerust contact met ons op.</h4>
-              <a href="contact.html" class="hero_btn-contact">CONTACT US</a>
+              <a href="contact-page.php" class="hero_btn-contact">CONTACT US</a>
           </section> 
        <!-- Call to Action End -->
 
@@ -753,13 +753,13 @@
                                   <!-- Links -->
                                   <h6 class="text-uppercase fw-bold">Over Ons</h6>
                                   <p>
-                                    <a href="about.html" class="text-white">Lease</a>
+                                    <a href="about.php" class="text-white">Lease</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Levering en Service</a>
+                                    <a href="about.php" class="text-white">Levering en Service</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Prijzen en Voorwaarden</a>
+                                    <a href="about.php" class="text-white">Prijzen en Voorwaarden</a>
                                   </p>
                                  
                                 </div>
@@ -770,13 +770,13 @@
                                   <!-- Links -->
                                   <h6 class="text-uppercase fw-bold">Producten</h6>
                                   <p>
-                                    <a href="about.html" class="text-white">Personenauto's</a>
+                                    <a href="fleetpark-carproducts.php" class="text-white">Personenauto's</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Bestelwagens</a>
+                                    <a href="fleetpark-vanproducts.php" class="text-white">Bestelwagens</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Sportauto's</a>
+                                    <a href="fleetpark-luxuryproducts.php" class="text-white">Sportauto's</a>
                                   </p>
                                 </div>
                                 <!-- Grid column -->

@@ -33,7 +33,7 @@
 
       .section {
           position: relative;
-          height: 100vh;
+          height: 120vh;
       }
 
       .section .section-center {
@@ -75,6 +75,7 @@
       }
 
       .col-md-8 {
+          margin-left: 13%;
           position: relative;
           min-height: 1px;
           padding-right: 15px;
@@ -84,6 +85,7 @@
       .booking-form .form-group {
           position: relative;
           margin-bottom: 30px;
+          width: 120%;
       }
 
       .booking-form .form-control {
@@ -184,6 +186,7 @@
           color: #fff;
           border-radius: 4px;
           display: block;
+          margin-left: 35px;
       }
 
       
@@ -288,6 +291,8 @@
       }
   
       .car-finder_heading {
+          margin-bottom: 30px;
+          padding-left: 36%;
           font-weight: 400;
           color: #d4002a;
           font-size: 1.75rem;
@@ -302,7 +307,7 @@
       }
 
       .heading-3 {
-          margin-left: -15px;
+          margin-left: 13%;
           font-size: 1.125rem;
           line-height: 1.5rem;
           font-weight: 700;

@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
         'Beste Gebruiker, <br>
          Bedankt dat u ons uw email heeft opgestuurd. <br>
          Hier is de link van de verificatiecode:  <br>
-         <a href="http://localhost/examenproject_2022/change-password.php?reset='.$code.'">http://localhost/examenproject_2022/change-password.php?reset='.$code.'</a></b>');
+         <a href="http://localhost:8012/examenproject_2022/change-password.php?reset='.$code.'">http://localhost:8012/examenproject_2022/change-password.php?reset='.$code.'</a></b>');
 }
 ?>
 

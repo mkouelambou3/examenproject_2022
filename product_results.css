@@ -822,6 +822,7 @@
               height: 1.5rem;
        }
        .checkmark-text {
+              display: none;
               margin-left: 15px;
        }
 

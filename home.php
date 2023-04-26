@@ -27,27 +27,28 @@
        }
 
        body {
-              animation: fadeIn 4s;
+              animation: fadeIn 3s;
        }
+       
 </style>
 <body>
        
        <section class="header">
 
               <nav>             
-                     <a href="home.html" class="logo">
+                     <a href="home.php" class="logo">
                      <i class="fa-solid fa-car-side"></i> POC Share Wheels 
                      </a>
                      <div class="nav-links" id="navLinks">
                             <!-- Reposnive bar open and close -->
                             <i class="fa fa-times" onclick="hideMenu()"></i>
                             <ul>
-                                <li><a href="home.html">Home</a></li>
+                                <li><a href="home.php">Home</a></li>
                                 <li><a href="about.html">Over Ons</a></li>
-                                <li><a href="product-page.html">Producten</a></li>
-                                <li><a href="#">Reserveren</a></li>
+                                <li><a href="product-page.php">Producten</a></li>
+                                <li style="display: none;"><a href="#">Reserveren</a></li>
                                 <li><a href="login.php">Login</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="contact-page.php">Contact</a></li>
                             </ul>
                         </div>
                         <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -120,7 +121,7 @@
                          <div class="layer-1">
                              <h3>Personenauto's</h3>
                          </div>
-                         <a href="#" class="hero_btn-5">Check Het Assortiment</a>
+                         <a href="fleetpark-carproducts.php" class="hero_btn-5">Check Het Assortiment</a>
 
                      </div>
                      <div class="campus-col">
@@ -128,14 +129,14 @@
                          <div class="layer-2">
                              <h3>Bestelwagens</h3>
                          </div>
-                         <a href="#" class="hero_btn-6">Check Het Assortiment</a>
+                         <a href="fleetpark-vanproducts.php" class="hero_btn-6">Check Het Assortiment</a>
                      </div>
                      <div class="campus-col">
                             <img src="images/hyper-car.png" alt="" class="i-3">
                          <div class="layer-3">
                             <h3>Sportauto's</h3> 
                          </div>
-                         <a href="#" class="hero_btn-7">Check Het Assortiment</a>
+                         <a href="fleetpark-luxuryproducts.php" class="hero_btn-7">Check Het Assortiment</a>
                      </div>
                  </div>
        </section>
@@ -221,7 +222,7 @@
         <section class="cta">
               <h1>GET READY FOR CONTACT</h1>
               <h4>Heeft u meer vragen over onze producten, prijzen en voorwaarden? <br> Neem gerust contact met ons op.</h4>
-              <a href="contact.html" class="hero_btn-contact">CONTACT US</a>
+              <a href="contact-page.html" class="hero_btn-contact">CONTACT US</a>
           </section> 
        <!-- Call to Action End -->
 
@@ -291,13 +292,13 @@
                                   <!-- Links -->
                                   <h6 class="text-uppercase fw-bold">Producten</h6>
                                   <p>
-                                    <a href="about.html" class="text-white">Personenauto's</a>
+                                    <a href="fleetpark-carproducts.php" class="text-white">Personenauto's</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Bestelwagens</a>
+                                    <a href="fleetpark-vanproducts.php" class="text-white">Bestelwagens</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Sportauto's</a>
+                                    <a href="fleetpark-luxuryproducts.php" class="text-white">Sportauto's</a>
                                   </p>
                                 </div>
                                 <!-- Grid column -->
@@ -307,7 +308,7 @@
                                   <!-- Links -->
                                   <h6 class="text-uppercase fw-bold">Contact</h6>
                                   <p style="color: #fff;"><i class="fas fa-home mr-3"></i> Apollolaan 1, 1076 NN, AM</p>
-                                  <p style="color: #fff; font-size: 16px;"><i class="fas fa-envelope mr-3"></i> infopocsharewheels@gmail.com</p>
+                                  <p style="color: #fff; font-size: 14px;"><i class="fas fa-envelope mr-3"></i> infopocsharewheels@gmail.com</p>
                                   <p style="color: #fff;"><i class="fas fa-phone mr-3"></i> +31 06 86 10 37 26</p>
                                 </div>
                                 <!-- Grid column -->

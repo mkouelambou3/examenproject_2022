@@ -1,11 +1,10 @@
 <?php
        include 'config.php';
-      
 
        session_start();
 
        if (!isset($_SESSION['SESSION_EMAIL'])) {
-            header("Location: home.html");
+            header("Location: home.php");
             die();
         }
 
@@ -15,6 +14,11 @@
               $row = mysqli_fetch_assoc($query);
        }
 ?>
+
+
+
+
+
 
 
 
@@ -51,17 +55,17 @@
 <body>
        <section class="sub-header">
               <nav>
-                     <a href="welcome.php" class="logo">
+                     <a href="home.php" class="logo">
                             <i class="fa-solid fa-car-side"></i> POC Share Wheels
                      </a>
                      <div class="nav-links" id="navLinks">
                             <!-- Reposnive bar open and close -->
                             <i class="fa fa-times" onclick="hideMenu()"></i>
                             <ul>
-                                <li><a href="welcome.php">Home</a></li>
+                                <li><a href="home.php">Home</a></li>
                                 <li><a href="about.php">Over Ons</a></li>
                                 <li><a href="product-page.php">Producten</a></li>
-                                <li><a href="#">Reserveren</a></li>
+                                <li style="display: none;"><a href="#">Reserveren</a></li>
                                 <div class="dropdown">
                                    <li><a href="#">Account</a></li>
                                    <div class="dropdown-content">
@@ -92,7 +96,7 @@
                                    en verhuren tegen een lage prijs. Wij vechten voor de beste service en werken samen met de grootste
                                    autohuurbedrijven van Nederland.
                                    </p>
-                                   <a href="about.html" class="hero_btn-8">ONTDEK MEER</a>
+                                   <a href="about.php" class="hero_btn-8">ONTDEK MEER</a>
                             </div>
                             <div class="about-col">
                                    <img src="images/about.png" alt="">
@@ -280,13 +284,13 @@
                                   <!-- Links -->
                                   <h6 class="text-uppercase fw-bold">Over Ons</h6>
                                   <p>
-                                    <a href="about.html" class="text-white">Lease</a>
+                                    <a href="about.php" class="text-white">Lease</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Levering en Service</a>
+                                    <a href="about.php" class="text-white">Levering en Service</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Prijzen en Voorwaarden</a>
+                                    <a href="about.php" class="text-white">Prijzen en Voorwaarden</a>
                                   </p>
                                  
                                 </div>
@@ -297,13 +301,13 @@
                                   <!-- Links -->
                                   <h6 class="text-uppercase fw-bold">Producten</h6>
                                   <p>
-                                    <a href="about.html" class="text-white">Personenauto's</a>
+                                    <a href="fleetpark-carproducts.php" class="text-white">Personenauto's</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Bestelwagens</a>
+                                    <a href="fleetpark-vanproducts.php" class="text-white">Bestelwagens</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Sportauto's</a>
+                                    <a href="fleetpark-luxuryproducts.php" class="text-white">Sportauto's</a>
                                   </p>
                                 </div>
                                 <!-- Grid column -->

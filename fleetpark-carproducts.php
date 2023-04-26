@@ -1,10 +1,10 @@
 <?php
-
        include 'config.php';
+
        session_start();
 
        if (!isset($_SESSION['SESSION_EMAIL'])) {
-            header("Location: home.html");
+            header("Location: home.php");
             die();
         }
 
@@ -12,8 +12,9 @@
 
        if (mysqli_num_rows($query) > 0) {
               $row = mysqli_fetch_assoc($query);
-       }  
+       }
 ?>
+
 
 
 
@@ -57,7 +58,7 @@
   <body>
     <section class="sub-header">
       <nav>
-        <a href="home.html" class="logo">
+        <a href="welcome.php" class="logo">
           <i class="fa-solid fa-car-side"></i> POC Share Wheels
         </a>
         <div class="nav-links" id="navLinks">
@@ -390,7 +391,7 @@
                                           </div>
 
                                           <div class="vehicle_prices">
-                                            <a class="btn btn-primary vehicle_cta" href="?main-category=car&category=RCAR">
+                                            <a class="btn btn-primary vehicle_cta" href="book-finder.php?main_category=car&token-id=RCAR">
                                               Reserveer deze auto
                                             </a>
 
@@ -532,7 +533,7 @@
                                           </div>
 
                                           <div class="vehicle_prices">
-                                            <a class="btn btn-primary vehicle_cta" href="?main-category=car&category=TYAR">
+                                            <a class="btn btn-primary vehicle_cta" href="book-finder.php?main_category=car&token-id=TYAR">
                                               Reserveer deze auto
                                             </a>
 
@@ -672,7 +673,7 @@
                                           </div>
 
                                           <div class="vehicle_prices">
-                                            <a class="btn btn-primary vehicle_cta" href="?main-category=car&category=OMAR">
+                                            <a class="btn btn-primary vehicle_cta" href="book-finder.php?main_category=car&token-id=OMAR">
                                               Reserveer deze auto
                                             </a>
 
@@ -696,7 +697,7 @@
           <section class="cta">
               <h1>GET READY FOR CONTACT</h1>
               <h4>Heeft u meer vragen over onze producten, prijzen en voorwaarden? <br> Neem gerust contact met ons op.</h4>
-              <a href="contact.html" class="hero_btn-contact">CONTACT US</a>
+              <a href="contact-page.php" class="hero_btn-contact">CONTACT US</a>
           </section> 
        <!-- Call to Action End -->
 
@@ -749,13 +750,13 @@
                                   <!-- Links -->
                                   <h6 class="text-uppercase fw-bold">Over Ons</h6>
                                   <p>
-                                    <a href="about.html" class="text-white">Lease</a>
+                                    <a href="about.php" class="text-white">Lease</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Levering en Service</a>
+                                    <a href="about.php" class="text-white">Levering en Service</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Prijzen en Voorwaarden</a>
+                                    <a href="about.php" class="text-white">Prijzen en Voorwaarden</a>
                                   </p>
                                  
                                 </div>
@@ -766,13 +767,13 @@
                                   <!-- Links -->
                                   <h6 class="text-uppercase fw-bold">Producten</h6>
                                   <p>
-                                    <a href="about.html" class="text-white">Personenauto's</a>
+                                    <a href="fleetpark-carproducts.php" class="text-white">Personenauto's</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Bestelwagens</a>
+                                    <a href="fleetpark-vanproducts.php" class="text-white">Bestelwagens</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Sportauto's</a>
+                                    <a href="fleetpark-luxuryproducts.php" class="text-white">Sportauto's</a>
                                   </p>
                                 </div>
                                 <!-- Grid column -->

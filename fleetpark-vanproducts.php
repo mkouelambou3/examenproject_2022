@@ -415,7 +415,7 @@
                                           </div>
 
                                           <div class="vehicle_prices">
-                                            <a class="btn btn-primary vehicle_cta" href="?main-category=van&category=VCVN">
+                                            <a class="btn btn-primary vehicle_cta" href="book-finder.php?main_category=van&token-id=VCVN">
                                               Reserveer deze auto
                                             </a>
 
@@ -584,7 +584,7 @@
                                           </div>
 
                                           <div class="vehicle_prices">
-                                            <a class="btn btn-primary vehicle_cta" href="?main-category=van&category=MBVN">
+                                            <a class="btn btn-primary vehicle_cta" href="book-finder.php?main_category=van&token-id=MBVN">
                                               Reserveer deze auto
                                             </a>
 
@@ -751,7 +751,7 @@
                                           </div>
 
                                           <div class="vehicle_prices">
-                                            <a class="btn btn-primary vehicle_cta" href="?main-category=car&category=OMAR">
+                                            <a class="btn btn-primary vehicle_cta" href="book-finder.php?main_category=van&token-id=PTVN">
                                               Reserveer deze auto
                                             </a>
 

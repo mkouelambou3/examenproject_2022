@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
     'Beste Gebruiker, <br>
      Bedankt dat u uw account heeft geregistreerd bij ons. <br>
      Hier is de link van de verificatiecode:  <br>
-     <a href="http://localhost/examenproject_2022/login.php?verification='.$code.'">http://localhost/examenproject_2022/login.php?verification='.$code.'</a></b>');
+     <a href="http://localhost:8012/examenproject_2022/login.php?verification='.$code.'">http://localhost:8012/examenproject_2022/login.php?verification='.$code.'</a></b>');
 
 }
 

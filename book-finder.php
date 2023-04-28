@@ -17,6 +17,8 @@
         if(mysqli_num_rows($query) > 0) {
           $heading = "Waar en wanneer wil je de {$result} ($token_id) halen?";
         }
+
+
     
 
 ?>
@@ -197,7 +199,7 @@
                   </div>
                   <div class="col-md-8">
                     <div class="form-btn">
-                      <button type="submit" class="submit-btn" id="submit-btn" name="car-product-btn">Book NU</button>
+                      <button type="submit" class="submit-btn" id="submit-btn" name="order-product-btn">Book NU</button>
                     </div>
                   </div>
                 </form>

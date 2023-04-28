@@ -53,16 +53,16 @@
 <body>
 <section class="sub-header">
               <nav>
-                     <a href="home.php" class="logo">
+                     <a href="welcome.php" class="logo">
                             <i class="fa-solid fa-car-side"></i> POC Share Wheels
                      </a>
                      <div class="nav-links" id="navLinks">
                             <!-- Reposnive bar open and close -->
                             <i class="fa fa-times" onclick="hideMenu()"></i>
                             <ul>
-                                <li><a href="home.php">Home</a></li>
+                                <li><a href="welcome.php">Home</a></li>
                                 <li><a href="about.php">Over Ons</a></li>
-                                <li><a href="product-page.php">Producten</a></li>
+                                <li><a href="poc-products.php">Producten</a></li>
                                 <li style="display: none;"><a href="#">Reserveren</a></li>
                                 <div class="dropdown">
                                    <li><a href="#">Account</a></li>
@@ -1394,7 +1394,7 @@
        <section class="cta">
         <h1>GET READY FOR CONTACT</h1>
         <h4>Heeft u meer vragen over onze producten, prijzen en voorwaarden? <br> Neem gerust contact met ons op.</h4>
-        <a href="contact.html" class="hero_btn-contact">CONTACT US</a>
+        <a href="contact-page.php" class="hero_btn-contact">CONTACT US</a>
     </section> 
     <!-- Call to Action End -->
 

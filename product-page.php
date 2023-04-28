@@ -87,6 +87,10 @@
                       verdere vragen? Neem dan gerust met contact ons op? Voor meer info, check de tijden waar u met ons 
                       contact zou willen opnemen.
                      </p>
+
+                     <p>Let op, als u gebruik wilt maken van de meest recente dingen zoals een auto huren adviseren wij u om een account te maken
+                      of inloggen als u er een al heeft.
+                     </p>
                   </div>
                   <div class="content-block_links">
                     <a href="fleetpark-carproducts.php" class="btn-secondary btn-large">Bekijk ons wagenpark</a>

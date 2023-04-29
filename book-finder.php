@@ -18,8 +18,56 @@
           $heading = "Waar en wanneer wil je de {$result} ($token_id) halen?";
         }
 
+        if (isset($_POST["order-product-btn"])) {
+          $main_category = mysqli_escape_string($conn, $_GET["main_category"]);
+          $token_id = mysqli_escape_string($conn, $_GET["token-id"]);
+          $city = mysqli_escape_string($conn, $_POST["city"]);
+          $surname = mysqli_escape_string($conn, $_POST["surname"]);
+          $name = mysqli_escape_string($conn, $_POST["name"]);
+          $email = mysqli_escape_string($conn, $_POST["email"]);
+          $check_in = mysqli_escape_string($conn, $_POST["check_in"]);
+          $check_out = mysqli_escape_string($conn, $_POST["check_out"]);
 
-    
+          $sql =  "SELECT `main_category`, `category` `city`, `start_time`, `end_time`, `check_in`, `check_out` FROM cars WHERE `main_category` = '{$main_category}' ";
+          $result_query = mysqli_query($conn, $sql);
+
+          if ($check_in > $check_out) {
+            $msg = "<div class= 'info alert-danger' style='font-weight: bold; color:#c80000; font-size: 13px; margin-left: 20%; margin-right: 15%; margin-bottom: 15px; ';> ERROR, check-in datum mag niet later zijn dan de check-uit datum.</div>";
+          } else {
+            if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM cars WHERE main_category='{$main_category}' AND city='{$city}'")) > 0) {
+              $sql = "INSERT INTO orders (`token-id`, `city`, `surname`, `name`, `email`, `check_in`, `check_out`) VALUES ('{$token_id}', '{$city}', '{$surname}','{$name}','{$email}', '{$check_in}', '{$check_out}')";
+              $result_query = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM orders WHERE `token-id`='{$token_id}'")) > 0) {
+                $msg = "<div class='info alert-danger'style='font-weight: bold; color: #58a3db; font-size: 13px; margin-left: 20%;' ;>Let op, deze auto is al besteld op deze email : {$email}.</div>";
+            }
+            if ($result_query) {
+                header("Location: order-success.php");
+            } else {
+                $msg = "<div class= 'info alert-danger' style='font-weight: bold; color:#c80000; font-size: 13px; margin-left: 30%; margin-right: 30%; margin-bottom: 15px; ';> ERROR, uw bestelling kon niet voltooid worden.</div>";
+              }
+            } else {
+              $msg = "<div class= 'info alert-danger' style='font-weight: bold; color:#c80000; font-size: 13px; margin-left: 27%; margin-right: 15%; margin-bottom: 15px; ';> ERROR, er zijn helaas geen resultaten teruggevonden.</div>";
+            }
+          }
+
+          sendEmail($email, 'POC Share Wheels - Confirmation Order',
+          'Beste Gebruiker, <br>
+          Bedankt voor uw bestelling voor bij POC Share Wheels. <br>
+          Hier is de info van uw bestelling: <br>
+          category : <?php echo '.$category.'; ?> <br>
+          token-id : <?php echo '.$token_id.'; ?> <br>
+          city : <?php echo '.$city.'; ?><br>
+          surname : <?php echo '.$surname.'; ?> <br>
+          name : <?php echo '.$name.'; ?> <br>
+          email : <?php echo '.$email.'; ?><br>
+          check_in : <?php echo '.$check_in.'; ?> <br>
+          $check_out : <?php echo '.$check_out.'; ?> <br>'
+        );
+
+          
+        }
+
 
 ?>
 
@@ -109,7 +157,7 @@
                      <span class="heading-3 car-finder_preffered-category" id="selected-car-text"> <?php echo $heading; ?> </span>
                    </div>
                  </div>
-                 <form>
+                 <form action="" method="post">
                   <div class="col-md-8">
                     <div class="form-group">
                       <input
@@ -202,6 +250,7 @@
                       <button type="submit" class="submit-btn" id="submit-btn" name="order-product-btn">Book NU</button>
                     </div>
                   </div>
+                  <?php echo $msg; ?>
                 </form>
                
               </div>

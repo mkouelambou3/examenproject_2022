@@ -33,12 +33,12 @@
 
       .section {
           position: relative;
-          height: 130vh;
+          height: 150vh;
       }
 
       .section .section-center {
           position: absolute;
-          top: 50%;
+          top: 55%;
           left: 0;
           right: 0;
           transform: translateY(-50%);
@@ -292,7 +292,7 @@
   
       .car-finder_heading {
           margin-bottom: 30px;
-          padding-left: 36%;
+          padding-left: 38%;
           font-weight: 400;
           color: #d4002a;
           font-size: 1.75rem;
@@ -307,7 +307,7 @@
       }
 
       .heading-3 {
-          margin-left: 13%;
+          margin-left: 12%;
           font-size: 1.125rem;
           line-height: 1.5rem;
           font-weight: 700;

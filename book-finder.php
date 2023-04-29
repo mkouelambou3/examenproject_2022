@@ -64,7 +64,7 @@
           name : '.$name.' <br>
           email : '.$email.' <br>
           check_in : '.$check_in.' <br>
-          $check_out : '.$check_out.' <br>',
+          check_out : '.$check_out.' <br>',
         );
 
           

@@ -29,7 +29,11 @@
           $check_out = mysqli_escape_string($conn, $_POST["check_out"]);
 
           $sql =  "SELECT `main_category`, `category` `city`, `start_time`, `end_time`, `check_in`, `check_out` FROM cars WHERE `main_category` = '{$main_category}' ";
-          $result_query = mysqli_query($conn, $sql);
+          $result_query = mysqli_query($conn, $sql); 
+
+          if (mysqli_num_rows($result_query($conn, "SELECT * FROM orders WHERE email='{$email}' AND  `token-id` ='{$token_id}'")) > 0) {
+            $msg = "<div class='info alert-danger'style='font-weight: bold; color: #58a3db; font-size: 13px; margin-left: 20%;' ;>Let op, deze auto is al besteld op deze email : {$email}.</div>";
+          }
 
           if ($check_in > $check_out) {
             $msg = "<div class= 'info alert-danger' style='font-weight: bold; color:#c80000; font-size: 13px; margin-left: 20%; margin-right: 15%; margin-bottom: 15px; ';> ERROR, check-in datum mag niet later zijn dan de check-uit datum.</div>";
@@ -38,9 +42,6 @@
               $sql = "INSERT INTO orders (`token-id`, `city`, `surname`, `name`, `email`, `check_in`, `check_out`) VALUES ('{$token_id}', '{$city}', '{$surname}','{$name}','{$email}', '{$check_in}', '{$check_out}')";
               $result_query = mysqli_query($conn, $sql);
 
-            if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM orders WHERE `token-id`='{$token_id}'")) > 0) {
-                $msg = "<div class='info alert-danger'style='font-weight: bold; color: #58a3db; font-size: 13px; margin-left: 20%;' ;>Let op, deze auto is al besteld op deze email : {$email}.</div>";
-            }
             if ($result_query) {
                 header("Location: order-success.php");
             } else {
@@ -55,14 +56,15 @@
           'Beste Gebruiker, <br>
           Bedankt voor uw bestelling voor bij POC Share Wheels. <br>
           Hier is de info van uw bestelling: <br>
-          category : <?php echo '.$category.'; ?> <br>
-          token-id : <?php echo '.$token_id.'; ?> <br>
-          city : <?php echo '.$city.'; ?><br>
-          surname : <?php echo '.$surname.'; ?> <br>
-          name : <?php echo '.$name.'; ?> <br>
-          email : <?php echo '.$email.'; ?><br>
-          check_in : <?php echo '.$check_in.'; ?> <br>
-          $check_out : <?php echo '.$check_out.'; ?> <br>'
+          main_category : '.$main_category.'<br>
+          category : '.$result.' <br>
+          token-id : '.$token_id.' <br>
+          city : '.$city.' <br>
+          surname : '.$surname.' <br>
+          name : '.$name.' <br>
+          email : '.$email.' <br>
+          check_in : '.$check_in.' <br>
+          $check_out : '.$check_out.' <br>',
         );
 
           

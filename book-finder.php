@@ -31,10 +31,6 @@
           $sql =  "SELECT `main_category`, `category` `city`, `start_time`, `end_time`, `check_in`, `check_out` FROM cars WHERE `main_category` = '{$main_category}' ";
           $result_query = mysqli_query($conn, $sql); 
 
-          if (mysqli_num_rows($result_query($conn, "SELECT * FROM orders WHERE email='{$email}' AND  `token-id` ='{$token_id}'")) > 0) {
-            $msg = "<div class='info alert-danger'style='font-weight: bold; color: #58a3db; font-size: 13px; margin-left: 20%;' ;>Let op, deze auto is al besteld op deze email : {$email}.</div>";
-          }
-
           if ($check_in > $check_out) {
             $msg = "<div class= 'info alert-danger' style='font-weight: bold; color:#c80000; font-size: 13px; margin-left: 20%; margin-right: 15%; margin-bottom: 15px; ';> ERROR, check-in datum mag niet later zijn dan de check-uit datum.</div>";
           } else {

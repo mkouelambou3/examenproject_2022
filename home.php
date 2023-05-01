@@ -335,7 +335,7 @@
           </body>
 
        <!-- Footer Section End -->
-       <script>
+     <!--  <script>
               function autocomplete(inp, arr) {
                
                 var currentFocus;
@@ -435,6 +435,7 @@
               
               autocomplete(document.getElementById("city"), cities);
               </script>
+              !-->
        
        <script src="script.js"></script>
 </body>

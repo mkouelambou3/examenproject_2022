@@ -29,7 +29,15 @@
           $check_out = mysqli_escape_string($conn, $_POST["check_out"]);
 
           $sql =  "SELECT `main_category`, `category` `city`, `start_time`, `end_time`, `check_in`, `check_out` FROM cars WHERE `main_category` = '{$main_category}' ";
-          $result_query = mysqli_query($conn, $sql); 
+          $result_query = mysqli_query($conn, $sql);
+
+          $order_query = "SELECT `email`, `city` FROM orders WHERE `token-id` = '{$token_id}'";
+          $checkout_order = mysqli_query($conn, $order_query);
+
+          if (mysqli_num_rows($checkout_order) >= 1) {
+            $msg = "<div class= 'info alert-danger' style='font-weight: bold; color:#c80000; font-size: 13px; margin-left: 30%; margin-right: 30%; margin-bottom: 15px; ';> Let op, deze auto is al besteld.</div>";
+          }
+        
 
           if ($check_in > $check_out) {
             $msg = "<div class= 'info alert-danger' style='font-weight: bold; color:#c80000; font-size: 13px; margin-left: 20%; margin-right: 15%; margin-bottom: 15px; ';> ERROR, check-in datum mag niet later zijn dan de check-uit datum.</div>";
@@ -40,7 +48,8 @@
 
             if ($result_query) {
                 header("Location: order-success.php");
-            } else {
+            }
+            else {
                 $msg = "<div class= 'info alert-danger' style='font-weight: bold; color:#c80000; font-size: 13px; margin-left: 30%; margin-right: 30%; margin-bottom: 15px; ';> ERROR, uw bestelling kon niet voltooid worden.</div>";
               }
             } else {

@@ -68,7 +68,7 @@
             <li><a href="welcome.php">Home</a></li>
             <li><a href="about.php">Over Ons</a></li>
             <li><a href="product-page.php">Producten</a></li>
-            <li><a href="#">Reserveren</a></li>
+            <li style="display: none;"><a href="#">Reserveren</a></li>
                 <div class="dropdown">
                   <li><a href="#">Account</a></li>
                     <div class="dropdown-content">
@@ -396,7 +396,7 @@
                                             </a>
 
                                             <div class="text-center">
-                                               <a class="btn btn-transparent btn-icon vehicle_card-expander-btn" href="#">
+                                               <a class="btn btn-transparent btn-icon vehicle_card-expander-btn" href="renault-clio.php">
                                                 <span>Meer informatie</span>
                                               </a>
                                             </div>
@@ -538,7 +538,7 @@
                                             </a>
 
                                             <div class="text-center">
-                                               <a class="btn btn-transparent btn-icon vehicle_card-expander-btn" href="#">
+                                               <a class="btn btn-transparent btn-icon vehicle_card-expander-btn" href="toyota-yaris-cbe.php">
                                                 <span>Meer informatie</span>
                                               </a>
                                             </div>
@@ -678,7 +678,7 @@
                                             </a>
 
                                             <div class="text-center">
-                                               <a class="btn btn-transparent btn-icon vehicle_card-expander-btn" href="#">
+                                               <a class="btn btn-transparent btn-icon vehicle_card-expander-btn" href="opel-mokka.php">
                                                 <span>Meer informatie</span>
                                               </a>
                                             </div>

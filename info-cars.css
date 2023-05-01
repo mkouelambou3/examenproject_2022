@@ -1,0 +1,525 @@
+       @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+       * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif;
+       }
+
+       body {
+          background: #4c96b7;
+          text-align: center;
+       }
+
+       body, h1, h2, h3, h4, p, ul, ol, li, figure, figcaption, blockquote, dl, dd, fieldset, legend {
+          margin: 0;
+          border: 0;
+       }
+
+       nav {
+          display: flex;
+          padding: 2% 6%;
+          align-items: center;
+          text-align: center;
+          justify-content: space-between;
+       }
+  
+     nav .logo {
+      
+          margin-bottom: 20px;
+          text-decoration: none;
+          font-size: 20px;
+          color: #fff3f3;
+          font-weight: bold;
+       }
+  
+     nav .fa-solid { 
+          padding: 10px;
+          font-size: 30px;
+          color: #58A3DB;
+      }
+     
+     .nav-links{
+          flex: 1;
+          text-align: right;
+     }
+  
+     .nav-links ul li{
+          display: inline-block;
+          list-style: none;
+          padding: 12px 12px;
+          position: relative;
+          text-transform: uppercase;
+     }
+  
+     .nav-links ul li a{
+          text-decoration: none;
+          color: #ffff;
+          font-size: 18px;
+     }
+  
+     .nav-links ul li::after{
+          content: '';
+          width: 0%;
+          height: 2px;
+          background: #4C96D7;
+          display: block;
+          margin: auto;
+          transition: 0.25s;
+     }
+  
+     .nav-links ul li:hover::after{
+          width: 100%;
+     }
+     nav .fa {
+          display: none;
+     }
+
+     /* Responsive Navbar Section Start */
+        
+     @media(max-width: 900px) {
+          .text_box h2 {
+              font-size: 50px;
+          }
+          .text_box #headtext {
+              font-size: 23px;
+          }
+          .text_box p {
+              margin: 10px 40px;
+              font-size: 20px;
+          }
+          .nav-links ul li {
+              margin: 10px;
+              display: block;
+          }
+          .nav-links {
+              position: fixed;
+              background: #47b19efa;
+              height: 100vh;
+              width: 200px;
+              top: 0;
+              right: -200px;
+              text-align: left;
+              z-index: 2;
+              transition: 1.2s;
+          }
+          nav .fa {
+              display: block;
+              color: #ffff;
+              margin: 10px;
+              font-size: 22px;
+              cursor: pointer;
+          }
+          .nav-links ul {
+              padding: 30px;
+          }
+      }
+
+      @media(max-width : 450px) {
+          nav .fa-solid{
+              padding: 10px;
+              font-size: 30px;
+              color: #58A3DB;
+         }
+      }
+      /* Responsive Navbar End */
+
+      /*About Section Start*/
+
+      .sub-header {
+          height: 30vh;
+          width: 100%;
+          background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), 
+          url(images/car-ban.png);
+          background-position: center;
+          background-size: cover;
+          text-align: center;
+          color: #fff;
+      }
+      
+      .sub-header h1 {
+          margin-top: -5px;
+      }
+
+     /*About Section End*/
+
+     /*Informatie Car Products Section Start */
+
+     .site-content-wrap {
+          max-width: 76.25rem;
+          padding: 0 20px;
+          margin: 0 auto;
+     }
+
+     .fleet-detail-page .vehicle {
+          font-size: 0.8125rem;
+     }
+
+    .vehicle-header_page-header .vehicle-header {
+          color: #000;
+          max-width: 778px;
+          margin: auto;
+    }
+
+    .vehicle-header {
+          position: relative;
+          width: 100%;
+    }
+
+    .vehicle-header_page-header .vehicle-header_title {
+          margin-top: 20px;
+          font-size: 2.125rem;
+          line-height: 2.5rem;
+          font-weight: 700;
+          text-align: center;
+          word-break: break-word;
+          letter-spacing: -0.02em;
+    }
+
+    .vehicle-header_title {
+          text-transform: uppercase;
+          margin-bottom: 0.25rem;
+    }
+
+    .vehicle-header_title span {
+          font-weight: 400; 
+    }
+
+    .vehicle-header_page-header .vehicle-header_subtitle {
+          display: block;
+          margin-top: 1.875rem;
+          font-size: 1.125rem;
+          line-height: 1.5rem;
+          font-weight: 700;
+          text-align: center;
+          color: #000;
+          letter-spacing: -0.01em;
+      }
+
+      .fleet-detail-page .vehicle {
+          font-size: 0.8125rem;
+      }
+
+      .grid {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0 -15px;
+      }
+
+      .grid-item {
+          width: 50%;
+          padding-left: 15px;
+          padding-right: 15px;
+          position: relative;
+      }
+
+      .vehicle-image {
+          position: relative;
+          height: 0;
+          padding-bottom: 50%;
+      }
+
+      .vehicle-image img {
+          position: relative;
+          /* width: 100%; */
+         /* aspect-ratio: 2/1; */
+      }
+      
+      img {
+          max-width: 100%;
+          height: auto;
+          display: block;
+      }
+
+      .vehicle_image-actions {
+          padding-top: 0.625rem;
+      }
+      
+      .text-center {
+          text-align: center;
+      }
+      
+      .vehicle-detail .grid-item:not(:last-child) {
+          margin-bottom: 30px;
+      }
+
+      .vehicle_feature {
+          line-height: 1.1rem;
+          margin-bottom: 0.5rem;
+      }
+
+      .vehicle_extra {
+          color: #65615d;
+      }
+
+      .vehicle_features .icon-list {
+          --icon-list-line-height: 1.5rem;
+          --icon-list-icon-size: 1.5rem;
+          columns: 2;
+          margin: 15px -25px;
+      }
+
+      ul[class], ol[class] {
+          list-style: none;
+      }
+
+      .vehicle_features .icon-list_item {
+          padding-bottom: 5px;
+          color: #000;
+      }
+
+      .icon-list_item:not(:last-of-type) {
+          padding-bottom: 10px;
+      }
+
+      .icon-list_item {
+          display: inline-flex;
+          align-items: flex-start;
+          width: 100%;
+          line-height: 1.5rem;
+      }
+
+      .icon-list_item-icon {
+          display: flex;
+          align-items: center;
+          flex-shrink: 0;
+          width: var(--icon-list-icon-size, calc(var(--icon-list-font-size, 0.8125rem) * 1.5));
+          height: var(--icon-list-icon-size, calc(var(--icon-list-font-size, 0.8125rem) * 1.5));
+     }
+     
+     svg[class^=icon-], div[class*=" icon-"] {
+          width: 100%;
+    }
+
+   .icon-list_item-text {
+          margin-left: 0.375rem;
+          width: 100%;
+    }
+
+   .icon-list_item-text .markdown {
+          line-height: var(--icon-list-line-height, calc(var(--icon-list-font-size, 0.8125rem) * 1.5));
+    }
+
+    .vehicle .vehicle_cta {
+          padding: 0.5625rem 1.875rem;
+          display: inline-block;
+          font-size: 0.75rem;
+          line-height: 1.25rem;
+          text-decoration: none;
+          font-weight: 600;
+          letter-spacing: .07em;
+          text-align: center;
+          text-transform: uppercase;
+          border-radius: 5rem;
+          cursor: pointer;
+          transition: ease-in-out .3s;
+          transition-property: color,border-color,background-color;
+          border: 1px solid transparent;
+          border-radius: 5rem;
+          width: 100%;
+   }
+
+   .vehicle .vehicle_cta {
+          width: 100%;
+   }
+  
+
+   .btn-primary {
+        color: #fff;
+   }
+
+   .btn-inverted, .btn-secondary, .btn-primary {
+          position: relative;
+          z-index: 0;
+   }
+
+   .btn-primary:not(.btn-primary_disabled):before{
+          background: linear-gradient(360deg, #af0123 0%, #d4002a 100%);
+   }
+
+   .btn-primary:not(.btn-primary_disabled):after {
+          opacity: 0;
+          background: linear-gradient(360deg, #c20127 0%, #8b001b 100%);
+   }
+
+   .btn-inverted:before, .btn-secondary:before, .btn-primary:not(.btn-primary_disabled):before, .btn-primary:not(.btn-primary_disabled):after {
+          content: "";
+          position: absolute;
+          top: -1px;
+          bottom: -1px;
+          right: -1px;
+          left: -1px;
+          border: none;
+          border-radius: inherit;
+          z-index: -1;
+          transition: opacity ease-in-out .3s;
+   }
+
+    @media only screen and (min-width: 978px) {
+          .two-columns .grid-item, .two-columns.from-desktop .grid-item {
+                        width: 50%;
+          }
+
+          .two-columns .one-third-column, .three-columns .grid-item {
+                        width: 33.333333%;
+          }
+
+          .two-columns .two-thirds-column {
+                        width: 66.666666%;
+          }
+
+          .car-finder-results_results>:first-child {
+                 margin-top: 35px;
+          }
+   }
+
+
+
+     @media only screen and (min-width : 978px) {
+          .vehicle-header_page-header .vehicle-header {
+                    margin-top: 4.375rem;
+                    margin-bottom: 4.375rem;
+          }
+
+          .two-columns .three-fifth-column {
+                    width: 60%;
+          }
+
+          .two-columns .grid-item, .two-columns.from-desktop .grid-item {
+                    width: 50%;
+          }
+
+          .two-columns .two-fifth-column {
+                    width: 40%;
+          }
+     }
+
+     /*Informatie Car Products Section End */
+
+
+     /*Call to Action Start*/
+
+     .cta {
+          margin: 100px auto;
+          width: 80%;
+          height: 500px;
+          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(images/car-back.png);
+          background-size: cover;
+          background-position: center;
+          border-radius: 10px;
+          text-align: center;
+          padding: 100px 0;
+      }
+      
+      .cta h1 {
+          font-size: 50px;
+          font-weight: 800;
+          margin: 30px 0px;
+          line-height: 1.1;
+          text-transform: uppercase;
+          color: #fff;
+      }
+      .cta h4{
+          margin: 40px 0px;
+          color: #fff;
+      }
+  
+      @media(max-width: 767px){
+          .cta h1{
+              font-size: 26px;
+          }
+      }
+      .hero_btn-contact{
+          font-weight: 600;
+          position: relative;
+          display: inline-block;
+          color: #fff;
+          border: 1px solid #fff3f3;
+          border-radius: 5px;
+          padding: 12px 34px;
+          font-size: 18px;
+          background: transparent;
+          cursor: pointer;
+          text-decoration: none;
+      }
+      .hero_btn-contact:hover{
+          border: 1px solid #d4002a;
+          background: #d4002a;
+          transition: 0.8s;
+      }
+  
+  
+      /*Call to Action End*/
+  
+      /*Footer Section Start*/
+  
+      footer{
+          display: block;
+      }
+  
+      .footer-page {
+          padding: 5rem 0;
+          background-color: #000;
+          color: #777;
+      }
+  
+      .container {
+          @media (min-width: 768px)
+          {
+              max-width: 720px;
+          }
+      }
+  
+      .container{
+          width: 2000px;
+      }
+  
+      .mb-6{
+          margin-bottom: 3rem! important;
+      }
+      
+      .row{
+          display: flex;
+          flex-wrap: wrap;
+          margin-right: -15px;
+          margin-left: -15px;
+      }
+      .footer-page .footer-site-logo{
+          margin-left: 5%;
+          text-decoration: none;
+          color: #fff3f3;
+          font-size: 26px;
+          font-weight: bold;
+          margin-bottom: 30px;
+          display: block;
+      }
+  
+      h5{
+          font-size: 0.875rem;
+      }
+      
+      h6{
+          border-radius: 10px;
+      }
+  
+      
+  
+      .text-white{
+          padding-top: 10px;
+          align-self: auto;
+          text-decoration: none;
+          font-weight: 500;
+      }
+  
+      .d-flex{
+          margin: 10px;
+      }
+  
+      .copyright-text {
+          font-size: 18px;
+          text-align: center;
+      }
+  
+  
+      /*Footer Section End*/

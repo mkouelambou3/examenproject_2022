@@ -249,7 +249,7 @@
                   </div>
                   <div class="col-md-8">
                     <div class="form-btn">
-                      <button type="submit" class="submit-btn" id="submit-btn" name="order-product-btn"> Book NU </button>
+                      <button type="submit" class="submit-btn" id="submit-btn" name="order-product-btn"> Boek NU </button>
                     </div>
                   </div>
                   <?php echo $msg; ?>

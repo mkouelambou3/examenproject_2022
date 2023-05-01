@@ -681,7 +681,7 @@
                                             </a>
 
                                             <div class="text-center">
-                                               <a class="btn btn-transparent btn-icon vehicle_card-expander-btn" href="#">
+                                               <a class="btn btn-transparent btn-icon vehicle_card-expander-btn" href="corvette-c8.php">
                                                 <span>Meer informatie</span>
                                               </a>
                                             </div>

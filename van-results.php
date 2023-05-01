@@ -377,13 +377,13 @@
                                                     Reserveer deze auto
                                                  </a>
                                                  <div class="text-center">
-                                                   <button class="btn btn-transparent btn-icon vehicle_card-expander-btn">
+                                                  <a class="btn btn-transparent btn-icon vehicle_card-expander-btn" href="volkswagen-caddy.php">
                                                      <span>Meer informatie</span>
                                                        <svg class="icon-chevron-right" xmlns="http://www.w3.org/2000/svg" width="19" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 19 16">
                                                           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
                                                        </svg>
                                                      </div>
-                                                   </button>
+                                                  </a>
                                                  </div>
                                              </div> 
                                           </div>
@@ -564,13 +564,13 @@
                                                     Reserveer deze auto
                                                  </a> 
                                                  <div class="text-center">
-                                                   <button class="btn btn-transparent btn-icon vehicle_card-expander-btn">
+                                                 <a class="btn btn-transparent btn-icon vehicle_card-expander-btn" href="mercedes-benz-vito.php">
                                                      <span>Meer informatie</span>
                                                        <svg class="icon-chevron-right" xmlns="http://www.w3.org/2000/svg" width="19" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 19 16">
                                                           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
                                                        </svg>
                                                      </div>
-                                                   </button>
+                                                  </a>
                                                  </div>
                                              </div> 
                                           </div>
@@ -751,13 +751,13 @@
                                                     Reserveer deze auto
                                                  </a>
                                                  <div class="text-center">
-                                                  <button class="btn btn-transparent btn-icon vehicle_card-expander-btn">
+                                                  <a class="btn btn-transparent btn-icon vehicle_card-expander-btn" href="peugot-expert.php">
                                                      <span>Meer informatie</span>
                                                        <svg class="icon-chevron-right" xmlns="http://www.w3.org/2000/svg" width="19" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 19 16">
                                                           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
                                                        </svg>
                                                      </div>
-                                                   </button>
+                                                   </a>
                                                  </div>
                                              </div> 
                                           </div>

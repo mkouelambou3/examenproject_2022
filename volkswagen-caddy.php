@@ -70,7 +70,7 @@
                                 <li><a href="about.html">Over Ons</a></li>
                                 <li><a href="product-page.php">Producten</a></li>
                                 <li style="display: none;"><a href="#">Reserveren</a></li>
-                                <li><a href="login.php">Login</a></li>
+                                <li style="display: none;"><a href="login.php">Login</a></li>
                                 <li><a href="contact-page.html">Contact</a></li>
 
                             </ul>

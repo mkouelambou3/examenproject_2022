@@ -273,29 +273,30 @@
 
                <div class="row">
                      <div class="course-col">
-                            <img src="images/lease-icon.png" class="icon-1">
-                            <h3>Lease</h3>
-                            <p>Lekker gemakkelijk, efficent en snel. 
+                            <img src="images/lease-icon.png" class="icon-lease">
+                            <h3 class="paragraph-headingtext-1">Lease</h3>
+                            <p class="paragraph-text-1">Lekker gemakkelijk, efficent en snel. 
                              Bij POC Share Wheels kunt u altijd een lease auto huren
-                            voor de beste tarief en prijs.</p>
-                            <a href="about.php" class="hero_btn-2">Lees Meer</a>
+                            voor de beste tarief en prijs. Of u nu een personenauto, 
+                            bestelauto of luxe huurt.</p>
+                            <a href="about.html" class="hero_btn-lease">Lees Meer</a>
                      </div>
                      <div class="course-col">
-                            <img src="images/car-service.png" class="icon-2">
+                            <img src="images/car-service.png" class="icon-service">
                             <h3>Levering en Service</h3>
                             <p>Levering en Service gaat lekker soepel bij POC Share Wheels.
                              Wij zorgen voor uitstekende levering en service is zo lekker snel geregeld.
                             </p>
-                            <a href="about.php" class="hero_btn-3">Lees Meer</a>
+                            <a href="about.html" class="hero_btn-service">Lees Meer</a>
                      </div>
                      <div class="course-col">
-                            <img src="images/car-price.png" class="icon-3">
+                            <img src="images/car-price.png" class="icon-prijzen">
                             <h3>Prijzen en Voorwaarden</h3>
                             <p>Lage prijzen, vaste tarieven.
                              Bij POC Share Wheels kunt u kiezen uit meerdere verschillende auto's,
                              van normale auto's tot aan bestelwagens en eventueel vrachtauto's.
                             </p>
-                            <a href="about.php" class="hero_btn-4">Lees Meer</a>
+                            <a href="about.html" class="hero_btn-prijzen">Lees Meer</a>
                      </div>
                  </div>
        </section>
@@ -316,7 +317,7 @@
                          <div class="layer-1">
                              <h3>Personenauto's</h3>
                          </div>
-                         <a href="fleetpark-carproducts.php" class="hero_btn-5">Check Het Assortiment</a>
+                         <a href="fleetpark-carproducts.php" class="hero_btn-cars">Check Het Assortiment</a>
 
                      </div>
                      <div class="campus-col">
@@ -324,14 +325,14 @@
                          <div class="layer-2">
                              <h3>Bestelwagens</h3>
                          </div>
-                         <a href="fleetpark-vanproducts.php" class="hero_btn-6">Check Het Assortiment</a>
+                         <a href="fleetpark-vanproducts.php" class="hero_btn-vans">Check Het Assortiment</a>
                      </div>
                      <div class="campus-col">
                             <img src="images/hyper-car.png" alt="" class="i-3">
                          <div class="layer-3">
                             <h3>Sportauto's</h3> 
                          </div>
-                         <a href="fleetpark-luxuryproducts.php" class="hero_btn-7">Check Het Assortiment</a>
+                         <a href="fleetpark-luxuryproducts.php" class="hero_btn-luxury-cars">Check Het Assortiment</a>
                      </div>
                  </div>
        </section>
@@ -443,7 +444,7 @@
                             <a href="https://www.instagram.com/" class="text-white me-4">
                                    <i class="fab fa-instagram"></i>
                                  </a>
-                            <a href="" class="text-white me-4">
+                            <a href="https://www.linkedin.com/in/mike-koue-lambou-621272220/" class="text-white me-4">
                                    <i class="fab fa-linkedin"></i>
                             </a>
                             </div>
@@ -455,7 +456,7 @@
                               <div class="row mt-3">
                                 <!-- Grid column -->
                                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                                  <!-- Content -->
+                                  <!-- Content --> 
                                   <h6 class="text-uppercase fw-bold">POC Share Wheels</h6>
                                   <h6>
                                     Bij POC Share Wheels bieden wij de toekomst van auto's huren.
@@ -487,13 +488,13 @@
                                   <!-- Links -->
                                   <h6 class="text-uppercase fw-bold">Producten</h6>
                                   <p>
-                                    <a href="about.html" class="text-white">Personenauto's</a>
+                                    <a href="fleetpark-carproducts.php" class="text-white">Personenauto's</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Bestelwagens</a>
+                                    <a href="fleetpark-vanproducts.php" class="text-white">Bestelwagens</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Sportauto's</a>
+                                    <a href="fleetpark-luxuryproducts.php" class="text-white">Sportauto's</a>
                                   </p>
                                 </div>
                                 <!-- Grid column -->
@@ -503,7 +504,7 @@
                                   <!-- Links -->
                                   <h6 class="text-uppercase fw-bold">Contact</h6>
                                   <p style="color: #fff;"><i class="fas fa-home mr-3"></i> Apollolaan 1, 1076 NN, AM</p>
-                                  <p style="color: #fff; font-size: 14px";><i class="fas fa-envelope mr-3"></i> infopocsharewheels@gmail.com</p>
+                                  <p style="color: #fff; font-size: 14px;"><i class="fas fa-envelope mr-3"></i> infopocsharewheels@gmail.com</p>
                                   <p style="color: #fff;"><i class="fas fa-phone mr-3"></i> +31 06 86 10 37 26</p>
                                 </div>
                                 <!-- Grid column -->
@@ -522,6 +523,7 @@
                               </div>
                               <!-- Grid row -->
                             </div>
+                            <h2 class="copyright-text">&copy; POC Share Wheels. 2022 Rights Reserved. Version : 1.0.</h2>
                           </section>
                         
               <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

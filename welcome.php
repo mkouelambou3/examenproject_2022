@@ -5,7 +5,7 @@
        session_start();
 
        if (!isset($_SESSION['SESSION_EMAIL'])) {
-            header("Location: home.php");
+            header("Location: login.php");
             die();
         }
 

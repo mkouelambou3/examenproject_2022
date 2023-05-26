@@ -88,7 +88,7 @@
                       contact zou willen opnemen.
                      </p>
 
-                     <p>Let op, als u gebruik wilt maken van de meest recente dingen zoals een auto huren adviseren wij u om een account te maken
+                     <p class="highlight-product-text">Let op, als u gebruik wilt maken van de meest recente dingen zoals een auto huren adviseren wij u om een account aan te maken
                       of inloggen als u er een al heeft.
                      </p>
                   </div>

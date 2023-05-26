@@ -626,6 +626,16 @@
 
        /*Products Section Start*/
 
+       .highlight-product-text {
+            color: #c80000;
+            font-weight: 500;
+       }
+
+       .highlight-product-text:hover {
+            font-weight: 700;
+            cursor: pointer;
+       }
+
         .block-title {
             margin-bottom: 3.125rem;
         }

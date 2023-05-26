@@ -132,8 +132,10 @@
         }
         
         .hero_btn:hover {
-            border: 1px solid #24f8c7;
-            background: #24f8c7;
+            transition: all ease-in-out 4s;
+            color: #000;
+            border: 1px solid #000;
+            background: #4C96D7;
             transition: 1s;
         }
 
@@ -653,8 +655,10 @@
             text-decoration: none;
         }
         .hero_btn-contact:hover{
-            border: 1px solid #24f8c7;
-            background: #24f8c7;
+            transition: all ease-in-out 4s;
+            color: #000;
+            border: 1px solid #000;
+            background: #4c96d7;
             transition: 0.8s;
         }
 

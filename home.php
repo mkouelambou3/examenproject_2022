@@ -106,7 +106,7 @@
        </section>
        <!-- Course Section End-->
 
-       <!-- Campus Section Start-- >
+       <!-- Campus Section Start-->
        <section class="campus">
               <div class="PageBlock">
                      <div class="verticalLine"></div>

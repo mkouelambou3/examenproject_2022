@@ -1022,8 +1022,6 @@
               border-radius: 10px;
           }
       
-          
-      
           .text-white{
               padding-top: 10px;
               align-self: auto;
@@ -1034,9 +1032,29 @@
           .d-flex{
               margin: 10px;
           }
+
+          .fa-facebook-f:hover {
+              transition: all ease-in .2s;
+              color: #58a3db;
+          }
+  
+          .fa-twitter:hover {
+              transition: all ease-in .2s;
+              color: #58a3db;
+          }
+  
+          .fa-instagram:hover {
+              transition: all ease-in .2s;
+              color: #58a3db;
+          }
+  
+          .fa-linkedin:hover {
+              transition: all ease-in .2s;
+              color: #58a3db;
+          }
       
           .copyright-text {
-              font-size: 18px;
+              font-size: 15px;
               text-align: center;
           }
       

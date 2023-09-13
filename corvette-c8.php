@@ -295,7 +295,7 @@
                               </div>
                               <!-- Grid row -->
                             </div>
-                            <h2 class="copyright-text">&copy; POC Share Wheels. 2022 Rights Reserved. Version : 1.0.</h2>
+                            <h2 class="copyright-text">&copy; POC Share Wheels. 2022 Rights Reserved. Version : 1.0.16</h2>
                           </section>
                         
               <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

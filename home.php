@@ -32,6 +32,7 @@
        
 </style>
 <body>
+      <!-- Hierin zie je het navigatiemenu dat wordt beschreven in de code. -->
        
        <section class="header">
 
@@ -67,6 +68,8 @@
        </section>
         
        <!-- Course Section Start-->
+
+       <!-- In de Course Section beschrijk ik wat onze site aanbiedt qua diensten en werkzaamheden.-->
        <section class="course">
               <div class="PageBlock">
                      <div class="verticalLine"></div>
@@ -107,6 +110,10 @@
        <!-- Course Section End-->
 
        <!-- Campus Section Start-->
+
+       <!-- In de Campus Section bieden we onze opties aan voor onze website. -->
+
+
        <section class="campus">
               <div class="PageBlock">
                      <div class="verticalLine"></div>
@@ -144,6 +151,9 @@
 
 
        <!-- Reviews Section Start -->
+
+       <!-- Hierin in deze sectie beschrijf ik een paar reviews van onze klanten. Daarin wordt ook beschreven wat hun ervaring was 
+            en wat betreft qua verbetering enzovoort. -->
 
        <section class="reviews">
               <div class="PageBlock">
@@ -227,6 +237,8 @@
        <!-- Call to Action End -->
 
        <!-- Footer Section Start -->
+
+       <!-- Hierin staat de code van footer, hierin  -->
        <body>
               <div class="container my-5">
 

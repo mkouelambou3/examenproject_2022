@@ -183,7 +183,7 @@
                      <div>
                          <p>Ik heb zo laatst een auto gehuurd op deze site en de service was geweldig.
                             Mijn experince was geweldig op deze site. Alles was helder, duidelijk, overzichtelijk
-                            en leuk assortiment uit te kiezen. Klein minpuntje was het contacteren, het heeft wat langer geduurd dan 
+                            en leuk assortiment uit te kiezen. Klein minpuntje was het contacteren, het heeft wat langer geduurd dan    
                             normaal. Maar voor de rest een leuke site om te bezoeken.</p>
                          <h3>Anne Hof</h3>
                          <i class="fa fa-star"></i>
@@ -229,6 +229,8 @@
        <script src="script.js"></script>
         <!-- Call to Action Start -->
 
+        <!-- Hier komt een contactblok te staan, vervolgens kom je op de contact pagina terecht. !-->
+
         <section class="cta">
               <h1>GET READY FOR CONTACT</h1>
               <h4>Heeft u meer vragen over onze producten, prijzen en voorwaarden? <br> Neem gerust contact met ons op.</h4>
@@ -244,6 +246,8 @@
 
                      <footer
                      class="text-center text-lg-start text-white" style="background-color: #000; border-radius: 20px;">
+
+                     <!-- Hierin vinden links plaats van onze sociale media. !-->
 
                      <section class="d-flex justify-content-between p-4" 
                      style="background-color: #777">
@@ -265,6 +269,8 @@
                             </a>
                             </div>
                      </section>
+
+                     <!-- Footer Page met alle links van onze pagina. !-->
 
                      <section class="">
                             <div class="container text-center text-md-start mt-5">
@@ -324,6 +330,8 @@
                                   <p style="color: #fff;"><i class="fas fa-phone mr-3"></i> +31 06 86 10 37 26</p>
                                 </div>
                                 <!-- Grid column -->
+
+                                <!-- Een kleine grid gemaakt met onze openingstijden om conatct op te kunnen nemen. -->
 
                                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                                    <!-- Links -->

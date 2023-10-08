@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
     sendEmail($email, 'POC Share Wheels - Reset Account Password',
         'Beste Gebruiker, <br>
          Bedankt dat u ons uw email heeft opgestuurd. <br>
-         Hier is de link van de verificatiecode:  <br>
+         Hier is de link van uw verificatiecode:  <br>
          <a href="http://localhost:8012/examenproject_2022/change-password.php?reset='.$code.'">http://localhost:8012/examenproject_2022/change-password.php?reset='.$code.'</a></b>');
 }
 ?>

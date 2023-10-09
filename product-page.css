@@ -628,10 +628,20 @@
 
        .highlight-product-text {
             color: #c80000;
-            font-weight: 500;
+            font-weight: 400;
        }
 
        .highlight-product-text:hover {
+            font-weight: 700;
+            cursor: pointer;
+       }
+
+       .alert-product-text {
+            color: #c80000;
+            font-weight: 400;
+       }
+
+       .alert-product-text:hover {
             font-weight: 700;
             cursor: pointer;
        }
@@ -697,7 +707,7 @@
 
         .vehicle-header {
             position: relative;
-            color: #d4002a;
+            color: #58a3db;
             margin-bottom: 15px;
             width: 100%;
         }
@@ -871,8 +881,8 @@
         }
 
         .btn-secondary {
-            color: #d4002a;
-            border: 1px solid #d4002a;
+            color: #58a3db;
+            border: 1px solid #58a3db;
             border-radius: 50px;
             text-decoration: none;
             text-transform: uppercase;
@@ -906,7 +916,7 @@
         .content-block_links a:hover {
             color: #fff;
             transition: ease-in-out .3s;
-            background-color: #d4002a;
+            background-color: #090a0b;
         }
         .btn-secondary {
             position: relative;

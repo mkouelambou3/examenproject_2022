@@ -91,6 +91,8 @@
                      <p class="highlight-product-text">Let op, als u gebruik wilt maken van de meest recente dingen zoals een auto huren adviseren wij u om een account aan te maken
                       of inloggen als u er een al heeft.
                      </p>
+
+                     <p class="alert-product-text"> Let op, De All-season banden op aanvraag zijn op dit moment niet beschikbaar.</p>
                   </div>
                   <div class="content-block_links">
                     <a href="fleetpark-carproducts.php" class="btn-secondary btn-large">Bekijk ons wagenpark</a>
@@ -133,7 +135,8 @@
 
                       <div class="vehicle_features">
                         <p class="vehicle_feature vehicle_extra"> Minimale leeftijd bestuurder 18 jaar </p>
-                        <p class="vehicle_feature vehicle_extra"> All-season banden op aanvraag </p>
+                        <!-- De All-season banden aanvraag is op dit moment niet beschikbaar. !-->
+                        <!-- <p class="vehicle_feature vehicle_extra"> All-season banden op aanvraag </p> !-->
                         <ul class="icon-list">
                           <li class="icon-list_item">
                             <span class="icon-list_item-icon">
@@ -260,7 +263,8 @@
 
                       <div class="vehicle_features">
                         <p class="vehicle_feature vehicle_extra"> Minimale leeftijd bestuurder 18 jaar </p>
-                        <p class="vehicle_feature vehicle_extra"> All-season banden op aanvraag </p>
+                        <!-- De All-season banden aanvraag is op dit moment niet beschikbaar. !-->
+                        <!-- <p class="vehicle_feature vehicle_extra"> All-season banden op aanvraag </p> !-->
                         <ul class="icon-list">
                           <li class="icon-list_item">
                             <span class="icon-list_item-icon">
@@ -391,7 +395,8 @@
 
                       <div class="vehicle_features">
                         <p class="vehicle_feature vehicle_extra"> Minimale leeftijd bestuurder 18 jaar </p>
-                        <p class="vehicle_feature vehicle_extra"> All-season banden op aanvraag </p>
+                        <!-- De All-season banden aanvraag is op dit moment niet beschikbaar. !-->
+                        <!-- <p class="vehicle_feature vehicle_extra"> All-season banden op aanvraag </p> !-->
                         <ul class="icon-list">
                           <li class="icon-list_item">
                             <span class="icon-list_item-icon">

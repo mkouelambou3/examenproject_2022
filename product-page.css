@@ -646,6 +646,17 @@
             cursor: pointer;
        }
 
+       .alert-pocproducten-text {
+            color: #58a3db;
+            font-weight: 400;
+       }
+
+       .alert-pocproducten-text:hover {
+            font-weight: 700;
+            color: #d4002a;
+            cursor: pointer;
+       }
+
         .block-title {
             margin-bottom: 3.125rem;
         }

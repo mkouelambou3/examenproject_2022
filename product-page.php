@@ -92,7 +92,7 @@
                       of inloggen als u er een al heeft.
                      </p>
 
-                     <p class="alert-product-text"> Let op, De All-season banden op aanvraag zijn op dit moment niet beschikbaar.</p>
+                     <p class="alert-pocproducten-text"> Let op, De All-season banden op aanvraag zijn op dit moment niet beschikbaar.</p>
                   </div>
                   <div class="content-block_links">
                     <a href="fleetpark-carproducts.php" class="btn-secondary btn-large">Bekijk ons wagenpark</a>

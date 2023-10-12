@@ -85,6 +85,7 @@
               </nav>
               <h1>Over Ons</h1>
        </section>
+                     <!-- Hierin vertel ik een klein stukje over wat doen als bedrijf. Hier onder lees je onze producten en diensten. !-->
               <section class="about-us"> 
                      <div class="row">
                             <div class="about-col">
@@ -107,6 +108,8 @@
                             <div class="Clear"></div>
                      </div>
                      <div class="row">
+
+                     <!-- Hierin vertel een klein stukje over wat voor auto's wij leveren. -->
                             <div class="about-col">
                                    <h1>Personenauto's</h1>
                                    <p>POC Share Wheels biedt een wijd assortiment personenauto's. Hier bij POC

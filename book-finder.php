@@ -243,7 +243,7 @@
                   </div>
                   <div class="col-md-8">
                     <div class="form-group">
-                      <input class="form-control" type="date" required="" id="check-out" name="check_out" max="2023-05-01">
+                      <input class="form-control" type="date" required="" id="check-out" name="check_out" max="2024-06-30">
                       <span class="form-label">Check Uit</span>
                     </div>
                   </div>

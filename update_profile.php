@@ -153,6 +153,10 @@ if (isset($_POST['update_profile'])) {
        Ga Terug.
        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
        </a>
+
+            <a class="txt4" href="welcome.php">
+            Terug naar Home.
+            </a>
        </div>
        <script>
               (function($) {

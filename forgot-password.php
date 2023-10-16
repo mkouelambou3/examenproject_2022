@@ -80,6 +80,11 @@ if (isset($_POST['submit'])) {
     Terug naar Login.
     <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
     </a>
+
+            <a class="txt5" href="home.php">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            Terug naar Home.
+            </a>
     </div>
 
     <script>

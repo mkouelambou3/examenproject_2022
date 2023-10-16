@@ -110,6 +110,15 @@
               text-decoration: none;
        }
 
+       .txt4 {
+              margin-left: 85px;
+              font-family: 'Poppins', sans-serif;
+              line-height: 1.5;
+              font-size: 15px;
+              color: #666;
+              text-decoration: none;
+       }
+
        .limiter {
               width: 100%;
               margin: 0 auto;

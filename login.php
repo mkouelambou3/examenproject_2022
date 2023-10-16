@@ -46,7 +46,7 @@
                 $msg = "<div class='alert alert-info' style='font-weight: bold; color:#58a3db; font-size:10px; margin-left:45px; ';>Verifieer uw account en probeer het opnieuw.</div>";
             }
         } else {
-            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:11px; margin-left:55px; ';>ERROR, email of wachtwoord klopt niet.</div>";
+            $msg = "<div class='alert alert-danger' style='font-weight: bold; color:#c80000; font-size:13px; margin-left:30px; ';>ERROR, email of wachtwoord klopt niet.</div>";
         }
     }
 ?>
@@ -114,6 +114,9 @@
     <a class="txt3" href="register.php">
     Nog geen lid? Registreer nu.
     <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            <a class="txt4" href="home.php">
+            Terug naar Home.
+            </a>
     </a>
     </div>
     <script>

@@ -137,6 +137,9 @@ Username / Password?
        Al lid? Log In.
        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
        </a>
+            <a class="txt4" href="home.php">
+            Terug naar Home.
+            </a>
        </div>
        <script>
               (function($) {

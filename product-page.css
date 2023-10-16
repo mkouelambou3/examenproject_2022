@@ -647,8 +647,10 @@
        }
 
        .alert-pocproducten-text {
+            font-size: 16px;
             color: #58a3db;
             font-weight: 400;
+            font-family: "Apercu Arabic Pro", sans-serif;
        }
 
        .alert-pocproducten-text:hover {

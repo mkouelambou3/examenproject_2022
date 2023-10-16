@@ -212,6 +212,11 @@
                             <h3>Stap 1</h3>
                             <p>Bij Stap 1 kunt u kiezen welke personenauto, bestelwagen of sportauto u wilt huren bij POC Share Wheels.
                                Check voor meer op onze producten pagina.
+                               <br>
+                               <p class="about-highlight-text">Tip : Als je klant bent van POC Share Wheels kun je makkelijk gebruik gebruiken 
+                               van onze autozoeker, lekker eenvoudig en simpel.
+                               </br>
+                               </p>
                             </p>
                      </div>
                      <div class="course-col">

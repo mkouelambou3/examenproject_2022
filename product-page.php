@@ -116,7 +116,7 @@
             <h2 class="heading-2 text-center block-title">Onze auto's</h2>
             <div class="grid three-columms">
               <div class="grid-item">
-                <a href = "book-finder.php?main_category=car&token-id=RCAR" class="link-car" id="link-car">
+                <a href = "login.php" class="link-car" id="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
@@ -244,7 +244,7 @@
 
               
               <div class="grid-item">
-                <a href = "book-finder.php?main_category=car&token-id=TYAR" class="link-car">
+                <a href = "login.php" class="link-car" id="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
@@ -376,7 +376,7 @@
 
 
               <div class="grid-item">
-                <a href = "book-finder.php?main_category=car&token-id=OMAR" class="link-car">
+                <a href = "login.php" class="link-car" id="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
@@ -509,7 +509,7 @@
             <h2 class="heading-2 text-center block-title">Onze bestelauto's</h2>
             <div class="grid three-columms">
               <div class="grid-item">
-                <a href="book-finder.php?main_category=van&token-id=VCVN" class="link-car">
+                <a href = "login.php" class="link-car" id="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
@@ -665,7 +665,7 @@
               </div>
 
               <div class="grid-item">
-                <a href="book-finder.php?main_category=van&token-id=MBVN" class="link-car">
+                <a href = "login.php" class="link-car" id="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
@@ -821,7 +821,7 @@
               </div>
 
               <div class="grid-item">
-                <a href="book-finder.php?main_category=van&token-id=PTVN" class="link-car">
+                <a href = "login.php" class="link-car" id="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
@@ -986,7 +986,7 @@
             <h2 class="heading-2 text-center block-title">Onze Luxe auto's</h2>
             <div class="grid three-columms">
               <div class="grid-item">
-                <a href="book-finder.php?main_category=luxe-car&token-id=PPLR" class="link-car">
+                <a href = "login.php" class="link-car" id="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
@@ -1116,7 +1116,7 @@
 
 
               <div class="grid-item">
-                <a href="book-finder.php?main_category=luxe-car&token-id=RPLR" class="link-car">
+                <a href = "login.php" class="link-car" id="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">
@@ -1246,7 +1246,7 @@
 
 
               <div class="grid-item">
-                <a href="book-finder.php?main_category=luxe-car&token-id=CCLR" class="link-car">
+                <a href = "login.php" class="link-car" id="link-car">
                   <div class="vehicle-overview-block_card card">
                     <div>
                       <div class="vehicle-header">

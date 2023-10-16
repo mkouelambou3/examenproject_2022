@@ -803,6 +803,12 @@
             width: 400px;
             height: 400px;
         }
+
+        .about-highlight-text {
+            font-family: "Apercu Arabic Pro", sans-serif;
+            font-weight: 650;
+            color: #58a3db;
+        }
         /*About Section End*/
 
         /*Footer Section Start*/

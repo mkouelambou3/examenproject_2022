@@ -134,28 +134,28 @@ if (isset($_POST['update_profile'])) {
        </div>
 
        <div class="flex">
-       <div class="update-profile">
+            <div class="update-profile">
               <div class="inputBox">
-              <span class="update-text">Update uw foto  :</span>
-              <input type="file" name="update_choosefile" accept="image/jpg, image/jpeg, image/png" class="box">
+                <span class="update-text">Update uw foto  :</span>
+                    <input type="file" name="update_choosefile" accept="image/jpg, image/jpeg, image/png" class="box">
               </div>
-       </div>
+            </div>
        </div>
 
        <?php echo $msg; ?>
 
        <div class="container-profile100-form-btn">
-       <button class="profile100-form-btn" value="update_profile" name="update_profile">Update Profiel</button>
+            <button class="profile100-form-btn" value="update_profile" name="update_profile">Update Profiel</button>
        </div>
 
        <div class="text-center p-t-136">
-       <a class="txt3" href="profile.php">
-       Ga Terug.
-       <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-       </a>
+            <a class="txt3" href="profile.php">
+                Ga Terug.
+                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            </a>
 
             <a class="txt4" href="welcome.php">
-            Terug naar Home.
+                Terug naar Home.
             </a>
        </div>
        <script>

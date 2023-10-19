@@ -136,7 +136,7 @@ if (isset($_POST['update_profile'])) {
        <div class="flex">
             <div class="update-profile">
               <div class="inputBox">
-                <span class="update-text">Update uw foto  :</span>
+                <span class="update-text">Update uw foto :</span>
                     <input type="file" name="update_choosefile" accept="image/jpg, image/jpeg, image/png" class="box">
               </div>
             </div>

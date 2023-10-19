@@ -68,7 +68,7 @@
           <!-- Reposnive bar open and close -->
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
-            <li><a href="home.php">Home</a></li>
+            <li><a href="welcome.php">Home</a></li>
             <li><a href="about.php">Over Ons</a></li>
             <li><a href="product-page.php">Producten</a></li>
             <li style="display: none;"><a href="#">Reserveren</a></li>

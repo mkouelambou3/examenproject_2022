@@ -39,8 +39,9 @@
           <li><a href="home.php">Home</a></li>
           <li><a href="about.html">Over Ons</a></li>
           <li><a href="product-page.php">Producten</a></li>
+          <li><a href="login.php">Login</a></li>
           <li style="display: none;"><a href="#">Reserveren</a></li>
-          <div class="dropdown" style="display: none;">
+          <!--<div class="dropdown" style="display: none;">
             <li><a href="#">Account</a></li>
             <div class="dropdown-content">
               <div class="user-info">
@@ -49,7 +50,7 @@
               <a href="profile.php">Profiel</a>
               <a href="logout.php">Uitloggen</a>
             </div>
-          </div>
+          </div> !-->
           <li><a href="contact-page.php">Contact</a></li>
 
         </ul>

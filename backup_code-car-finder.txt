@@ -1,0 +1,82 @@
+<div class="section-center">
+                       <div class="container" style="max-width: 1180px;">
+                        
+                         <div class="row">
+                           <div class="booking-form">
+                              <div class="car-finder_content">
+                                <div class="car-finder_title">
+                                  <p class="car-finder_heading">
+                                    Huur een
+                                    <span>Auto</span>
+                                  </p>
+                                </div>
+                              </div>
+                               <div class="col-md-8">
+                                 <div class="form-group">
+                                   <input
+                                     class="form-control"
+                                     type="text"
+                                     placeholder="Kies een stad, postcode of plaats" id="city" name="city"
+                                   />
+                                   <span class="form-label">Waar wil je ophalen?</span>
+                                 </div>
+                               </div>
+                               <div class="col-md-2">
+                                 <div class="form-group">
+                                   <select class="form-control" id="start-time" name="start-time">
+                                     <option>9:00</option>
+                                     <option>10:00</option>
+                                     <option>11:00</option>
+                                     <option>12:00</option>
+                                     <option>13:00</option>
+                                     <option>14:00</option>
+                                     <option>15:00</option>
+                                     <option>16:00</option>
+                                     <option>17:00</option>
+                                   </select>
+                                   <span class="select-arrow"></span>
+                                   <span class="form-label">Ophaaltijd</span>
+                                 </div>
+                               </div>
+                               <div class="col-md-2">
+                                 <div class="form-group">
+                                   <select class="form-control" id="end-time" name="end-time">
+                                     <option>9:00</option>
+                                     <option>10:00</option>
+                                     <option>11:00</option>
+                                     <option>12:00</option>
+                                     <option>13:00</option>
+                                     <option>14:00</option>
+                                     <option>15:00</option>
+                                     <option>16:00</option>
+                                     <option>17:00</option>
+                                   </select>
+                                   <span class="select-arrow"></span>
+                                   <span class="form-label">Inlevertijd</span>
+                                 </div>
+                               </div>
+                               <div class="col-md-4">
+                                 <div class="form-group">
+                                   <input class="form-control" type="date" id="check-in" name="check-in" required="">
+                                   <span class="form-label">Check In</span>
+                                 </div>
+                               </div>
+                               <div class="col-md-4">
+                                 <div class="form-group">
+                                   <input class="form-control" type="date" required="" id="check-out" name="check-out">
+                                   <span class="form-label">Check Uit</span>
+                                 </div>
+                               </div>
+                               <div class="col-md-4">
+                                 <div class="form-btn">
+                                   <button class="submit-btn">Check Beschikbaarheid</button>
+                                 </div>
+                               </div>
+                             
+                            
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                  </div>

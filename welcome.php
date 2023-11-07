@@ -279,7 +279,7 @@
                              Bij POC Share Wheels kunt u altijd een lease auto huren
                             voor de beste tarief en prijs. Of u nu een personenauto, 
                             bestelauto of luxe huurt.</p>
-                            <a href="about.html" class="hero_btn-lease">Lees Meer</a>
+                            <a href="about.php" class="hero_btn-lease">Lees Meer</a>
                      </div>
                      <div class="course-col">
                             <img src="images/car-service.png" class="icon-service">
@@ -287,7 +287,7 @@
                             <p>Levering en Service gaat lekker soepel bij POC Share Wheels.
                              Wij zorgen voor uitstekende levering en service is zo lekker snel geregeld.
                             </p>
-                            <a href="about.html" class="hero_btn-service">Lees Meer</a>
+                            <a href="about.php" class="hero_btn-service">Lees Meer</a>
                      </div>
                      <div class="course-col">
                             <img src="images/car-price.png" class="icon-prijzen">
@@ -296,7 +296,7 @@
                              Bij POC Share Wheels kunt u kiezen uit meerdere verschillende auto's,
                              van normale auto's tot aan bestelwagens en eventueel vrachtauto's.
                             </p>
-                            <a href="about.html" class="hero_btn-prijzen">Lees Meer</a>
+                            <a href="about.php" class="hero_btn-prijzen">Lees Meer</a>
                      </div>
                  </div>
        </section>

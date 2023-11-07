@@ -126,7 +126,7 @@
         <div class="layer-1">
           <h3>Personenauto's</h3>
         </div>
-        <a href="fleetpark-carproducts.php" class="hero_btn-cars">Check Het Assortiment</a>
+        <a href="login.php" class="hero_btn-cars">Check Het Assortiment</a>
 
       </div>
       <div class="campus-col">
@@ -134,14 +134,14 @@
         <div class="layer-2">
           <h3>Bestelwagens</h3>
         </div>
-        <a href="fleetpark-vanproducts.php" class="hero_btn-vans">Check Het Assortiment</a>
+        <a href="login.php" class="hero_btn-vans">Check Het Assortiment</a>
       </div>
       <div class="campus-col">
         <img src="images/hyper-car.png" alt="" class="i-3">
         <div class="layer-3">
           <h3>Sportauto's</h3>
         </div>
-        <a href="fleetpark-luxuryproducts.php" class="hero_btn-luxury-cars">Check Het Assortiment</a>
+        <a href="login.php" class="hero_btn-luxury-cars">Check Het Assortiment</a>
       </div>
     </div>
   </section>

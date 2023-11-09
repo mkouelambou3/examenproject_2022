@@ -307,13 +307,13 @@
                 <!-- Links -->
                 <h6 class="text-uppercase fw-bold">Producten</h6>
                 <p>
-                  <a href="fleetpark-carproducts.php" class="text-white">Personenauto's</a>
+                  <a href="login.php" class="text-white">Personenauto's</a>
                 </p>
                 <p>
-                  <a href="fleetpark-vanproducts.php" class="text-white">Bestelwagens</a>
+                  <a href="login.php" class="text-white">Bestelwagens</a>
                 </p>
                 <p>
-                  <a href="fleetpark-luxuryproducts.php" class="text-white">Sportauto's</a>
+                  <a href="login.php" class="text-white">Sportauto's</a>
                 </p>
               </div>
               <!-- Grid column -->

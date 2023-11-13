@@ -144,7 +144,7 @@
   <!-- Hier komt binnenkort een nieuwe feature van POC Share Wheels : Het pakketplan. Hierin kunnen hun auto plan kiezen etc.-->
 
   <!-- Note : if feature comes to new update, next things to implement are :
-            1 : make an update banner if new features are coming for the site.
+            1 : make an update banner if new features are coming to the site.
             2 : change version names.
             3 : next update : 1.0.16.3 -> 1.0.20.0
   !-->

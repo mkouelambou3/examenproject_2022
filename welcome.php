@@ -62,14 +62,6 @@
        <script src="https://kit.fontawesome.com/d6dc7c8001.js" crossorigin="anonymous"></script>
 </head>
 <style>
-       h1 {
-              font-size: 46px;
-              font-weight: 800;
-              margin: 15px 0;
-              line-height: 50px;
-              text-transform: uppercase;
-              color: #24f8c7;
-       }
 
        body {
             animation: fadeIn 3s;
@@ -268,7 +260,7 @@
                      <div class="verticalLine"></div>
                      <div class="Clear"></div>
               </div>
-               <h1>CHECK ONZE DIENSTEN <br> & ASSORTIMENT</h1>
+              <h1 class="services_title">CHECK ONZE DIENSTEN <br> & ASSORTIMENT</h1>
                <p>Ontdek hier onze diensten/assortiment bij POC Share Wheels.</p>
 
                <div class="row">
@@ -308,7 +300,7 @@
                      <div class="verticalLine"></div>
                      <div class="Clear"></div>
               </div>
-              <h1>ONZE PRODUCTEN</h1>
+              <h1 class="products_title">ONZE PRODUCTEN</h1>
               <p>Bij POC Share Wheels bieden wij uit ruime keuzes uit: Personenauto's, Bestelwagens's & Sportauto's.</p>
 
               <div class="row">
@@ -336,7 +328,33 @@
                      </div>
                  </div>
        </section>
-       <!-- Campus Section End-->
+<!-- Campus Section End-->
+
+<!-- Package Plan Section Start !-->
+
+  <!-- Hier komt binnenkort een nieuwe feature van POC Share Wheels : Het pakketplan. Hierin kunnen hun auto plan kiezen etc.-->
+
+  <!-- Note : if feature comes to new update, next things to implement are :
+            1 : make an update banner if new features are coming for the site.
+            2 : change version names.
+            3 : next update : 1.0.16.3 -> 1.0.20.0
+  !-->
+
+  <section class="package-plan">
+    <div class="container">
+      <div class="pageblock">
+        <div class="verticalLine"></div>
+        <div class="Clear"></div>
+      </div>
+      <h3 class="package-plan_title">HET PAKKETPLAN</h3>
+      <p class="package-plan_paragraph-text">Binnenkort gaan wij ons nieuwste feature introduceren bij POC Share Wheels: Het pakketplan!
+        <br>Met deze nieuwe feature krijgen onze klanten kortingen op de nieuwste producten, 
+        <br>exclusieve features en nog veel meer!
+      </p>
+      <p class="package-plan_text">Stay tuned voor de nieuwe update!</p>
+  </section>
+
+  <!-- Package Plan Section End !-->
 
 
        <!-- Reviews Section Start -->
@@ -346,7 +364,7 @@
                      <div class="verticalLine"></div>
                      <div class="Clear"></div>
               </div>
-              <h1>WAT DE KLANTEN ZEGGEN OVER ONS</h1>
+              <h1 class="customers_title">WAT DE KLANTEN ZEGGEN OVER ONS</h1>
               <p>Hier delen onze klanten reviews over het bedrijf POC Share Wheels zelf. Bekijk wat de klanten over ons zeggen.</p>
               
         <div class="row">

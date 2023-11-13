@@ -27,6 +27,33 @@
         position: relative;
     }
 
+    .services_title {
+        font-size: 46px;
+        font-weight: 800;
+        margin: 15px 0;
+        line-height: 50px;
+        text-transform: uppercase;
+        color: #58a3db;
+    }
+
+    .products_title {
+            font-size: 46px;
+            font-weight: 800;
+            margin: 15px 0;
+            line-height: 50px;
+            text-transform: uppercase;
+            color: #24f8c7;
+    }
+
+    .customers_title {
+            font-size: 46px;
+            font-weight: 800;
+            margin: 15px 0;
+            line-height: 50px;
+            text-transform: uppercase;
+            color: #777;
+    }
+
     nav {
         display: flex;
         padding: 2% 6%;
@@ -381,9 +408,38 @@
         transition: 0.8s;
     }
 
-    /* Course Section End*/
+    /* Course Section End */
 
-    /* Course Campus Start*/
+    /* Package Plan Section Start */
+
+    .package-plan_title {
+        text-align: center;
+        font-size: 46px;
+        font-weight: 800;
+        margin: 15px 0;
+        line-height: 50px;
+        text-transform: uppercase;
+        color: #f2bc1b;
+    }
+
+    .package-plan_paragraph-text {
+        text-align: center;
+        font-weight: 500;
+        margin: 15px 0;
+        line-height: 40px;
+    }
+
+    .package-plan_text {
+        text-align: center;
+        color: #d4002a;
+    }
+
+
+
+
+    /* Package Plan Section End */
+
+    /* Course Campus Start */
 
     .campus {
         width: 80%;

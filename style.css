@@ -190,6 +190,14 @@
         display: none;
     }
 
+    /* Notification Part Start */
+
+     .dropdown-content, .notifications_text{
+        font-size: 15px;
+    }
+
+    /* Notification Part End */
+
     /* Responsive Navbar Section Start */
 
     @media(max-width: 900px) {

@@ -87,9 +87,12 @@
                                    <li><a href="#">Account</a></li>
                                    <div class="dropdown-content">
                                    <div class="user-info">
-                                   <?php echo "Welcome, "  . $row['naam'] ; ?>
+                                   <?php echo "Welcome, ". $row['naam'] ; ?>
                                    </div>
                                           <a href="profile.php">Profiel</a>
+                                          <div class="circle-notifications">
+                                             <a href="#"><p class="notifications_text" style="font-size: 15px;">0 Meldingen</p></a>
+                                          </div>
                                           <a href="logout.php">Uitloggen</a>
                                    </div>
                                </div>

@@ -27,7 +27,7 @@ if (mysqli_num_rows($query) > 0) {
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>POC Share Wheels - Car Rental Website</title>
+  <title>POC Share Wheels - Luxe Car Results</title>
   <link rel="stylesheet" href="product_results.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC++EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
@@ -52,7 +52,7 @@ if (mysqli_num_rows($query) > 0) {
 </style>
 
 <body>
-  <section class="sub-header">
+<section class="sub-header">
     <nav>
       <a href="welcome.php" class="logo">
         <i class="fa-solid fa-car-side"></i> POC Share Wheels
@@ -63,14 +63,18 @@ if (mysqli_num_rows($query) > 0) {
         <ul>
           <li><a href="welcome.php">Home</a></li>
           <li><a href="about.php">Over Ons</a></li>
-          <li><a href="product-page.php">Producten</a></li>
-          <li><a href="#">Reserveren</a></li>
+          <li><a href="poc-products.php">Producten</a></li>
+          <li style="display: none;"><a href="#">Reserveren</a></li>
           <div class="dropdown">
             <li><a href="#">Account</a></li>
             <div class="dropdown-content">
               <div class="user-info">
                 <?php echo "Welcome, "  . $row['naam']; ?>
               </div>
+                <a href="#" class="notify-icon">
+                  <span>Berichten</span>
+                  <span class="notify-icon_badge">0</span>
+                </a>
               <a href="profile.php">Profiel</a>
               <a href="logout.php">Uitloggen</a>
             </div>

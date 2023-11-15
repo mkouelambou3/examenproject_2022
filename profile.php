@@ -38,7 +38,7 @@ if (mysqli_num_rows($query) > 0) {
                                    <i class="fa-solid fa-car-side"></i>POC Share Wheels
                             </a>
                             <p style="margin-bottom: 15px; font-size: 13px; font-weight: 700;">
-                                   Updaten van uw acccount, het kan elke dag bij POC Share Wheels.</p>
+                                   Het updaten van uw acccount, het kan elke dag bij POC Share Wheels.</p>
                      </nav>
                      <?php
                      $query = mysqli_query($conn, "SELECT * FROM users WHERE email='{$_SESSION['SESSION_EMAIL']}'");

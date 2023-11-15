@@ -52,7 +52,7 @@ if (mysqli_num_rows($query) > 0) {
 </style>
 
 <body>
-  <section class="sub-header">
+<section class="sub-header">
     <nav>
       <a href="home.php" class="logo">
         <i class="fa-solid fa-car-side"></i> POC Share Wheels
@@ -61,12 +61,12 @@ if (mysqli_num_rows($query) > 0) {
         <!-- Reposnive bar open and close -->
         <i class="fa fa-times" onclick="hideMenu()"></i>
         <ul>
-          <li><a href="home.php">Home</a></li>
-          <li><a href="about.html">Over Ons</a></li>
-          <li><a href="product-page.php">Producten</a></li>
+          <li><a href="welcome.php">Home</a></li>
+          <li><a href="about.php">Over Ons</a></li>
+          <li><a href="poc-products.php">Producten</a></li>
           <li style="display: none;"><a href="#">Reserveren</a></li>
           <li style="display: none;"><a href="login.php">Login</a></li>
-          <li><a href="contact-page.html">Contact</a></li>
+          <li><a href="contact-page.php">Contact</a></li>
 
         </ul>
       </div>
@@ -74,7 +74,7 @@ if (mysqli_num_rows($query) > 0) {
       <!-- Reposnive bar open and close -->
     </nav>
     <h1 class="heading-text">Informatie</h1>
-  </section>
+</section>
 
   <div class="fleet-detail-page">
     <div class="site-content-wrap">

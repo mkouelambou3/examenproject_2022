@@ -155,11 +155,18 @@
         <div class="verticalLine"></div>
         <div class="Clear"></div>
       </div>
-      <h3 class="package-plan_title">HET PAKKETPLAN</h3>
-      <p class="package-plan_paragraph-text">Binnenkort gaan wij ons nieuwste feature introduceren bij POC Share Wheels: Het pakketplan!
-        <br>Met deze nieuwe feature krijgen onze klanten kortingen op de nieuwste producten, 
+      <h3 class="package-plan_title">Alert</h3>
+      <p class="package-plan_paragraph-text">Let op, binnenkort komt er een nieuwe update van POC Share Wheels.
+        <br>Wij gaan binnenkort onze features toevoegen aan de nieuwe update zoals
         <br>exclusieve features en nog veel meer!
       </p>
+
+        <br>
+        <p class="features-highlighted-text">
+          Tip : Als je klant bent van POC Share Wheels kun je makkelijk toegang <br> 
+          tot de nieuwste updates, lekker eenvoudig en simpel.
+          </br>
+        </p>
       <p class="package-plan_text">Stay tuned voor de nieuwe update!</p>
   </section>
 

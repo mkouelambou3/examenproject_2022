@@ -60,50 +60,53 @@
        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet">
        <script src="https://kit.fontawesome.com/d6dc7c8001.js" crossorigin="anonymous"></script>
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <style>
 
        body {
             animation: fadeIn 3s;
        }
+
 </style>
 <body>
        
-       <section class="header">
+              <section class="header">
+                  <nav>
+                      <a href="welcome.php" class="logo">
+                          <i class="fa-solid fa-car-side"></i> POC Share Wheels
+                      </a>
+                      <div class="nav-links" id="navLinks">
+                          <!-- Responsive bar open and close -->
+                          <i class="fa fa-times" onclick="hideMenu()"></i>
+                          <ul>
+                              <li><a href="welcome.php">Home</a></li>
+                              <li><a href="about.php">Over Ons</a></li>
+                              <li><a href="poc-products.php">Producten</a></li>
+                              <li style="display: none;"><a href="#">Reserveren</a></li>
+                              <div class="dropdown">
+                                  <li><a href="#">Account</a></li>
+                                  <div class="dropdown-content">
+                                      <div class="user-info">
+                                          <?php echo "Welcome, " . $row['naam']; ?>
+                                      </div>
+                                      <a href="#" class="notify-icon">
+                                        <span>Berichten</span>
+                                        <span class="notify-icon_badge">0</span>
+                                      </a>
+                                      <a href="profile.php">Profiel</a>
+                                      <a href="logout.php">Uitloggen</a>
+                                  </div>
+                              </div>
+                              <li><a href="contact-page.php">Contact</a></li>
+                          </ul>
 
-              <nav>             
-                     <a href="welcome.php" class="logo">
-                     <i class="fa-solid fa-car-side"></i> POC Share Wheels 
-                     </a>
-                     <div class="nav-links" id="navLinks">
-                            <!-- Reposnive bar open and close -->
-                            <i class="fa fa-times" onclick="hideMenu()"></i>
-                            <ul>
-                                <li><a href="welcome.php">Home</a></li>
-                                <li><a href="about.php">Over Ons</a></li>
-                                <li><a href="poc-products.php">Producten</a></li>
-                                <li style="display: none;"><a href="#">Reserveren</a></li>
-                                <div class="dropdown">
-                                   <li><a href="#">Account</a></li>
-                                   <div class="dropdown-content">
-                                   <div class="user-info">
-                                   <?php echo "Welcome, ". $row['naam'] ; ?>
-                                   </div>
-                                          <a href="profile.php">Profiel</a>
-                                          <div class="circle-notifications">
-                                             <a href="#"><p class="notifications_text" style="font-size: 15px;">0 Meldingen</p></a>
-                                          </div>
-                                          <a href="logout.php">Uitloggen</a>
-                                   </div>
-                               </div>
-                                <li><a href="contact-page.php">Contact</a></li>
+                      </div>
+                      <i class="fa fa-bars" onclick="showMenu()"></i>
+                      <!-- Responsive bar open and close -->
+                  </nav>
+              </section>
 
-                            </ul>
-                        </div>
-                        <i class="fa fa-bars" onclick="showMenu()"></i>
-                        <!-- Reposnive bar open and close -->
-              </nav>
-       </section>
 
               <div class="text_box">
                      <h2>GET IN TOUCH</h2>

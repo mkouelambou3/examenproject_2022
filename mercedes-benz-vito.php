@@ -61,12 +61,12 @@ if (mysqli_num_rows($query) > 0) {
         <!-- Reposnive bar open and close -->
         <i class="fa fa-times" onclick="hideMenu()"></i>
         <ul>
-          <li><a href="home.php">Home</a></li>
-          <li><a href="about.html">Over Ons</a></li>
-          <li><a href="product-page.php">Producten</a></li>
+          <li><a href="welcome.php">Home</a></li>
+          <li><a href="about.php">Over Ons</a></li>
+          <li><a href="poc-products.php">Producten</a></li>
           <li style="display: none;"><a href="#">Reserveren</a></li>
           <li style="display: none;"><a href="login.php">Login</a></li>
-          <li><a href="contact-page.html">Contact</a></li>
+          <li><a href="contact-page.php">Contact</a></li>
 
         </ul>
       </div>

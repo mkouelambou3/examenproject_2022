@@ -59,7 +59,7 @@ if (mysqli_num_rows($query) > 0) {
                             <!-- Reposnive bar open and close -->
                             <i class="fa fa-times" onclick="hideMenu()"></i>
                             <ul>
-                                   <li><a href="home.php">Home</a></li>
+                                   <li><a href="welcome.php">Home</a></li>
                                    <li><a href="about.php">Over Ons</a></li>
                                    <li><a href="poc-products.php">Producten</a></li>
                                    <li style="display: none;"><a href="#">Reserveren</a></li>
@@ -69,6 +69,10 @@ if (mysqli_num_rows($query) > 0) {
                                                  <div class="user-info">
                                                         <?php echo "Welcome, "  . $row['naam']; ?>
                                                  </div>
+                                                 <a href="#" class="notify-icon">
+                                                   <span>Berichten</span>
+                                                   <span class="notify-icon_badge">0</span>
+                                                 </a>
                                                  <a href="profile.php">Profiel</a>
                                                  <a href="logout.php">Uitloggen</a>
                                           </div>
@@ -202,7 +206,7 @@ if (mysqli_num_rows($query) > 0) {
                                    <div class="verticalLine"></div>
                                    <div class="Clear"></div>
                             </div>
-                            <h1>Huren met POC Share Wheels</h1>
+                            <h1 class="renting-title_text">Huren met POC Share Wheels</h1>
                             <p>Hier kunt u lezen hoe bij ons huren en leasen werkt.</p>
                             <div class="course-col">
                                    <img src="images/step-1_icon.png" class="icon-10">
@@ -210,10 +214,10 @@ if (mysqli_num_rows($query) > 0) {
                                    <p>Bij Stap 1 kunt u kiezen welke personenauto, bestelwagen of sportauto u wilt huren bij POC Share Wheels.
                                           Check voor meer op onze producten pagina.
                                           <br>
-                                   <p class="about-highlight-text">Tip : Als je klant bent van POC Share Wheels kun je makkelijk gebruik gebruiken
-                                          van onze autozoeker, lekker eenvoudig en simpel.
-                                          </br>
-                                   </p>
+                                          <p class="about-highlight-text">Tip : Als je klant bent van POC Share Wheels kun je makkelijk gebruik gebruiken
+                                                 van onze autozoeker, lekker eenvoudig en simpel.
+                                                 </br>
+                                          </p>
                                    </p>
                             </div>
                             <div class="course-col">

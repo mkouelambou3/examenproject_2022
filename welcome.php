@@ -495,13 +495,13 @@
                                   <!-- Links -->
                                   <h6 class="text-uppercase fw-bold">Over Ons</h6>
                                   <p>
-                                    <a href="about.html" class="text-white">Lease</a>
+                                    <a href="about.php" class="text-white">Lease</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Levering en Service</a>
+                                    <a href="about.php" class="text-white">Levering en Service</a>
                                   </p>
                                   <p>
-                                    <a href="about.html" class="text-white">Prijzen en Voorwaarden</a>
+                                    <a href="about.php" class="text-white">Prijzen en Voorwaarden</a>
                                   </p>
                                  
                                 </div>

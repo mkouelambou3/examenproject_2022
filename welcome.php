@@ -90,9 +90,11 @@
                                       <div class="user-info">
                                           <?php echo "Welcome, " . $row['naam']; ?>
                                       </div>
-                                      <a href="#" class="notify-icon">
+                                      <a>
+                                      <button id="openModalBtn" onclick="openModal()" class="notify-icon">
                                         <span>Berichten</span>
                                         <span class="notify-icon_badge">0</span>
+                                      </button>
                                       </a>
                                       <a href="profile.php">Profiel</a>
                                       <a href="logout.php">Uitloggen</a>

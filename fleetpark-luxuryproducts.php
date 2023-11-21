@@ -63,17 +63,19 @@ if (mysqli_num_rows($query) > 0) {
         <ul>
           <li><a href="welcome.php">Home</a></li>
           <li><a href="about.php">Over Ons</a></li>
-          <li><a href="product-page.php">Producten</a></li>
+          <li><a href="poc-products.php">Producten</a></li>
           <li style="display: none;"><a href="#">Reserveren</a></li>
-          <div class="dropdown">
+            <div class="dropdown">
             <li><a href="#">Account</a></li>
             <div class="dropdown-content">
               <div class="user-info">
-                <?php echo "Welcome, "  . $row['naam']; ?>
+                <?php echo "Welcome, " . $row['naam']; ?>
               </div>
-              <a href="#" class="notify-icon">
-                <span>Berichten</span>
-                <span class="notify-icon_badge">0</span>
+              <a>
+                <button id="openModalBtn" class="notify-icon-button" onclick="openModal()">
+                  <span>Berichten</span>
+                  <span class="notify-icon_badge">0</span>
+                </button>
               </a>
               <a href="profile.php">Profiel</a>
               <a href="logout.php">Uitloggen</a>

@@ -37,21 +37,21 @@
     }
 
     .products_title {
-            font-size: 46px;
-            font-weight: 800;
-            margin: 15px 0;
-            line-height: 50px;
-            text-transform: uppercase;
-            color: #24f8c7;
+        font-size: 46px;
+        font-weight: 800;
+        margin: 15px 0;
+        line-height: 50px;
+        text-transform: uppercase;
+        color: #24f8c7;
     }
 
     .customers_title {
-            font-size: 46px;
-            font-weight: 800;
-            margin: 15px 0;
-            line-height: 50px;
-            text-transform: uppercase;
-            color: #777;
+        font-size: 46px;
+        font-weight: 800;
+        margin: 15px 0;
+        line-height: 50px;
+        text-transform: uppercase;
+        color: #777;
     }
 
     nav {
@@ -194,29 +194,29 @@
     /* Notification button styles */
 
 
-        #openModalBtn .notify-icon {
-            background-color: #555;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            position: relative;
-            display: inline-block;
-            border-radius: 2px;
-        }
+    .notify-icon-button {
+        background-color: #555;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        position: relative;
+        display: inline-block;
+        border-radius: 2px;
+    }
 
-        #openModalBtn:hover .notify-icon:hover {
-            background: red;
-        }
-        
-        #openModalBtn .notify-icon .notify-icon_badge {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            padding: 3px 10px;
-            border-radius: 50%;
-            background-color: red;
-            color: white;
-        }
+    .notify-icon-button:hover {
+        background: #777;
+    }
+
+    .notify-icon-button .notify-icon_badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        padding: 3px 10px;
+        border-radius: 50%;
+        background-color: red;
+        color: white;
+    }
 
     /* Notification Part End */
 

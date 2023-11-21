@@ -64,9 +64,11 @@ if (mysqli_num_rows($query) > 0) {
               <div class="user-info">
                 <?php echo "Welcome, "  . $row['naam']; ?>
               </div>
-              <a href="#" class="notify-icon">
-                <span>Berichten</span>
-                <span class="notify-icon_badge">0</span>
+              <a>
+                <button id="openModalBtn" class="notify-icon-button" onclick="openModal()">
+                  <span>Berichten</span>
+                  <span class="notify-icon_badge">0</span>
+                </button>
               </a>
               <a href="profile.php">Profiel</a>
               <a href="logout.php">Uitloggen</a>

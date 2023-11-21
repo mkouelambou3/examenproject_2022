@@ -73,17 +73,20 @@ if (mysqli_num_rows($query) > 0) {
             <li><a href="#">Account</a></li>
             <div class="dropdown-content">
               <div class="user-info">
-                <?php echo "Welcome, "  . $row['naam']; ?>
+                <?php echo "Welcome, " . $row['naam']; ?>
               </div>
-                <a href="#" class="notify-icon">
+              <a>
+                <button id="openModalBtn" class="notify-icon-button" onclick="openModal()">
                   <span>Berichten</span>
                   <span class="notify-icon_badge">0</span>
-                </a>
+                </button>
+              </a>
               <a href="profile.php">Profiel</a>
               <a href="logout.php">Uitloggen</a>
             </div>
           </div>
           <li><a href="contact-page.php">Contact</a></li>
+
         </ul>
       </div>
       <i class="fa fa-bars" onclick="showMenu()"></i>

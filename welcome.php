@@ -59,6 +59,7 @@ if (isset($_POST["finder-btn"])) {
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/d6dc7c8001.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="notify-center.js"></script>
 </head>
 <style>
   body {
@@ -68,13 +69,16 @@ if (isset($_POST["finder-btn"])) {
 
 <body>
 
+<script src="notify-center.js"></script>
+
+
+
   <section class="header">
     <nav>
       <a href="welcome.php" class="logo">
         <i class="fa-solid fa-car-side"></i> POC Share Wheels
       </a>
       <div class="nav-links" id="navLinks">
-        <!-- Responsive bar open and close -->
         <i class="fa fa-times" onclick="hideMenu()"></i>
         <ul>
           <li><a href="welcome.php">Home</a></li>
@@ -88,21 +92,28 @@ if (isset($_POST["finder-btn"])) {
                 <?php echo "Welcome, " . $row['naam']; ?>
               </div>
               <a>
-                <button id="openModalBtn" class="notify-icon-button" onclick="openModal()">
-                  <span>Berichten</span>
-                  <span class="notify-icon_badge">0</span>
-                </button>
+              <button id="open-modal" class="notify-icon" onclick="openModal()">
+                <span>Berichten</span>
+                <span class="notify-icon_badge">0</span>
+              </button>
               </a>
+
+              <div class="notify-content">
+                <div class="notify-modal-content">
+                  <span class="close-btn" onclick="closeModal()">&times;</span>
+                  <img src="car-icon.png" alt="Car Icon" class="car-icon">
+                  <h2>No new notifications</h2>
+                  <p>Check back later for updates on amazing wheels!</p>
+                </div>
+              </div>
               <a href="profile.php">Profiel</a>
               <a href="logout.php">Uitloggen</a>
             </div>
           </div>
           <li><a href="contact-page.php">Contact</a></li>
         </ul>
-
       </div>
       <i class="fa fa-bars" onclick="showMenu()"></i>
-      <!-- Responsive bar open and close -->
     </nav>
   </section>
 
@@ -431,7 +442,6 @@ if (isset($_POST["finder-btn"])) {
   </section>
 
   <!-- Reviews Section End -->
-  <script src="script.js"></script>
   <!-- Call to Action Start -->
 
   <section class="cta">

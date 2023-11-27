@@ -1,19 +1,20 @@
-var modal = document.querySelector('.notify-icon');
-var notify = document.getElementById('open-modal');
-var close = document.getElementById("close-modal");
+let counterValue = 0;
+
+function incrementCounter() {
+    counterValue++;
+    document.getElementById('counter').innerText = counterValue;
+    document.getElementById('modalCounter').innerText = counterValue;
+}
 
 function openModal() {
-    modal.style.display = 'block';
+    $('#berichtenModal').modal('show');
+    // Reset the counter when the modal is opened
+    counterValue = 0;
+    document.getElementById('counter').innerText = counterValue;
 }
 
 function closeModal() {
-    modal.style.display = 'none';
+    $('#berichtenModal').modal('hide');
 }
 
-// Click event for the "Berichten" button
-notify.addEventListener('click', function () {
-    openModal();
-});
 
-
-// Additional functions or modifications can be added as needed

@@ -69,10 +69,6 @@ if (isset($_POST["finder-btn"])) {
 
 <body>
 
-<script src="notify-center.js"></script>
-
-
-
   <section class="header">
     <nav>
       <a href="welcome.php" class="logo">
@@ -90,21 +86,6 @@ if (isset($_POST["finder-btn"])) {
             <div class="dropdown-content">
               <div class="user-info">
                 <?php echo "Welcome, " . $row['naam']; ?>
-              </div>
-              <a>
-              <button id="open-modal" class="notify-icon" onclick="openModal()">
-                <span>Berichten</span>
-                <span class="notify-icon_badge">0</span>
-              </button>
-              </a>
-
-              <div class="notify-content">
-                <div class="notify-modal-content">
-                  <span class="close-btn" onclick="closeModal()">&times;</span>
-                  <img src="car-icon.png" alt="Car Icon" class="car-icon">
-                  <h2>No new notifications</h2>
-                  <p>Check back later for updates on amazing wheels!</p>
-                </div>
               </div>
               <a href="profile.php">Profiel</a>
               <a href="logout.php">Uitloggen</a>
@@ -667,6 +648,7 @@ if (isset($_POST["finder-btn"])) {
   </script>
 
   <script src="script.js"></script>
+  <script src="notify-box-settings.js"></script>
 </body>
 
 </html>

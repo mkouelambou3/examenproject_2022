@@ -1,7 +1,6 @@
-// script.js
-
 var modal = document.querySelector('.notify-icon');
-var notifyButton = document.getElementById('open-modal');
+var notify = document.getElementById('open-modal');
+var close = document.getElementById("close-modal");
 
 function openModal() {
     modal.style.display = 'block';
@@ -12,8 +11,9 @@ function closeModal() {
 }
 
 // Click event for the "Berichten" button
-notifyButton.addEventListener('click', function () {
+notify.addEventListener('click', function () {
     openModal();
 });
+
 
 // Additional functions or modifications can be added as needed

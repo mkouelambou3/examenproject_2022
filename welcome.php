@@ -98,7 +98,7 @@ if (isset($_POST["finder-btn"])) {
                       </button>
                         <a href="profile.php">Profiel</a>
                         <a href="logout.php">Uitloggen</a>
-                        <!-- Move the "Berichten" button inside the account dropdown -->
+                        <!-- Move the "Berichten" button outside the account dropdown -->
                     </div>
                 </div>
                 <li><a href="#">Contact</a></li>

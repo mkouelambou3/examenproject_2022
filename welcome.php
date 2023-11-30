@@ -120,7 +120,7 @@ if (isset($_POST["finder-btn"])) {
         </div>
         <div class="modal-body">
           <!-- Add content for your modal here -->
-          <p class="messages-subtitle_text">You have <span id="modalCounter">0</span> new messages.</p>
+          <p class="messages-subtitle_text">U heeft <span id="modalCounter">0</span> nieuwe berichten ontvangen.</p>
           <!-- Add additional content as needed -->
         </div>
 

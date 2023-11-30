@@ -243,12 +243,13 @@
     }
 
     .modal-dialog {
-        top: 15%;
-        right: 5%;
+        top: 3%;
+        right: 9%;
     }
 
     div.modal-content {
-        width: 700px;
+        width: 850px;
+        height: 600px;
     }
 
     .modal-content {
@@ -318,6 +319,7 @@
     }
 
     .messages-subtitle_text {
+        margin-top: 22%;
         text-align: center;
     }
 

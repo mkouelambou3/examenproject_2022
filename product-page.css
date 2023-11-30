@@ -128,6 +128,159 @@
            display: none;
        }
 
+       /* Notification Part Start */
+
+    /* Notification button styles */
+
+    #berichtenButton {
+        margin: 3px;
+        background-color: #777;
+        color: #fff;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        position: relative;
+        transition: background-color 0.3s ease;
+    }
+
+    #berichtenButton:hover {
+        background-color: #000;
+    }
+
+    #berichtenButton span {
+        margin-left: 8px;
+    }
+
+    #berichtenButton .counter-circle {
+        background-color: #dc3545;
+        color: #fff;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        height: 250px;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 60px;
+    }
+
+    .modal-dialog {
+        top: 3%;
+        right: 9%;
+    }
+
+    div.modal-content {
+        width: 850px;
+        height: 600px;
+    }
+
+    .modal-content {
+        height: 350px;
+        width: 700px;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #d4d4d4;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .modal-header {
+        border-bottom: 1px solid #d4d4d4;
+        padding-bottom: 10px;
+    }
+
+    .modal-title {
+        font-size: 1.5em;
+        text-align: center;
+        margin: 0;
+        color: #000;
+    }
+
+    .modal-body {
+        padding: 20px 0;
+        height: calc(100% - 120px);
+        overflow-y: auto;
+    }
+
+
+    .modal-footer {
+        border-top: 1px solid #d4d4d4;
+        padding-top: 10px;
+        text-align: right;
+    }
+
+    /* Styling for the "x" button in the modal header */
+    .modal-header button.close {
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        color: #000;
+        opacity: 0.7;
+        cursor: pointer;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .modal-header button.close:hover {
+        opacity: 1;
+        transform: rotate(360deg);
+        /* Add a cool rotation animation */
+    }
+
+    .modal-footer button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .modal-footer button:hover {
+        background-color: #0056b3;
+    }
+
+    .messages-subtitle_text {
+        margin-top: 22%;
+        text-align: center;
+    }
+
+    .modal-footer {
+        margin: -30px;
+        border-top: 1px solid #d4d4d4;
+        padding-top: 10px;
+        text-align: center;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-footer p {
+        margin: 5px 0;
+        font-size: 15px;
+    }
+
+    /* Notification Part End */
+
        /* Responsive Navbar Section Start */
 
        @media(max-width: 900px) {

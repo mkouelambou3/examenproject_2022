@@ -52,12 +52,11 @@ if (mysqli_num_rows($query) > 0) {
 
 <body>
 <section class="sub-header">
-    <nav>
-      <a href="welcome.php" class="logo">
+<nav>
+      <a href="#" class="logo">
         <i class="fa-solid fa-car-side"></i> POC Share Wheels
       </a>
       <div class="nav-links" id="navLinks">
-        <!-- Reposnive bar open and close -->
         <i class="fa fa-times" onclick="hideMenu()"></i>
         <ul>
           <li><a href="welcome.php">Home</a></li>
@@ -68,27 +67,49 @@ if (mysqli_num_rows($query) > 0) {
             <li><a href="#">Account</a></li>
             <div class="dropdown-content">
               <div class="user-info">
-                <?php echo "Welcome, " . $row['naam']; ?>
+                <?php echo "Welcome, "  . $row['naam']; ?>
               </div>
-              <a>
-                <button id="openModalBtn" class="notify-icon-button" onclick="openModal()">
-                  <span>Berichten</span>
-                  <span class="notify-icon_badge">0</span>
-                </button>
-              </a>
+              <!-- Move the "Berichten" button inside the account dropdown -->
+              <button id="berichtenButton" onclick="openModal()">
+                Berichten
+                <span class="counter-circle" id="counter">0</span>
+              </button>
               <a href="profile.php">Profiel</a>
               <a href="logout.php">Uitloggen</a>
+              <!-- Move the "Berichten" button outside the account dropdown -->
             </div>
           </div>
           <li><a href="contact-page.php">Contact</a></li>
-
         </ul>
       </div>
       <i class="fa fa-bars" onclick="showMenu()"></i>
-      <!-- Reposnive bar open and close -->
     </nav>
     <h1 class="heading-products-text">personenauto's</h1>
   </section>
+
+  <!-- Modal HTML structure -->
+  <div class="modal" id="berichtenModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Berichten</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Add content for your modal here -->
+          <p class="messages-subtitle_text">U heeft <span id="modalCounter">0</span> nieuwe berichten ontvangen.</p>
+          <!-- Add additional content as needed -->
+        </div>
+
+        <div class="modal-footer">
+          <p>Huidige versie: 1.0.16.3</p>
+          <p>u bent up-to-date.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="fleet-page">
     <header class="page-header">
@@ -786,6 +807,7 @@ if (mysqli_num_rows($query) > 0) {
 
 
   <script src="script.js"></script>
+  <script src="notify-box-settings.js"></script>
 </body>
 
 </html>

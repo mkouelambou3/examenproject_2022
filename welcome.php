@@ -75,7 +75,7 @@ if (isset($_POST["finder-btn"])) {
 
   <section class="header">
     <nav>
-      <a href="#" class="logo">
+      <a href="welcome.php" class="logo">
         <i class="fa-solid fa-car-side"></i> POC Share Wheels
       </a>
       <div class="nav-links" id="navLinks">

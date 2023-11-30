@@ -55,7 +55,7 @@ if (mysqli_num_rows($query) > 0) {
 <body>
 <section class="sub-header">
     <nav>
-      <a href="home.php" class="logo">
+      <a href="welcome.php" class="logo">
         <i class="fa-solid fa-car-side"></i> POC Share Wheels
       </a>
       <div class="nav-links" id="navLinks">

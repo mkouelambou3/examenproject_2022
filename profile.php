@@ -34,7 +34,7 @@ if (mysqli_num_rows($query) > 0) {
 
               <div class="profile">
                      <nav>
-                            <a href="home.html" class="logo">
+                            <a href="welcome.php" class="logo">
                                    <i class="fa-solid fa-car-side"></i>POC Share Wheels
                             </a>
                             <p style="margin-bottom: 15px; font-size: 13px; font-weight: 700;">

@@ -10,7 +10,7 @@
   <script src="https://kit.fontawesome.com/d6dc7c8001.js" crossorigin="anonymous"></script>
 </head>
 <nav>
-  <a href="home.html" class="logo">
+  <a href="home.php" class="logo">
     <i class="fa-solid fa-car-side"></i> POC Share Wheels
   </a>
 </nav>

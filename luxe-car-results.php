@@ -4,7 +4,7 @@ include 'config.php';
 session_start();
 
 if (!isset($_SESSION['SESSION_EMAIL'])) {
-  header("Location: home.html");
+  header("Location: home.php");
   die();
 }
 

@@ -6,7 +6,7 @@ include 'config.php';
 $msg = "";
 
 if (!isset($_SESSION['SESSION_EMAIL'])) {
-  header("Location: home.html");
+  header("Location: home.php");
   die();
 }
 

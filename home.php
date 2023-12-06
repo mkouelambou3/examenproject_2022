@@ -164,7 +164,7 @@
         <br>
         <p class="features-highlighted-text">
           Tip : Als je klant bent van POC Share Wheels kun je makkelijk toegang <br> 
-          tot de nieuwste updates, lekker eenvoudig en simpel.
+          krijgen tot de nieuwste updates, lekker eenvoudig en simpel.
           </br>
         </p>
       <p class="package-plan_text">Stay tuned voor de nieuwe update!</p>

@@ -364,7 +364,7 @@ if (isset($_POST["finder-btn"])) {
   <!-- Note : if feature comes to new update, next things to implement are :
             1 : make an update banner if new features are coming for the site.
             2 : change version names.
-            3 : next update : 1.0.16.3 -> 1.0.20.0
+            3 : next update : 1.0.16.3 -> 1.0.30.0
   !-->
 
   <section class="package-plan">

@@ -359,12 +359,19 @@ if (isset($_POST["finder-btn"])) {
 
   <!-- Package Plan Section Start !-->
 
-  <!-- Hier komt binnenkort een nieuwe feature van POC Share Wheels : Het pakketplan. Hierin kunnen hun auto plan kiezen etc.-->
+  <!-- Hier komt binnenkort een nieuwe feature van POC Share Wheels : Het pakketplan. Hierin kunnen mensen hun autopakketplan kiezen etc.-->
 
   <!-- Note : if feature comes to new update, next things to implement are :
             1 : make an update banner if new features are coming for the site.
             2 : change version names.
             3 : next update : 1.0.16.3 -> 1.0.30.0
+
+      Note : if featured are updated and fixed to the site start implementing next features :
+            1 : adding dark mode theme 
+            2 : fixing and improving stability
+            3 : update version names.
+            4 : future update : 1.0.30.0 -> 1.0.31.0
+          
   !-->
 
   <section class="package-plan">

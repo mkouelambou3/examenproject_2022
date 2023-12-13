@@ -39,7 +39,7 @@
           <li><a href="product-page.php">Producten</a></li>
           <li style="display: none;"><a href="#">Reserveren</a></li>
           <li><a href="login.php">Login</a></li>
-          <li><a href="contact-page.php">Contact</a></li>
+          <li class="contact-text"><a href="contact-page.php">Contact</a></li>
         </ul>
       </div>
       <i class="fa fa-bars" onclick="showMenu()"></i>

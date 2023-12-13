@@ -101,7 +101,7 @@ if (isset($_POST["finder-btn"])) {
               <!-- Move the "Berichten" button outside the account dropdown -->
             </div>
           </div>
-          <li><a href="contact-page.php">Contact</a></li>
+          <li class="contact-text"><a href="contact-page.php">Contact</a></li>
         </ul>
       </div>
       <i class="fa fa-bars" onclick="showMenu()"></i>

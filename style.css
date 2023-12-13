@@ -414,6 +414,31 @@
             width: 500px;
             height: 550px;
         }
+
+        @media (max-width : 750px) {
+            .course-col {
+                flex-basis: 25%;
+                margin: 0 12px;
+                background: #fff3f3;
+                border-radius: 10px;
+                margin-bottom: 5%;
+                padding: 30px 12px;
+                box-sizing: border-box;
+                transition: 0.2s;
+                padding-left: 10%;
+            }
+        
+            .course-col h3 {
+                text-align: center;
+                font-weight: 600;
+                margin: 10px 0;
+                line-height: 1.1;
+            }
+        
+            .course-col:hover {
+                box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+            }
+        }
     }
 
     @media(max-width : 450px) {
